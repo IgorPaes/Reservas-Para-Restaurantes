@@ -12,3 +12,6 @@
  	- Confirmar a reserva; 
  	- Recusar a reserva; 
  	- Cancelar a reserva;
+**Modelo de entidade e Relacionamento**
+![Modelo de entidade e relacionamento](/assets/MER-restaurante.png)
+
