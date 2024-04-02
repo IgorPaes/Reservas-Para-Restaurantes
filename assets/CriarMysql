@@ -1,0 +1,16 @@
+// Criando Base de Dados
+
+CREATE database sistema_reserva;
+
+
+// Criando Tabela de Cadastro
+
+create table Cadastro (
+ Id int auto_increment primary key,
+ Nome varchar(30),
+ Cpf varchar(20),
+ Email varchar(30) unique,
+ Telefone varchar(20),
+ Senha varchar(50)
+);
+
