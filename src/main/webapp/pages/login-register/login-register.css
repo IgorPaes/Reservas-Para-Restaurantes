@@ -1,11 +1,16 @@
 body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
     background: black;
+    position: relative;
 }
 
-header .logo{
-    margin-left: 5.37rem;
-    width: 100%;
-    height: 7.875rem;
+header{
+    position: absolute;
+    top: 20px;
+    left: 0;
 }
 
 button {
@@ -13,19 +18,15 @@ button {
     cursor: pointer;
 }
 
-
-body .container{
+body .container {
 
     background-color: white;
     width: 980px;
     height: 525px;
     padding: 20px;
     border-radius: 10px;
-    justify-content: center;
-    align-items: center;
-    margin: auto;
     font-family: "Montserrat", sans-serif;
-    margin-top: -71px;
+
 }
 
 body input{
@@ -45,6 +46,7 @@ body input{
 }
 
 .input-group {
+    position: relative;
     flex: 1;
 }
 
@@ -68,38 +70,56 @@ body #register p {
     margin-bottom: 40px;
 }
 
-body .container #register #label {
+.container #register #label {
     font-weight: bold;
 
 }
 
 body #login {
     position: relative;
-    bottom: 40px;
     color: #000;
     margin-left: 46%;
+}
+#btn-acessar {
+    
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+
 }
 
 #btn-acessar button{
     background-color: black;
     color: white;
     border-radius: 10px;
-    padding: 15px 212px;
-    margin-left: 25%;
-    margin-top: 45px;
+    height: 50px;
+    width: 400px;
+    font-weight: 600;
+    text-align: center;
+    border: 2px solid transparent;
+    transition: all .45s;
+}
+
+
+#btn-acessar button:hover {
+
+    color: black;
+    border: 2px solid black;
+    background-color: transparent;
+    letter-spacing: 5px;
+
+}
+
+.password-container {
     position: relative;
-    bottom: 39px;
 }
 
 .password-container img {
-    position: relative;
-    bottom: 64px;
-    right: -2px;
-    cursor: pointer;
-    width: 24px;
-    height: auto;
-    margin-left: 414px;
-    margin-top: 10px;
+    position: absolute;
+    top: 31%;
+    right: 0;
+    height: 20px;
+    width: 20px;
 }
 
 

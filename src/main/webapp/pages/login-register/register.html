@@ -7,84 +7,81 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>R&R Register</title>
-    <link rel="stylesheet" href="../../pages/login-register/login-register.css">
+    <link rel="stylesheet" href="./login-register.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
+    <script src="script.js" defer></script>
 </head>
 
 <body>
+    <header>
+        <figure class="logo">
+            <img src="../../assets/logo.png" alt="">
+        </figure>
+    </header>
 
-<header>
+    <div class="container">
+        <form id="register">
 
-    <figure class="logo">
-        <img src="../../assets/logo.png" alt="">
-    </figure>
+            <h1> Cadastro</h1>
+            <p> Digite os seus dados de acesso no campo abaixo.</p>
 
-</header>
+            <div class="input-row"> <!-- Contêiner Flex para nome e CPF -->
+                <div class="input-group">
+                    <label for="name" id="label">Nome</label>
+                    <input type="text" name="name" id="txtname" placeholder="Digite seu nome">
+                </div>
 
-<div class="container">
-    <form id="register">
-
-        <h1> Cadastro</h1>
-        <p> Digite os seus dados de acesso no campo abaixo.</p>
-
-        <div class="input-row"> <!-- Contêiner Flex para nome e CPF -->
-            <div class="input-group">
-                <label for="name" id="label">Nome</label>
-                <input type="text" name="name" id="txtname" placeholder="Digite seu nome">
-            </div>
-
-            <div class="input-group">
-                <label for="cpf" id="label">CPF</label>
-                <input type="text" name="cpf" id="txtcpf" placeholder="Digite seu cpf ">
-            </div>
-        </div>
-
-        <div class="input-row"> <!-- Contêiner Flex para nome e CPF -->
-            <div class="input-group">
-                <label for="email" id="label">E-mail</label>
-                <input type="text" name="email" id="txtemail" placeholder="Digite seu e-mail">
-            </div>
-
-            <div class="input-group">
-                <label for="telefone" id="label">Telefone</label>
-                <input type="text" name="telefone" id="txttelefone" placeholder="Digite seu telefone">
-            </div>
-        </div>
-
-        <div class="input-row">
-
-            <div class="input-group">
-                <label for="senha" id="label">Senha</label>
-                <div class="password-container">
-                    <input type="password" name="senha" id="txtsenha" placeholder="Digite sua senha">
-                    <img src="../../assets/olho.png" alt="Visualizar Senha" id="icon" onclick="togglePasswordVisibility('txtsenha', 'icon')">
+                <div class="input-group">
+                    <label for="cpf" id="label">CPF</label>
+                    <input type="text" name="cpf" id="txtcpf" placeholder="Digite seu cpf ">
                 </div>
             </div>
 
-            <div class="input-group">
-                <label for="confirmarsenha" id="label">Confirmar Senha</label>
-                <div class="password-container">
-                    <input type="password" name="confirmarsenha" id="txtconfirmarsenha" placeholder="Digite novamente sua senha">
-                    <img src="../../assets/olho.png" alt="Visualizar Senha" id="icon" onclick="togglePasswordVisibility('txtconfirmarsenha', 'icon')">
+            <div class="input-row"> <!-- Contêiner Flex para nome e CPF -->
+                <div class="input-group">
+                    <label for="email" id="label">E-mail</label>
+                    <input type="text" name="email" id="txtemail" placeholder="Digite seu e-mail">
+                </div>
+
+                <div class="input-group">
+                    <label for="telefone" id="label">Telefone</label>
+                    <input type="text" name="telefone" id="txttelefone" placeholder="Digite seu telefone">
                 </div>
             </div>
 
-        </div>
+            <div class="input-row">
 
-        <a href="login.html" title="login" id="login">Fazer login</a>
+                <div class="input-group">
+                    <label for="senha" id="label">Senha</label>
+                    <div class="password-container">
+                        <input type="password" name="senha" id="txtsenha" placeholder="Digite sua senha">
+                        <img src="../../assets/olho.png" alt="Visualizar Senha" id="icon" onclick="togglePasswordVisibility('txtsenha', 'icon')">
+                    </div>
+                </div>
 
-        <div id="btn-acessar">
-            <button type="submit">Acessar</button>
-        </div>
+                <div class="input-group">
+                    <label for="confirmarsenha" id="label">Confirmar Senha</label>
+                    <div class="password-container">
+                        <input type="password" name="confirmarsenha" id="txtconfirmarsenha" placeholder="Digite novamente sua senha">
+                        <img src="../../assets/olho.png" alt="Visualizar Senha" id="icon" onclick="togglePasswordVisibility('txtconfirmarsenha', 'icon')">
+                    </div>
+                </div>
 
-    </form>
-</div>
+            </div>
 
-<script src="script.js"></script>
+            <a href="login.html" title="login" id="login">Fazer login</a>
+
+            <div id="btn-acessar">
+                <button type="submit">Acessar</button>
+            </div>
+
+        </form>
+    </div>
+
 
 </body>
 
