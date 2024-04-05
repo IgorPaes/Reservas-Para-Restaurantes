@@ -1,88 +1,81 @@
 <!doctype html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>R&R Register</title>
     <link rel="stylesheet" href="./login-register.css">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-
     <script src="script.js" defer></script>
 </head>
-
 <body>
+
     <header>
         <figure class="logo">
-            <img src="../../assets/logo.png" alt="">
+            <img src="../../assets/logo.png" alt="Logo">
         </figure>
     </header>
 
-    <div class="container">
-        <form id="register">
+    <main>
+        <div class="container">
+            <form class="register_form">
 
-            <h1> Cadastro</h1>
-            <p> Digite os seus dados de acesso no campo abaixo.</p>
+                <h1>Cadastro</h1>
+                <p>Digite os seus dados de acesso no campo abaixo.</p>
 
-            <div class="input-row"> <!-- Contêiner Flex para nome e CPF -->
-                <div class="input-group">
-                    <label for="name" id="label">Nome</label>
-                    <input type="text" name="name" id="txtname" placeholder="Digite seu nome">
-                </div>
+                <div class="input_row">
+                    <div class="input_group">
+                        <label for="name">Nome</label>
+                        <input type="text" name="name" id="txtname" placeholder="Digite seu nome">
+                    </div>
 
-                <div class="input-group">
-                    <label for="cpf" id="label">CPF</label>
-                    <input type="text" name="cpf" id="txtcpf" placeholder="Digite seu cpf ">
-                </div>
-            </div>
-
-            <div class="input-row"> <!-- Contêiner Flex para nome e CPF -->
-                <div class="input-group">
-                    <label for="email" id="label">E-mail</label>
-                    <input type="text" name="email" id="txtemail" placeholder="Digite seu e-mail">
-                </div>
-
-                <div class="input-group">
-                    <label for="telefone" id="label">Telefone</label>
-                    <input type="text" name="telefone" id="txttelefone" placeholder="Digite seu telefone">
-                </div>
-            </div>
-
-            <div class="input-row">
-
-                <div class="input-group">
-                    <label for="senha" id="label">Senha</label>
-                    <div class="password-container">
-                        <input type="password" name="senha" id="txtsenha" placeholder="Digite sua senha">
-                        <img src="../../assets/olho.png" alt="Visualizar Senha" id="icon" onclick="togglePasswordVisibility('txtsenha', 'icon')">
+                    <div class="input_group">
+                        <label for="cpf">CPF</label>
+                        <input type="text" name="cpf" id="txtcpf" placeholder="Digite seu cpf">
                     </div>
                 </div>
 
-                <div class="input-group">
-                    <label for="confirmarsenha" id="label">Confirmar Senha</label>
-                    <div class="password-container">
-                        <input type="password" name="confirmarsenha" id="txtconfirmarsenha" placeholder="Digite novamente sua senha">
-                        <img src="../../assets/olho.png" alt="Visualizar Senha" id="icon" onclick="togglePasswordVisibility('txtconfirmarsenha', 'icon')">
+                <div class="input_row">
+                    <div class="input_group">
+                        <label for="email">E-mail</label>
+                        <input type="text" name="email" id="txtemail" placeholder="Digite seu e-mail">
+                    </div>
+
+                    <div class="input_group">
+                        <label for="telefone">Telefone</label>
+                        <input type="text" name="telefone" id="txttelefone" placeholder="Digite seu telefone">
                     </div>
                 </div>
 
-            </div>
+                <div class="input_row">
+                    <div class="input_group">
+                        <label for="senha">Senha</label>
+                        <div class="password_container">
+                            <input type="password" name="senha" id="txtsenha" placeholder="Digite sua senha">
+                            <img src="../../assets/olho.png" alt="Visualizar Senha" aria-label="Visualizar Senha" onclick="togglePasswordVisibility('txtsenha', this)">
+                        </div>
+                    </div>
+                    
+                    <div class="input_group">
+                        <label for="confirmarsenha">Confirmar Senha</label>
+                        <div class="password_container">
+                            <input type="password" name="confirmarsenha" id="txtconfirmarsenha" placeholder="Digite novamente sua senha">
+                            <img src="../../assets/olho.png" alt="Visualizar Senha" aria-label="Visualizar Senha" onclick="togglePasswordVisibility('txtconfirmarsenha', this)">
+                        </div>
+                    </div>                 
+                </div>
 
-            <a href="login.html" title="login" id="login">Fazer login</a>
+                <a href="login.html" title="login" class="login_link">Fazer login</a>
 
-            <div id="btn-acessar">
-                <button type="submit">Acessar</button>
-            </div>
+                <div class="btn_acessar">
+                    <button type="submit">Acessar</button>
+                </div>
 
-        </form>
-    </div>
-
+            </form>
+        </div>
+    </main>
 
 </body>
-
 </html>
+

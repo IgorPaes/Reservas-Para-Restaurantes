@@ -1,3 +1,8 @@
+:root {
+    --color-black:#000;
+    --color-white:#fff;
+}
+
 body {
     display: flex;
     align-items: center;
@@ -7,29 +12,22 @@ body {
     position: relative;
 }
 
-header{
+.logo {
     position: absolute;
     top: 20px;
     left: 0;
 }
 
-button {
-    all: unset;
-    cursor: pointer;
-}
-
-body .container {
-
-    background-color: white;
+.container {
+    background-color: var(--color-white);
     width: 980px;
     height: 525px;
     padding: 20px;
     border-radius: 10px;
     font-family: "Montserrat", sans-serif;
-
 }
 
-body input{
+input {
     width: 380px;
     height: 39px;
     margin-bottom: 20px;
@@ -39,58 +37,58 @@ body input{
     padding-left: 10px;
 }
 
-.input-row {
+.input_row {
     display: flex;
     justify-content: space-between;
     gap: 40px;
 }
 
-.input-group {
+.input_group {
     position: relative;
     flex: 1;
 }
 
-.input-group input {
+.input_group input {
     width: 100%;
 }
 
-body .container #register {
-
-    margin-left: 3%;
-    margin-right: 3%;
+.register_form {
+    margin-left: 3vw;
+    margin-right: 3vw;
 }
-body #register h1 {
 
+.register_form h1 {
     font-size: 35px;
 }
 
-body #register p {
-
-    margin-top: -1.5%;
+.register_form p {
+    margin-top: 0.4em;
     margin-bottom: 40px;
 }
 
-.container #register #label {
+.input_row {
     font-weight: bold;
-
 }
 
-body #login {
-    position: relative;
-    color: #000;
-    margin-left: 46%;
-}
-#btn-acessar {
-    
+.login_link {
     display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-black);
+}
+
+.btn_acessar {
+    display: flex;
+    align-items: center;
     justify-content: center;
     margin-top: 30px;
-
 }
 
-#btn-acessar button{
-    background-color: black;
-    color: white;
+.btn_acessar button {
+    all: unset;
+    cursor: pointer;
+    background-color: var(--color-black);
+    color: var(--color-white);
     border-radius: 10px;
     height: 50px;
     width: 400px;
@@ -100,21 +98,18 @@ body #login {
     transition: all .45s;
 }
 
-
-#btn-acessar button:hover {
-
-    color: black;
-    border: 2px solid black;
+.btn_acessar button:hover {
+    color: var(--color-black);
+    border: 2px solid var(--color-black);
     background-color: transparent;
     letter-spacing: 5px;
-
 }
 
-.password-container {
+.password_container {
     position: relative;
 }
 
-.password-container img {
+.password_container img {
     position: absolute;
     top: 31%;
     right: 0;

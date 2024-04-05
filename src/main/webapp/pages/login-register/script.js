@@ -1,6 +1,5 @@
-function togglePasswordVisibility(inputId, toggleIconId) {
+function togglePasswordVisibility(inputId, toggleIcon) {
     var input = document.getElementById(inputId);
-    var toggleIcon = document.getElementById(toggleIconId);
     if (input.type === "password") {
         input.type = "text";
         toggleIcon.src = "../../assets/olho.png";
@@ -9,3 +8,6 @@ function togglePasswordVisibility(inputId, toggleIconId) {
         toggleIcon.src = "../../assets/olho.png";
     }
 }
+
+
+
