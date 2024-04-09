@@ -8,6 +8,7 @@
 :root {
     --cor-gradient-azul-escuro : linear-gradient(180deg, #191622 0%, #0E0B15 100%);
     --cor-branca : #FFF;
+    --color-black:#000;
 } 
 
 body {

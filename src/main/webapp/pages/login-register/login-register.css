@@ -1,14 +1,10 @@
-:root {
-    --color-black:#000;
-    --color-white:#fff;
-}
 
 body {
     display: flex;
     align-items: center;
     justify-content: center;
     height: 100vh;
-    background: black;
+    background: var(--color-black);
     position: relative;
 }
 
@@ -19,7 +15,7 @@ body {
 }
 
 .container {
-    background-color: var(--color-white);
+    background-color: var(--cor-branca);
     width: 980px;
     height: 525px;
     padding: 20px;
@@ -88,7 +84,7 @@ input {
     all: unset;
     cursor: pointer;
     background-color: var(--color-black);
-    color: var(--color-white);
+    color: var(--cor-branca);
     border-radius: 10px;
     height: 50px;
     width: 400px;
