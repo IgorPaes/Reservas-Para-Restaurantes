@@ -11,72 +11,111 @@
     <script src="script.js" defer></script>
 </head>
 <body>
-
-    <header>
+    <div class="container_registro">
         <figure class="logo">
             <img src="../../assets/logo.png" alt="Logo">
         </figure>
-    </header>
 
-    <main>
-        <div class="container">
-            <form class="register_form">
-
+        <main class="main_registro">
+            <header class="form_titulo">
                 <h1>Cadastro</h1>
                 <p>Digite os seus dados de acesso no campo abaixo.</p>
-
-                <div class="input_row">
-                    <div class="input_group">
-                        <label for="name">Nome</label>
-                        <input type="text" name="name" id="txtname" placeholder="Digite seu nome">
+            </header>
+            <form class="form_registro" action="">
+                <div class="form_inputs">
+                    <div class="grupo_input">
+                        <label for="nome">Nome</label>
+                        <input type="text" name="nome" id="input_nome" placeholder="Digite o seu nome">
                     </div>
-
-                    <div class="input_group">
-                        <label for="cpf">CPF</label>
-                        <input type="text" name="cpf" id="txtcpf" placeholder="Digite seu cpf">
-                    </div>
-                </div>
-
-                <div class="input_row">
-                    <div class="input_group">
+                    <div class="grupo_input">
                         <label for="email">E-mail</label>
-                        <input type="text" name="email" id="txtemail" placeholder="Digite seu e-mail">
+                        <input type="email" name="email" id="input_email" placeholder="Digite o seu e-mail">
                     </div>
-
-                    <div class="input_group">
+                    <div class="grupo_input">
+                        <label for="cpf">CPF</label>
+                        <input type="text" name="cpf" id="input_cpf" placeholder="Digite o seu cpf">
+                    </div>
+                    <div class="grupo_input">
                         <label for="telefone">Telefone</label>
-                        <input type="text" name="telefone" id="txttelefone" placeholder="Digite seu telefone">
+                        <input type="tel" name="telefone" id="input_telefone" placeholder="Digite o seu telefone">
                     </div>
-                </div>
-
-                <div class="input_row">
-                    <div class="input_group">
+                    <div class="grupo_input">
                         <label for="senha">Senha</label>
-                        <div class="password_container">
-                            <input type="password" name="senha" id="txtsenha" placeholder="Digite sua senha">
-                            <img src="../../assets/olho.png" alt="Visualizar Senha" aria-label="Visualizar Senha" onclick="togglePasswordVisibility('txtsenha', this)">
+                        <input type="password" name="senha" id="input_senha" placeholder="Digite a sua senha">
+                    </div>
+                    <div class="grupo_input">
+                        <label for="confirmarSenha">Confirmar Senha</label>
+                        <input type="password" name="confirmarSenha" id="input_confirmarSenha" placeholder="Digite a sua senha novamente">
+                    </div>
+                </div>
+            </form>
+            <div class="caixa_adicionais">
+                <button type="button">Fazer login</button>
+            </div>
+            <div class="caixa_confirmar">
+                <button type="button">ACESSAR</button>
+            </div>
+        </main>
+    
+        <!-- <main>
+            <div class="container">
+                <form class="register_form">
+    
+                    <h1>Cadastro</h1>
+                    <p>Digite os seus dados de acesso no campo abaixo.</p>
+    
+                    <div class="input_row">
+                        <div class="input_group">
+                            <label for="name">Nome</label>
+                            <input type="text" name="name" id="txtname" placeholder="Digite seu nome">
+                        </div>
+    
+                        <div class="input_group">
+                            <label for="cpf">CPF</label>
+                            <input type="text" name="cpf" id="txtcpf" placeholder="Digite seu cpf">
                         </div>
                     </div>
-                    
-                    <div class="input_group">
-                        <label for="confirmarsenha">Confirmar Senha</label>
-                        <div class="password_container">
-                            <input type="password" name="confirmarsenha" id="txtconfirmarsenha" placeholder="Digite novamente sua senha">
-                            <img src="../../assets/olho.png" alt="Visualizar Senha" aria-label="Visualizar Senha" onclick="togglePasswordVisibility('txtconfirmarsenha', this)">
+    
+                    <div class="input_row">
+                        <div class="input_group">
+                            <label for="email">E-mail</label>
+                            <input type="text" name="email" id="txtemail" placeholder="Digite seu e-mail">
                         </div>
-                    </div>                 
-                </div>
-
-                <a href="login.html" title="login" class="login_link">Fazer login</a>
-
-                <div class="btn_acessar">
-                    <button type="submit">Acessar</button>
-                </div>
-
-            </form>
-        </div>
-    </main>
-
+    
+                        <div class="input_group">
+                            <label for="telefone">Telefone</label>
+                            <input type="text" name="telefone" id="txttelefone" placeholder="Digite seu telefone">
+                        </div>
+                    </div>
+    
+                    <div class="input_row">
+                        <div class="input_group">
+                            <label for="senha">Senha</label>
+                            <div class="password_container">
+                                <input type="password" name="senha" id="txtsenha" placeholder="Digite sua senha">
+                                <img src="../../assets/olho.png" alt="Visualizar Senha" aria-label="Visualizar Senha" onclick="togglePasswordVisibility('txtsenha', this)">
+                            </div>
+                        </div>
+                        
+                        <div class="input_group">
+                            <label for="confirmarsenha">Confirmar Senha</label>
+                            <div class="password_container">
+                                <input type="password" name="confirmarsenha" id="txtconfirmarsenha" placeholder="Digite novamente sua senha">
+                                <img src="../../assets/olho.png" alt="Visualizar Senha" aria-label="Visualizar Senha" onclick="togglePasswordVisibility('txtconfirmarsenha', this)">
+                            </div>
+                        </div>                 
+                    </div>
+    
+                    <a href="login.html" title="login" class="login_link">Fazer login</a>
+    
+                    <div class="btn_acessar">
+                        <button type="submit">Acessar</button>
+                    </div>
+    
+                </form>
+            </div>
+        </main> -->
+    </div>
 </body>
 </html>
 

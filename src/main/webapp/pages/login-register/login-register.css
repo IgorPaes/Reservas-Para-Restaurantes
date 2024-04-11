@@ -1,118 +1,153 @@
+.container_registro {
 
-body {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    background: var(--color-black);
+    width: 100%;
+    height: 100%;
     position: relative;
+    padding: 20px;
+
 }
 
-.logo {
+.container_registro .logo {
+
     position: absolute;
     top: 20px;
     left: 0;
+
 }
 
-.container {
-    background-color: var(--cor-branca);
-    width: 980px;
-    height: 525px;
-    padding: 20px;
-    border-radius: 10px;
-    font-family: "Montserrat", sans-serif;
-}
+.container_registro .main_registro {
 
-input {
-    width: 380px;
-    height: 39px;
-    margin-bottom: 20px;
-    margin-top: 10px;
-    border-radius: 6px;
-    font-size: 15px;
-    padding-left: 10px;
-}
-
-.input_row {
-    display: flex;
-    justify-content: space-between;
-    gap: 40px;
-}
-
-.input_group {
-    position: relative;
-    flex: 1;
-}
-
-.input_group input {
-    width: 100%;
-}
-
-.register_form {
-    margin-left: 3vw;
-    margin-right: 3vw;
-}
-
-.register_form h1 {
-    font-size: 35px;
-}
-
-.register_form p {
-    margin-top: 0.4em;
-    margin-bottom: 40px;
-}
-
-.input_row {
-    font-weight: bold;
-}
-
-.login_link {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--color-black);
-}
-
-.btn_acessar {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 30px;
-}
-
-.btn_acessar button {
-    all: unset;
-    cursor: pointer;
-    background-color: var(--color-black);
-    color: var(--cor-branca);
-    border-radius: 10px;
-    height: 50px;
-    width: 400px;
-    font-weight: 600;
-    text-align: center;
-    border: 2px solid transparent;
-    transition: all .45s;
-}
-
-.btn_acessar button:hover {
-    color: var(--color-black);
-    border: 2px solid var(--color-black);
-    background-color: transparent;
-    letter-spacing: 5px;
-}
-
-.password_container {
-    position: relative;
-}
-
-.password_container img {
     position: absolute;
-    top: 31%;
-    right: 0;
-    height: 20px;
-    width: 20px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 1235px;
+    width: 100%;
+    /* height: 800px; */
+    padding: 45px 50px 20px 50px;
+    background-color: var(--cor-branca);
+    border-radius: 15px;
+
 }
 
+.container_registro .main_registro .form_titulo {
 
+    width: 100%;
+    margin-bottom: 50px;
 
+}
 
+.main_registro .form_titulo h1 {
+
+    font-size: 45px;
+    font-weight: 600;
+    letter-spacing: 2.25px;
+    color: var(--cor-azul-escuro1);
+    margin-bottom: 12px;
+
+}
+
+.main_registro .form_titulo p {
+
+    font-size: 20px;
+    color: var(--cor-azul-escuro1);
+    letter-spacing: 1.4px;
+
+}
+
+/* .container_registro .main_registro .form_registro {} */
+
+.main_registro .form_registro .form_inputs {
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 35px;
+    row-gap: 25px;
+
+}
+
+.main_registro .form_registro .grupo_input {
+
+    display: flex;
+    flex-direction: column;
+
+}
+
+.form_registro .grupo_input label {
+
+    font-size: 20px;
+    font-weight: 800;
+    letter-spacing: 1.4px;
+    color: var(--cor-azul-escuro1);
+    margin-bottom: 15px;
+    
+}
+
+.form_registro .grupo_input input {
+
+    height: 72px;
+    border: 2px solid var(--cor-azul-escuro1);
+    background-color: transparent;
+    padding: 0 10px 0 25px;
+    border-radius: 8px;
+    font-size: 23px;
+    color: rgba(15, 13, 23, .85);
+
+}
+
+.form_registro .grupo_input input::placeholder {
+
+    font-size: 20px;
+    font-weight: 400;
+    color: rgba(15, 13, 23, .4);
+    letter-spacing: .9px;
+
+}
+
+.main_registro .caixa_adicionais {
+
+    width: 100%;
+    text-align: center;
+    margin-top: 25px;
+
+}
+
+.main_registro .caixa_adicionais button {
+
+    font-size: 18px;
+    color: var(--cor-azul-escuro1);
+    letter-spacing: .9px;
+    text-decoration-line: underline;
+
+}
+
+.main_registro .caixa_confirmar {
+
+    width: 100%;
+
+}
+
+.main_registro .caixa_confirmar button {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    background: var(--cor-azul-escuro2);
+    max-width: 635px;
+    height: 72px;
+    width: 100%;
+    font-size: 21px;
+    font-weight: 700;
+    letter-spacing: 1.47px;
+    color: var(--cor-branca);
+    margin: 69px auto 0 auto;
+    transition: all var(--tempo-transicao-45);
+
+}
+
+.main_registro .caixa_confirmar button:hover {
+
+    letter-spacing: 6px; 
+
+}

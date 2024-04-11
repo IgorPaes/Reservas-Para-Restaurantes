@@ -9,7 +9,7 @@
     align-items: center;
     width: 100%;
     height: 100%;
-    background: var(--cor-gradient-azul-escuro);
+    background: var(--cor-gradient-azul-escura);
 }
 
 .logo {
@@ -58,13 +58,12 @@ button {
 }
 
 .titulo_principal_reserva {
-  max-width:54.75rem;
-  color: var(--cor-branca);
-  font-size: 3.75rem;
-  
-   
-
+    max-width:54.75rem;
+    color: var(--cor-branca);
+    font-size: 3.75rem;
+    font-weight: 850;
 }
+
 .paragrafo_principal {
     line-height: 2.125rem;
     max-width: 51.8rem;

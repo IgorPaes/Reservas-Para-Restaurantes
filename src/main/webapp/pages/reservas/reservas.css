@@ -18,7 +18,7 @@ video {
 .back {
 
     background: url(../../assets/back_reserv.png);
-    background-size:   100% 100%;
+    background-size:  100% 100%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -40,7 +40,6 @@ video {
     border-radius: 10px;
     font-family: "Montserrat", sans-serif;
     margin: auto;
-
 
 }
 
@@ -77,6 +76,7 @@ input {
     border-radius: 6px;
     font-size: 15px;
     padding-left: 10px;
+    
 }
 .input_group {
     position: relative;
