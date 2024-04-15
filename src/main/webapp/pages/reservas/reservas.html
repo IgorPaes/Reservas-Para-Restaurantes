@@ -8,6 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="reservas.css">
     <link rel="stylesheet" href="../../general/style.css">
+    <link rel="stylesheet" href="../../general/reset.css">
 
 
     <title>Reservas</title>
@@ -20,54 +21,59 @@
                 <img src="../../assets/logo.png" alt="Logo">
             </figure>
         </header>
-    
-        <main>
-            <div class="form-container">
-                <form class="form-reserve">
-                    <div class="form-header">
-                        <h1>FAÇA SUA RESERVA</h1>
+        <main class="form_container">
+            <form class="form_reserve">
+                <div class="form_header">
+                    <h1>FAÇA SUA RESERVA</h1>
+                </div>
+                <div class="section">
+                    <h2>INFORMAÇÕES DO RESPONSÁVEL</h2>
+                    <div class="line">
                     </div>
-    
-                    <div class="section">
-                        <h2>INFORMAÇÕES DO RESPONSÁVEL</h2>
-                        <div class = "line"> 
+                    <div class="form_inputs">
+                        <div class="grupo_input">
+                            <label for="nome">Nome</label>
+                            <input type="text" name="nome" id="input_nome" placeholder="Digite o seu nome">
                         </div>
-                        <div class="input_group">
-                            <label for="name">Nome</label>
-                            <input type="text" name="name" id="txtname" placeholder="Digite seu nome">
+                        <div class="grupo_input">
                             <label for="telefone">Telefone</label>
-                            <input type="text" name="telefone" id="txttelefone" placeholder="Digite seu telefone">
+                            <input type="tel" name="telefone" id="input_telefone" placeholder="Digite o seu telefone">
                         </div>
-                        <div class="input_group">
+                        <div class="grupo_input">
                             <label for="email">E-mail</label>
-                            <input type="text" name="email" id="txtemail" placeholder="Digite seu e-mail">
+                            <input type="email" name="email" id="input_email" placeholder="Digite o seu e-mail">
+                        </div>
+                        <div class="grupo_input">
                             <label for="cpf">CPF</label>
-                            <input type="text" name="cpf" id="txtcpf" placeholder="Digite seu cpf">
+                            <input type="text" name="cpf" id="input_cpf" placeholder="Digite o seu cpf">
                         </div>
                     </div>
-                    <div class="section">
-                        <h2>INFORMAÇÕES DA RESERVA</h2>
-                        <div class = "line">
-                            
-                        </div>
-                        <input type="date" name="data">
-                        <input type="time" name="horario">
-                        <select name="quantidade_pessoas">
-                        </select>
-                        <textarea name="comentario" placeholder="Comentário"></textarea>
+                </div>
+                <div class="section">
+                    <h2>INFORMAÇÕES DA RESERVA</h2>
+                    <div class="line">
+
                     </div>
+                    <label for="datas">DATAS</label>
+                    <input type="date" name="data">
+                    <label for="horarios">HORÁRIOS</label>
+                    <input type="time" name="horario">
+                    <label for="n_pessoas">Nº DE PESSOAS</label>
+                    <select name="n_pessoas">
+                    </select>
+                    <textarea name="comentario" placeholder="Comentário"></textarea>
+
+
                     <div class="buttons">
                         <button type="reset">CANCELAR</button>
                         <button type="submit">CONFIRMAR RESERVA</button>
                     </div>
-                </form>
-    
-            </div>
-    
+                </div>
+            </form>
+
+
         </main>
     </div>
-
-
 
 </body>
 

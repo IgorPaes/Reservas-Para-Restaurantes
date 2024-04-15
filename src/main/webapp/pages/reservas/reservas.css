@@ -1,92 +1,160 @@
-html,body,div,span,applet,object,iframe,h1,h2,h3,
-h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,
-code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,
-sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,
-form,label,legend,table,caption,tbody,tfoot,thead,tr,th,
-td,article,aside,canvas,details,embed,figure,figcaption,
-footer,header,hgroup,menu,nav,output,ruby,section,summary,
-time,mark,audio,
-video {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    font-size: 100%;
-    font: inherit;
-    vertical-align: baseline;
-}
 
 .back {
-
-    background: url(../../assets/back_reserv.png);
-    background-size:  100% 100%;
+    height: 100%;
+    min-height: 100%;
+    background-image: url(../../assets/back_reserv.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
 
 }
+
 .logo {
     position: absolute;
     top: 20px;
     left: 0;
 }
 
-.form-container {
+.form_container {
     position: relative;
     background-color: var(--cor-branca);
     width: 100%;
-    max-width: 100%;
-    height: 525px;
-    padding: 0;
+    max-width: 1200px;
+    height: 600px;
+    
     border-radius: 10px;
     font-family: "Montserrat", sans-serif;
     margin: auto;
 
 }
 
-h1 {
-    text-align: center;
-    color: var(--cor-branca);
-    margin: 0;
-    background-color: var(--color-black);
-    text-align: center;
+.form_header {
+    border-top-left-radius: 10px;
+    font-family: "Montserrat", sans-serif;
+    border-top-right-radius: 10px;
+    background-color: black;
+    color: white;
+    width: 100%;
     padding: 20px 0;
-    
+    font-family: 'Inter', sans-serif;
+    text-align: center;
 }
 
+.form_header h1 {
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 700;
+}
+
+.section {
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
 
 .section h2 {
-    color: var(--color-black);
-    text-align: center;
+    font-size: 24px;
     font-weight: bold;
-    font-size: 0.9em;
-    padding: 10px 0; 
+    margin-bottom: 10px;
+    text-align: center;
 }
 
 .line {
+    height: 2px;
+    background-color: var(--cor-azul-escuro1);
     width: 20%;
-    border-bottom: 1px solid var(--color-black);
-    margin: 0 auto;
+    margin: 0 auto 20px; 
 }
 
-input {
-    width: 380px;
-    height: 39px;
-    margin-bottom: 20px;
-    margin-top: 10px;
-    border-radius: 6px;
-    font-size: 15px;
-    padding-left: 10px;
-    
-}
 .input_group {
-    position: relative;
-    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+ 
+}
+.form_inputs label {
+    font-size: 18px;
+    color: var(--cor-azul-escuro1);
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+
+.form_container .form_reserve .form_inputs {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 35px;
+    row-gap: 25px;
+
+}
+.form_container .form_reserve .grupo_input {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.form_reserve .grupo_input input {
+
+    height: 52px;
+    border: 2px solid var(--cor-azul-escuro1);
+    background-color: transparent;
+    padding: 0 10px 0 25px;
+    border-radius: 8px;
+    font-size: 23px;
+    color: rgba(15, 13, 23, .85);
+
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row; 
+    gap: 10px;
+}
+.buttons button {
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    font-size: 18px; 
+    font-weight: bold;
+    cursor: pointer;
 }
 
 
 
+.buttons button[type="reset"] {
+    background-color: #f00;
+    text-align: center;
+    color: #fff;
+    width: 350px;
+    height: 50px;
+}
 
+.buttons button[type="submit"] {
+    background-color: var(--cor-azul-escuro1);
+    text-align: center;
+    color: #fff;
+    width: 500px;
+    height: 50px;
+}
+/* @media (max-width: 600px) {
+    .form_container {
+        width: 100%;
+        padding: 10px;
+    }
 
+    .input_group {
+        flex-direction: column;
+    }
 
-
-
+    .buttons button {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+} */
