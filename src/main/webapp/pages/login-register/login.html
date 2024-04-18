@@ -1,13 +1,47 @@
 <!doctype html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Login</title>
+    <title>R&R Login</title>
+    <link rel="stylesheet" href="./login-register.css">
+    <link rel="stylesheet" href="../../general/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="script.js" defer></script>
 </head>
 <body>
+    <div class="container_lr">
+        <figure class="logo">
+            <img src="../../assets/logo.png" alt="Logo">
+        </figure>
 
+        <main class="main_lr main_login">
+            <header class="form_titulo">
+                <h1>Login</h1>
+                <p>Digite os seus dados de acesso no campo abaixo.</p>
+            </header>
+            <form class="form_lr" action="">
+                <div class="form_inputs">
+                    <div class="grupo_input">
+                        <label for="nome">Nome</label>
+                        <input type="text" name="nome" id="input_nome" placeholder="Digite o seu nome">
+                    </div>
+                   
+                    <div class="grupo_input">
+                        <label for="senha">Senha</label>
+                        <input type="password" name="senha" id="input_senha" placeholder="Digite a sua senha">
+                    </div>
+                    
+                </div>
+            </form>
+            <div class="caixa_adicionais">
+                <button type="button">Cadastrar agora</button>
+            </div>
+            <div class="caixa_confirmar">
+                <button type="button">ACESSAR</button>
+            </div>
+        </main>
 
 </body>
 </html>

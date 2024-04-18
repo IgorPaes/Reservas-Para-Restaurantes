@@ -1,4 +1,4 @@
-.container_registro {
+.container_lr {
 
     width: 100%;
     height: 100%;
@@ -6,7 +6,7 @@
     padding: 20px;
 
 }
-.container_registro .logo {
+.container_lr .logo {
 
     position: absolute;
     top: 20px;
@@ -14,14 +14,14 @@
 
 }
 
-.container_registro .main_registro {
+.container_lr .main_lr {
 
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     max-width: 1235px;
-    width: 100%;
+    /*width: 100%;*/
     /* height: 800px; */
     padding: 45px 50px 20px 50px;
     background-color: var(--cor-branca);
@@ -29,14 +29,14 @@
 
 }
 
-.container_registro .main_registro .form_titulo {
+.container_lr .main_lr .form_titulo {
 
     width: 100%;
     margin-bottom: 50px;
 
 }
 
-.main_registro .form_titulo h1 {
+.main_lr .form_titulo h1 {
 
     font-size: 45px;
     font-weight: 600;
@@ -46,7 +46,7 @@
 
 }
 
-.main_registro .form_titulo p {
+.main_lr .form_titulo p {
 
     font-size: 20px;
     color: var(--cor-azul-escuro1);
@@ -54,9 +54,9 @@
 
 }
 
-/* .container_registro .main_registro .form_registro {} */
+/* .container_lr .main_lr .form_lr {} */
 
-.main_registro .form_registro .form_inputs {
+.main_lr .form_lr .form_inputs {
 
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -65,14 +65,14 @@
 
 }
 
-.main_registro .form_registro .grupo_input {
+.main_lr .form_lr .grupo_input {
 
     display: flex;
     flex-direction: column;
 
 }
 
-.form_registro .grupo_input label {
+.form_lr .grupo_input label {
 
     font-size: 20px;
     font-weight: 800;
@@ -82,7 +82,7 @@
     
 }
 
-.form_registro .grupo_input input {
+.form_lr .grupo_input input {
 
     height: 72px;
     border: 2px solid var(--cor-azul-escuro1);
@@ -94,7 +94,7 @@
 
 }
 
-.form_registro .grupo_input input::placeholder {
+.form_lr .grupo_input input::placeholder {
 
     font-size: 20px;
     font-weight: 400;
@@ -103,7 +103,7 @@
 
 }
 
-.main_registro .caixa_adicionais {
+.main_lr .caixa_adicionais {
 
     width: 100%;
     text-align: center;
@@ -111,7 +111,7 @@
 
 }
 
-.main_registro .caixa_adicionais button {
+.main_lr .caixa_adicionais button {
 
     font-size: 18px;
     color: var(--cor-azul-escuro1);
@@ -120,13 +120,14 @@
 
 }
 
-.main_registro .caixa_confirmar {
+.main_lr .caixa_confirmar {
 
     width: 100%;
+    margin-top: 69px;
 
 }
 
-.main_registro .caixa_confirmar button {
+.main_lr .caixa_confirmar button {
 
     display: flex;
     align-items: center;
@@ -140,13 +141,34 @@
     font-weight: 700;
     letter-spacing: 1.47px;
     color: var(--cor-branca);
-    margin: 69px auto 0 auto;
+    margin: 0 auto;
     transition: all var(--tempo-transicao-45);
 
 }
 
-.main_registro .caixa_confirmar button:hover {
+.main_lr .caixa_confirmar button:hover {
 
     letter-spacing: 6px; 
+
+}
+
+/* -------- LOGIN -------- */
+
+.main_login .form_inputs {
+
+    display: flex !important;
+    flex-direction: column;
+    max-width: 550px;
+}
+
+.main_login .caixa_confirmar {
+
+    margin-top: 100px;
+
+}
+
+.main_login .form_titulo {
+
+    margin-bottom: 70px;
 
 }
