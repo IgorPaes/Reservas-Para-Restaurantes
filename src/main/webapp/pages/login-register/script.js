@@ -1,3 +1,19 @@
+function submitForm() {
+    if(validaInputs()) {
+        const form = document.getElementById("userForm");
+        form.submit();
+    }
+}
+
+function validaInputs() {
+    let validado = false;
+
+
+
+
+    return validado;
+}
+
 function togglePasswordVisibility(inputId, toggleIcon) {
     var input = document.getElementById(inputId);
     if (input.type === "password") {
@@ -8,6 +24,3 @@ function togglePasswordVisibility(inputId, toggleIcon) {
         toggleIcon.src = "../../assets/olho.png";
     }
 }
-
-
-
