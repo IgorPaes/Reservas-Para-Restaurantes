@@ -17,6 +17,7 @@ function submitForm(element) {
 }
 
 
+
 function verificar(){
         for(let i = 0; i < verificacoes.length; i++){
            if(!verificacoes[i]){
@@ -26,9 +27,15 @@ function verificar(){
 }
 
 function nameValidate (){
+//    const input = event.target;
+//
+//     if (input.value.length >= 5 && event.key !== 'Backspace') {
+//            event.preventDefault();
+//     }
     if(campos[0].value.length < 3 || !nomeRegex.test(campos[0].value)){
         campos[0].style.borderColor = "red";
         console.log("O nome deve ter 3 caracteres");
+
     }else{
         campos[0].style.borderColor = "green";
         console.log("Nome Validado");
@@ -63,7 +70,7 @@ function cpfValidate(){
 }
 
 function telefoneValidate(){
-
+    campos[3].velue = campos[3].value.replace()
     if(telefoneRegex.test(campos[3].value)){
         campos[3].style.borderColor = "green";
         console.log("Telefone Validado");
