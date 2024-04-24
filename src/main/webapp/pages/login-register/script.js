@@ -6,13 +6,14 @@ function submitForm() {
 }
 
 function validaInputs() {
-    let validado = false;
 
+    const form = document.getElementByID('userForm');
+    const campos = document.querySelectorAll('.form_lr');
+    cont spans =
 
-
-
-    return validado;
 }
+
+
 
 function togglePasswordVisibility(inputId, toggleIcon) {
     var input = document.getElementById(inputId);
