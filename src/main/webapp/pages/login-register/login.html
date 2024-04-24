@@ -19,24 +19,22 @@
         <main class="main_lr main_login">
             <header class="form_titulo">
                 <h1>Login</h1>
-                <p>Digite os seus dados de acesso no campo abaixo.</p>
+                <p>Digite os seus dados de acesso nos campos abaixo.</p>
             </header>
             <form class="form_lr" id="userFormLogin" action="/validate-user" method="post">
                 <div class="form_inputs">
                     <div class="grupo_input">
-                        <label for="nome">Nome</label>
-                        <input type="text" name="nome" id="input_nome" placeholder="Digite o seu nome">
+                        <label for="emailInput">E-mail</label>
+                        <input type="text" name="email" id="emailInput" placeholder="Digite o seu email">
                     </div>
-                   
                     <div class="grupo_input">
-                        <label for="senha">Senha</label>
-                        <input type="password" name="senha" id="input_senha" placeholder="Digite a sua senha">
+                        <label for="inputSenha">Senha</label>
+                        <input type="password" name="senha" id="inputSenha" placeholder="Digite a sua senha">
                     </div>
-                    
                 </div>
             </form>
             <div class="caixa_adicionais">
-                <button type="button">Cadastrar agora</button>
+                <button type="button" onclick="location.href='./register.html'">Cadastrar agora</button>
             </div>
             <div class="caixa_confirmar">
                 <button type="button" onclick="submitForm('userFormLogin')">ACESSAR</button>
