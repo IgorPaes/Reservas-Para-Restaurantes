@@ -9,7 +9,7 @@ public class Conexao {
     public static String SERVER = "localhost";
     public static String DATABASE = "sistema_reserva";
     public static String LOGIN = "root";
-    public static String SENHA = "45Pass#DB";
+    public static String SENHA = "P@$$w0rd";
     public static String URL = "jdbc:mysql://" + SERVER + ":3306/" + DATABASE;
     public static Connection CONEXAO;
     public Conexao() {}
@@ -19,7 +19,8 @@ public class Conexao {
             try {
 
                 Class.forName(DRIVER);
-                CONEXAO = DriverManager.getConnection(URL, LOGIN, SENHA);
+                 CONEXAO = DriverManager.getConnection("jdbc:h2:~/test", "sa", "sa");
+                //CONEXAO = DriverManager.getConnection(URL, LOGIN, SENHA);
 
                 if (CONEXAO != null) {
                     STATUS = "Conexão realizada com sucesso!";
