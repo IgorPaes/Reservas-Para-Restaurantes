@@ -21,7 +21,7 @@
                 <h1>Cadastro</h1>
                 <p>Digite os seus dados de acesso no campo abaixo.</p>
             </header>
-            <form class="form_lr" id="userForm" action="/create-user" method="post">
+            <form class="form_lr" id="userFormRegister" action="/create-user" method="post">
                 <div class="form_inputs">
                     <div class="grupo_input">
                         <label for="nome">Nome</label>
@@ -53,7 +53,7 @@
                 <button type="button" onclick="location.href='./login.html'">Fazer login</button>
             </div>
             <div class="caixa_confirmar">
-                <button type="button" onclick="submitForm()">ACESSAR</button>
+                <button type="button" onclick="submitForm('userFormRegister')">CONFIRMAR</button>
             </div>
         </main>
     </div>

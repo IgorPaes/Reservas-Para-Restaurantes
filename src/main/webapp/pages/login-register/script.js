@@ -1,6 +1,6 @@
-function submitForm() {
+function submitForm(element) {
     if(validaInputs()) {
-        const form = document.getElementById("userForm");
+        const form = document.getElementById(element);
         form.submit();
     }
 }

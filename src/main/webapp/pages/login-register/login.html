@@ -21,7 +21,7 @@
                 <h1>Login</h1>
                 <p>Digite os seus dados de acesso no campo abaixo.</p>
             </header>
-            <form class="form_lr" action="">
+            <form class="form_lr" id="userFormLogin" action="/validate-user" method="post">
                 <div class="form_inputs">
                     <div class="grupo_input">
                         <label for="nome">Nome</label>
@@ -39,7 +39,7 @@
                 <button type="button">Cadastrar agora</button>
             </div>
             <div class="caixa_confirmar">
-                <button type="button" onclick="submitForm()">ACESSAR</button>
+                <button type="button" onclick="submitForm('userFormLogin')">ACESSAR</button>
             </div>
         </main>
 
