@@ -10,12 +10,12 @@ public class Conexao {
     public static String DATABASE = "sistema_reserva";
     public static String LOGIN = "root";
     public static String SENHA = "45Pass#DB";
-    public static String URL = "jdbc:mysql://" + SERVER + ":3306/" + DATABASE;
+    public static String URL = "";
     public static Connection CONEXAO;
     public Conexao() {}
     public static Connection abrirConexao() throws ClassNotFoundException,SQLException {
 
-
+        URL = "jdbc:mysql://" + SERVER + ":3306/" +DATABASE + "?useTimezone=true&serverTimezone=UTC&useSSL=false";
         if(CONEXAO==null)
         {
             try {
