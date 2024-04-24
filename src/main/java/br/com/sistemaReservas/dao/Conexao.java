@@ -9,7 +9,7 @@ public class Conexao {
     public static String SERVER = "localhost";
     public static String DATABASE = "sistema_reserva";
     public static String LOGIN = "root";
-    public static String SENHA = "P@$$w0rd";
+    public static String SENHA = "45Pass#DB";
     public static String URL = "jdbc:mysql://" + SERVER + ":3306/" + DATABASE;
     public static Connection CONEXAO;
     public Conexao() {}
