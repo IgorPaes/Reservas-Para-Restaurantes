@@ -3,7 +3,7 @@ const campos = document.querySelectorAll('.form_lr input');
 const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 const nomeRegex = /^[a-zA-Z]{3,}$/;
 const cpfRegex = /^(\d{3})\.(\d{3})\.(\d{3})\-(\d{2})$/
-const telefoneRegex = /^\d{2}\s\d{4,5}-\d{4}$/
+const telefoneRegex = /^\(\d{2}\)\s\d{1}\s\d{4,5}-\d{4}/
 let verificacoes = [false, false, false, false, false, false]
 
 function submitForm(element) {
@@ -27,12 +27,8 @@ function verificar(){
 }
 
 function nameValidate (){
-//    const input = event.target;
-//
-//     if (input.value.length >= 5 && event.key !== 'Backspace') {
-//            event.preventDefault();
-//     }
-    if(campos[0].value.length < 3 || !nomeRegex.test(campos[0].value)){
+
+    if(campos[0].value.length < 3 || campos[0].value.length >= 30 || !nomeRegex.test(campos[0].value)){
         campos[0].style.borderColor = "red";
         console.log("O nome deve ter 3 caracteres");
 
@@ -70,7 +66,8 @@ function cpfValidate(){
 }
 
 function telefoneValidate(){
-    campos[3].velue = campos[3].value.replace()
+    campos[3].value = campos[3].value.replace(/^(\d{2})(\d{1})(\d{4,5})(\d{4})$/, "($1) $2 $3-$4");
+    console.log(telefoneRegex.test(campos[3].value))
     if(telefoneRegex.test(campos[3].value)){
         campos[3].style.borderColor = "green";
         console.log("Telefone Validado");
@@ -85,7 +82,18 @@ function telefoneValidate(){
 function senhaValidate(){
 
     const confirmarSenha = campos[4].value === campos[5].value ? true:false
-    if(confirmarSenha){
+    //&& campos[4].value.length >= 6 && campos[4].value.length <= 20 && campos[5].value.length >= 6 && campos[5].value.length <= 20
+    if (campos[4].value.length <= 6 && campos[4].value.length <= 20 && !confirmarSenha){
+
+        campos[4].style.borderColor = "red";
+
+    }
+    if(campos[5].value.length <= 6 && campos[5].value.length <= 20 && !confirmarSenha){
+
+        campos[5].style.borderColor = "red";
+
+    }
+    if(confirmarSenha ){
         campos[4].style.borderColor = "green";
         campos[5].style.borderColor = "green";
         console.log("Senha Correta")
@@ -93,8 +101,6 @@ function senhaValidate(){
         verificacoes[5] = true;
     }
     else{
-        campos[4].style.borderColor = "red";
-        campos[5].style.borderColor = "red";
         console.log("Senha Incorreta")
     }
     return confirmarSenha;
