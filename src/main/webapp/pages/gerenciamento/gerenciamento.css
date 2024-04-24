@@ -1,13 +1,158 @@
 
+.cabecalho {
+    width: 100%;
+    height: 7.875rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(90deg, rgba(10, 9, 13, 0.34) 0%, rgba(0, 0, 0, 0.00) 100%);
+}
+
 
 .outback {
-    font-family: "Montserrat", sans-serif;
-    font-optical-sizing: auto;
-    font-style: normal;
-    line-height: normal;
-    box-sizing: border-box;
-    font-weight: 400;
-    color: aliceblue;
+    max-width: 236px;
+    margin-left: 60px;
+    
 }
+
+.botoes_nav {
+    display: flex;
+    align-items:center;
+    gap: 35px;
+    position: absolute;
+    width: 767px;
+    height: 24px;
+    left: 582px;
+    top: 51px;
+    
+    
+}
+/*
+ .botao-reservas-pendentes {
+     width: 216px;
+    height: 24px;
+    top: 51px;
+    gap: 0px;
+    opacity: 0px;
+    font-size: 20px;
+    font-weight: 800;
+    line-height: 24.38px; 
+    color: #7F7E82;
+    text-decoration: none;
+    font-family: Montserrat; 
+    margin-right: 20px;
+    position: absolute;
+    width: 1045px;
+    height: 24px;
+    left: 450px;
+    top: 51px; 
+    
+    
+}
+
+.botao-reservas-andamento {
+
+    height: 24px;
+    top: 51px;
+    left: 833px;
+    gap: 0px;
+    opacity: 0px; 
+    font-family: Montserrat;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 24.38px; 
+    color: #FFF;
+    width: 1045px;
+    height: 24px;
+    top: 51px; 
+}
+
+.botao-historico-reservas {
+    width: 220px;
+    height: 24px;
+    top: 51px;
+    left: 1129px;
+    gap: 0px;
+    opacity: 0px; 
+    font-family: Montserrat;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 24.38px; 
+    text-align: left; 
+    color: #BEBEBE;
+    text-decoration: none;
+}
+
+
+.btn_editar > button {
+    height: 24px;
+    top: 308px;
+    left: 1413px;
+    gap: 0px;
+    opacity: 0px;
+    width: 225px;
+    height: 2.625rem;
+    flex-shrink: 0;
+    border-radius: 10px;
+    background: rgba(228, 227, 232, 0.5);
+    margin-top: 40.25rem;
+    color: #FFFFFF;
+    font-family: Montserrat;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-align: center;
+    width: 197px;
+    height: 62px;
+    flex-shrink: 0;
+
+}
+
+.btn_cancelar > button {
+    height: 24px;
+    top: 308px;
+    gap: 0px;
+    opacity: 0px;
+    width: 225px;
+    height: 2.625rem;
+    flex-shrink: 0;
+    border-radius: 10px;
+    background: #FF4646;
+    margin-top: 40.25rem;
+    color: #FFFFFF;
+    font-family: Montserrat;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-align: center;
+    width: 197px;
+    height: 62px;
+    flex-shrink: 0;
+    margin-right: 20px;
+
     
 
+}
+
+.filtros {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.filtros {
+    margin-right: 10px;
+    color: #FFFFFF;
+    position: absolute;
+    width: 956px;
+    height: 34px;
+    left: 115px;
+    top: 206px;
+
+}
+
+
+
+ */
