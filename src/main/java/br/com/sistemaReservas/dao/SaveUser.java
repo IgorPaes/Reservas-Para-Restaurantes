@@ -16,7 +16,7 @@ public class SaveUser {
             Connection connection = DriverManager.getConnection("jdbc:h2:~/test", "sa","sa");
 
             PreparedStatement preparedStatement = connection.prepareStatement(SQL);
-            preparedStatement.setString(1, user.getNoma());
+            preparedStatement.setString(1, user.getNome());
             preparedStatement.execute();
 
             connection.close();

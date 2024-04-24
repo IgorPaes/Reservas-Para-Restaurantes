@@ -21,7 +21,6 @@
     left: 50%;
     transform: translate(-50%, -50%);
     width: 100%;
-    max-width: 1235px;
     padding: 45px 50px 20px 50px;
     background-color: var(--cor-branca);
     border-radius: 15px;
@@ -151,7 +150,21 @@
 
 }
 
+/* -------- REGISTER -------- */
+
+.main_register {
+
+   max-width: 1235px;
+
+}
+
 /* -------- LOGIN -------- */
+
+.main_login {
+
+    max-width: 650px;
+
+}
 
 .main_login .form_inputs {
 

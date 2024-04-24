@@ -2,24 +2,19 @@ package br.com.sistemaReservas.model;
 
 public class User {
 
-    private String noma, email, cpf, telefone, senha;
+    private String nome, email, cpf, telefone, senha;
 
-    public User(String noma, String email, String cpf, String telefone, String senha) {
-        this.noma = noma;
+    public User(String nome, String email, String cpf, String telefone, String senha) {
+        this.nome = nome;
         this.email = email;
         this.cpf = cpf;
         this.telefone = telefone;
         this.senha = senha;
     }
 
+    public String getNome() { return nome; }
 
-    public String getNoma() {
-        return noma;
-    }
-
-    public void setNoma(String noma) {
-        this.noma = noma;
-    }
+    public void setNome(String nome) { this.nome = nome; }
 
     public String getEmail() {
         return email;
