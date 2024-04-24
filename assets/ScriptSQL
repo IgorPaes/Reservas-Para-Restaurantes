@@ -2,8 +2,6 @@
 
 CREATE DATABASE IF NOT EXISTS sistema_reserva;
 
-// Criando Tabela de Cadastro
-
 CREATE TABLE IF NOT EXISTS Clientes (
  Id int auto_increment primary key,
  Nome varchar(30),

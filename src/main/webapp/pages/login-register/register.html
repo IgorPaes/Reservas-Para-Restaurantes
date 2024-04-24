@@ -19,11 +19,12 @@
         <main class="main_lr main_register">
             <header class="form_titulo">
                 <h1>Cadastro</h1>
-                <p>Digite os seus dados de acesso no campo abaixo.</p>
+                <p>Digite os seus dados de registro nos campos abaixo.</p>
             </header>
             <form class="form_lr" id="userFormRegister" action="/create-user" method="post">
                 <div class="form_inputs">
                     <div class="grupo_input">
+<<<<<<< HEAD
                         <label for="nome">Nome</label>
                         <input type="text" name="nome" id="input_nome" placeholder="Digite o seu nome" oninput="nameValidate()">
                     </div>
@@ -46,6 +47,30 @@
                     <div class="grupo_input">
                         <label for="confirmarSenha">Confirmar Senha</label>
                         <input type="password" name="confirmarSenha" id="input_confirmarSenha" placeholder="Digite a sua senha novamente" oninput="senhaValidate()">
+=======
+                        <label for="inputNome">Nome</label>
+                        <input type="text" name="nome" id="inputNome" placeholder="Digite o seu nome">
+                    </div>
+                    <div class="grupo_input">
+                        <label for="inputEmail">E-mail</label>
+                        <input type="email" name="email" id="inputEmail" placeholder="Digite o seu e-mail">
+                    </div>
+                    <div class="grupo_input">
+                        <label for="inputCPF">CPF</label>
+                        <input type="text" name="cpf" id="inputCPF" placeholder="Digite o seu cpf">
+                    </div>
+                    <div class="grupo_input">
+                        <label for="inputTelefone">Telefone</label>
+                        <input type="tel" name="telefone" id="inputTelefone" placeholder="Digite o seu telefone">
+                    </div>
+                    <div class="grupo_input">
+                        <label for="inputSenha">Senha</label>
+                        <input type="password" name="senha" id="inputSenha" placeholder="Digite a sua senha">
+                    </div>
+                    <div class="grupo_input">
+                        <label for="inputConfirmarSenha">Confirmar Senha</label>
+                        <input type="password" name="confirmarSenha" id="inputConfirmarSenha" placeholder="Digite a sua senha novamente">
+>>>>>>> 0f98c348c1f8579c907738e83991f18f3f835eef
                     </div>
                 </div>
             </form>
