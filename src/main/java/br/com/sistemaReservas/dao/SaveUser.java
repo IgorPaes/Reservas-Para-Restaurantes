@@ -1,7 +1,7 @@
 package br.com.sistemaReservas.dao;
 
 import br.com.sistemaReservas.model.User;
-import jdk.jpackage.internal.Log;
+
 import java.util.logging.Logger;
 import java.util.logging.Level;
 import java.sql.Connection;

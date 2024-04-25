@@ -28,7 +28,7 @@ function verificar(){
 
 function nameValidate (){
 
-    if(campos[0].value.length < 3 || campos[0].value.length >= 30 || !nomeRegex.test(campos[0].value)){
+    if(campos[0].value.length < 3 || campos[0].value.length >= 30 ){
         campos[0].style.borderColor = "red";
         console.log("O nome deve ter 3 caracteres");
 
@@ -52,14 +52,19 @@ function emailValidate(){
     }
 }
 
-function cpfValidate(){
-    campos[2].value = campos[2].value.replace(/^(\d{3})(\d{3})(\d{3})(\d{2})$/, "$1.$2.$3-$4");
-    if(cpfRegex.test(campos[2].value)){
+function cpfValidate() {
+    let cpfValue = campos[2].value.replace(/\D/g, '');
+
+    if (cpfValue.length <= 11) {
+        cpfValue = cpfValue.replace(/^(\d{3})(\d{3})(\d{3})(\d{0,2})$/, "$1.$2.$3-$4");
+        campos[2].value = cpfValue;
+    }
+
+    if (cpfRegex.test(cpfValue) && cpfValue.length === 14) {
         campos[2].style.borderColor = "green";
         console.log("CPF Validado");
         verificacoes[2] = true;
-
-    }else{
+    } else {
         campos[2].style.borderColor = "red";
         console.log("CPF Não Validado");
     }
