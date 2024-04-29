@@ -84,7 +84,7 @@ function telefoneValidate() {
         verificacoes[3] = true;
     } else {
         campos[3].style.borderColor = "red";
-        console.log("Telefone Não Validado");
+        console.log("Telefone Não Validadoo");
     }
 }
 
