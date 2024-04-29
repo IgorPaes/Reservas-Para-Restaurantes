@@ -70,15 +70,19 @@ function cpfValidate() {
     }
 }
 
-function telefoneValidate(){
-    campos[3].value = campos[3].value.replace(/^(\d{2})(\d{1})(\d{4,5})(\d{4})$/, "($1) $2 $3-$4");
-    console.log(telefoneRegex.test(campos[3].value))
-    if(telefoneRegex.test(campos[3].value)){
+function telefoneValidate() {
+    let telefoneValue = campos[3].value.replace(/\D/g, ''); // Remove todos os caracteres não numéricos
+
+    telefoneValue = telefoneValue.replace(/^(\d{2})(\d{4})(\d{4})$/, "($1)$2-$3");
+    telefoneValue = telefoneValue.slice(0, 14);
+
+    campos[3].value = telefoneValue;
+
+    if (/^\(\d{2}\)\d{4}-\d{4}$/.test(telefoneValue) && telefoneValue.length === 14) {
         campos[3].style.borderColor = "green";
         console.log("Telefone Validado");
         verificacoes[3] = true;
-
-    }else{
+    } else {
         campos[3].style.borderColor = "red";
         console.log("Telefone Não Validado");
     }
