@@ -24,29 +24,33 @@ function verificar() {
 }
 
 function nameValidate() {
+    let nomeValue = campos[0].value;
+    nomeValue = nomeValue.replace(/[^a-zA-Z]+/g, '');
 
-    if (campos[0].value.length < 3 || campos[0].value.length >= 30) {
+    campos[0].value = nomeValue;
+
+    if (nomeValue.length < 3 || nomeValue.length >= 30) {
         campos[0].style.borderColor = "red";
-        console.log("O nome deve ter 3 caracteres");
-
     } else {
         campos[0].style.borderColor = "green";
-        console.log("Nome Validado");
         verificacoes[0] = true;
     }
 }
 
+
 function emailValidate() {
-    if (emailRegex.test(campos[1].value)) {
-        campos[1].style.borderColor = "green";
+    let emailValue = document.getElementById('input_email').value;
+
+    if (emailRegex.test(emailValue)) {
+        document.getElementById('input_email').style.borderColor = "green";
         console.log("E-mail Validado");
         verificacoes[1] = true;
-
     } else {
-        campos[1].style.borderColor = "red";
+        document.getElementById('input_email').style.borderColor = "red";
         console.log("E-mail Não Validado");
     }
 }
+
 
 function cpfValidate() {
     let cpfValue = campos[2].value.replace(/\D/g, '');
@@ -78,28 +82,38 @@ function telefoneValidate() {
 }
 
 function senhaValidate() {
+    const senhaInput = document.getElementById('input_senha').value;
+    const confirmarSenhaInput = document.getElementById('input_confirmarSenha').value;
 
-    const confirmarSenha = campos[4].value === campos[5].value ? true : false
-    //&& campos[4].value.length >= 6 && campos[4].value.length <= 20 && campos[5].value.length >= 6 && campos[5].value.length <= 20
-    if (campos[4].value.length <= 6 && campos[4].value.length <= 20 && !confirmarSenha) {
-        campos[4].style.borderColor = "red";
+    const confirmarSenha = senhaInput === confirmarSenhaInput;
 
-    }
-    if (campos[5].value.length <= 6 && campos[5].value.length <= 20 && !confirmarSenha) {
-        campos[5].style.borderColor = "red";
-
-    }
-    if (confirmarSenha) {
-        campos[4].style.borderColor = "green";
-        campos[5].style.borderColor = "green";
-        console.log("Senha Correta")
+    if (senhaInput.length < 6 || senhaInput.length > 20 || !confirmarSenha) {
+        document.getElementById('input_senha').style.borderColor = "red";
+        document.getElementById('input_confirmarSenha').style.borderColor = "red";
+    } else {
+        document.getElementById('input_senha').style.borderColor = "green";
+        document.getElementById('input_confirmarSenha').style.borderColor = "green";
         verificacoes[4] = true;
         verificacoes[5] = true;
-    } else {
-        console.log("Senha Incorreta")
     }
+
     return confirmarSenha;
 }
+
+function senhaValidateLogin() {
+    const senhaInput = document.getElementById('input_senha').value;
+
+    if (senhaInput.length < 6 || senhaInput.length > 20) {
+        document.getElementById('input_senha').style.borderColor = "red";
+    } else {
+        document.getElementById('input_senha').style.borderColor = "green";
+        verificacoes[4] = true;
+
+    }
+
+    return confirmarSenha;
+}
+
 
 function botaoVerificar() {
     return !verificacoes.includes(false);
