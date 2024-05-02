@@ -27,7 +27,7 @@
                     <h1>FAÇA SUA RESERVA</h1>
                 </div>
                 <div class="section">
-                    <h2>INFORMAÇÕES DO RESPONSÁVEL</h2>
+                    <h2 class="title">INFORMAÇÕES DO RESPONSÁVEL</h2>
                     <div class="line">
                     </div>
                     <div class="form_inputs">
@@ -49,25 +49,49 @@
                         </div>
                     </div>
                 </div>
-                <div class="section">
-                    <h2>INFORMAÇÕES DA RESERVA</h2>
-                    <div class="line">
 
+                <div class="title_container">
+                    <h2 class="title">INFORMAÇÕES DA RESERVA</h2>
+                    <div class="line"></div>
+                </div>    
+
+                <div class="section_info_reserva">
+                    
+                    <div class="input-group">
+                        <label for="datas">Datas</label>
+                        <input type="date" id="datas" name="data">
                     </div>
-                    <label for="datas">DATAS</label>
-                    <input type="date" name="data">
-                    <label for="horarios">HORÁRIOS</label>
-                    <input type="time" name="horario">
-                    <label for="n_pessoas">Nº DE PESSOAS</label>
-                    <select name="n_pessoas">
-                    </select>
-                    <textarea name="comentario" placeholder="Comentário"></textarea>
-
-
-                    <div class="buttons">
-                        <button type="reset">CANCELAR</button>
-                        <button type="submit">CONFIRMAR RESERVA</button>
+                    <div class="input-group">
+                        <label for="horarios">Horários</label>
+                        <input type="time" id="horarios" name="horario">
                     </div>
+                    <div class="input-group">
+                        <label for="n_pessoas">Qtd de Pessoas</label>
+                        <select name="n_pessoas">
+                            <option></option>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                            <option>6</option>
+                            <option>7</option>
+                            <option>8</option>
+                            <option>9</option>
+                            <option>10</option>
+                        </select>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="comentario">Comentário</label>
+                        <textarea name="comentario" id="comentario" placeholder="Comentário"></textarea>
+                    </div>
+                    
+                </div>
+
+                <div class="buttons">
+                    <button type="reset">CANCELAR</button>
+                    <button type="submit">CONFIRMAR RESERVA</button>
                 </div>
             </form>
 
