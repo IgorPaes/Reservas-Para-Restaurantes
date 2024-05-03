@@ -43,7 +43,7 @@ function verificar() {
 
 function nameValidate() {
     let nomeValue = campos[0].value;
-    nomeValue = nomeValue.replace(/[^a-zA-Z]+/g, '');
+    nomeValue = nomeValue.replace(/[^a-zA-Z\s]+/g, '');
 
     campos[0].value = nomeValue;
 

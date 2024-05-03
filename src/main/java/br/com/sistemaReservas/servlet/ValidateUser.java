@@ -18,7 +18,6 @@ public class ValidateUser extends HttpServlet {
         String userEmail = request.getParameter("email");
         String userSenha = request.getParameter("senha");
 
-
         CheckUser checkUser = new CheckUser();
         checkUser.validate(userEmail,userSenha);
         
