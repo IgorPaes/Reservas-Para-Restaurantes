@@ -4,21 +4,39 @@ const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 const nomeRegex = /^[a-zA-Z]{3,}$/;
 const cpfRegex = /^(\d{3})\.(\d{3})\.(\d{3})\-(\d{2})$/
 const telefoneRegex = /^(\d{2})(\d{5})(\d{4})$/
-let verificacoes = [false, false, false, false, false, false]
+let verificacoes = []
 
 function submitForm(element) {
+    /*console.log("Element recebido:", element); // Imprime o valor de element no console
+
+
+
+     Cria um objeto para armazenar os valores do formulário
+    const formData = {};
+
+    Itera sobre os elementos do formulário e armazena os valores no objeto formData
+    for (const input of form.elements) {
+        if (input.name) {
+            formData[input.name] = input.value;
+        }
+    }
+
+    Imprime os valores do formulário no console
+    console.log("Valores do formulário:", formData);*/
+
     if (botaoVerificar()) {
+     //Obtém o formulário pelo ID
         const form = document.getElementById(element);
         form.submit();
     } else {
-        verificar()
+        verificar();
     }
 }
 
 function verificar() {
     for (let i = 0; i < verificacoes.length; i++) {
-        if (!verificacoes[i]) {
-            campos[i].style.borderColor = "red"
+        if (!verificacoes[i]) { // Não altera a borda do campo de e-mail se a verificação falhar
+            campos[i].style.borderColor = "red";
         }
     }
 }
@@ -33,7 +51,7 @@ function nameValidate() {
         campos[0].style.borderColor = "red";
     } else {
         campos[0].style.borderColor = "green";
-        verificacoes[0] = true;
+        verificacoes.push(true);
     }
 }
 
@@ -41,15 +59,30 @@ function nameValidate() {
 function emailValidate() {
     let emailValue = document.getElementById('input_email').value;
 
+    console.log(emailValue);
     if (emailRegex.test(emailValue)) {
         document.getElementById('input_email').style.borderColor = "green";
         console.log("E-mail Validado");
-        verificacoes[1] = true;
+        verificacoes.push(true);
     } else {
         document.getElementById('input_email').style.borderColor = "red";
         console.log("E-mail Não Validado");
     }
 }
+
+function emailValidateLogin() {
+    let emailValue = document.getElementById('input_email').value;
+
+        console.log(emailValue);
+        if (emailRegex.test(emailValue)) {
+            document.getElementById('input_email').style.borderColor = "green";
+            console.log("E-mail Validado");
+            verificacoes.push(true);
+        } else {
+            document.getElementById('input_email').style.borderColor = "red";
+            console.log("E-mail Não Validado");
+        }
+    }
 
 
 function cpfValidate() {
@@ -61,7 +94,7 @@ function cpfValidate() {
     }
     if (cpfRegex.test(cpfValue) && cpfValue.length === 14) {
         campos[2].style.borderColor = "green";
-        verificacoes[2] = true;
+        verificacoes.push(true) = true;
     } else {
         campos[2].style.borderColor = "red";
     }
@@ -75,7 +108,7 @@ function telefoneValidate() {
 
     if (telefoneFormatado === campos[3].value && telefoneValue.length === 11) {
         campos[3].style.borderColor = "green";
-        verificacoes[3] = true;
+        verificacoes.push(true);
     } else {
         campos[3].style.borderColor = "red";
     }
@@ -93,8 +126,7 @@ function senhaValidate() {
     } else {
         document.getElementById('input_senha').style.borderColor = "green";
         document.getElementById('input_confirmarSenha').style.borderColor = "green";
-        verificacoes[4] = true;
-        verificacoes[5] = true;
+        verificacoes.push(true)
     }
 
     return confirmarSenha;
@@ -107,11 +139,8 @@ function senhaValidateLogin() {
         document.getElementById('input_senha').style.borderColor = "red";
     } else {
         document.getElementById('input_senha').style.borderColor = "green";
-        verificacoes[4] = true;
-
+        verificacoes.push(true)
     }
-
-    return confirmarSenha;
 }
 
 

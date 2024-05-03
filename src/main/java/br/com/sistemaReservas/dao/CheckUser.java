@@ -17,7 +17,7 @@ public class CheckUser {
         ResultSet resultSet = null;
         try {
             connection = Conexao.abrirConexao();
-            comandoSQL = connection.prepareStatement("SELECT * FROM Clientes WHERE email = ? AND senha = ?",
+            comandoSQL = connection.prepareStatement("SELECT email,senha FROM Clientes WHERE email = ? AND senha = ?",
                     PreparedStatement.RETURN_GENERATED_KEYS);
 
             comandoSQL.setString(1, email);
