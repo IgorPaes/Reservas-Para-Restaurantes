@@ -69,31 +69,21 @@
     margin: 0 auto 20px; 
 }
 
-
-
 .section_info_reserva {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
-    padding: 20px;
+    padding: 8px;
     border-radius: 8px;
-    margin-bottom: 5px;
-
     justify-content: center;
 }
 
-.input-group {
+.input_group{
     display: flex;
     flex-direction: column;
 }
 
-.input-groups {
-    display: flex;
-    flex-direction: column;
-}
-
-
-.input-group label {
+.input_group label {
     margin-bottom: 5px;
     font-size: 18px;
     font-weight: 600;
@@ -103,9 +93,9 @@
 
 }
 
-.input-group input,
-.input-group select,
-.input-group textarea {
+.input_group input,
+.input_group select,
+.input_group textarea {
     width: 232px;
     height: 52px;
     padding: 8px;
@@ -144,7 +134,7 @@
 
 .input_group {
     display: flex;
-    justify-content: space-between;
+    justify-content:space-between;
     margin-bottom: 20px;
  
 }
@@ -163,6 +153,7 @@
     row-gap: 25px;
 
 }
+
 .form_container .form_reserve .grupo_input {
     display: flex;
     flex-direction: column;
@@ -178,7 +169,6 @@
     border-radius: 8px;
     font-size: 23px;
     color: rgba(15, 13, 23, .85);
-
 }
 
 .buttons {
@@ -188,6 +178,7 @@
     flex-direction: row; 
     gap: 10px;
 }
+
 .buttons button {
     padding: 10px 20px;
     border-radius: 5px;
@@ -196,8 +187,6 @@
     font-weight: bold;
     cursor: pointer;
 }
-
-
 
 .buttons button[type="reset"] {
     background-color: #f00;

@@ -4,21 +4,24 @@ import br.com.sistemaReservas.dao.CheckUser;
 import br.com.sistemaReservas.model.User;
 
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-public class ValidateUser {
+@WebServlet("/validate-user")
+public class ValidateUser extends HttpServlet {
 
     protected void doPost(HttpServletRequest request, HttpServletResponse resp) throws ServletException, IOException {
 
-        String userName = request.getParameter("nome");
         String userEmail = request.getParameter("email");
+        String userSenha = request.getParameter("senha");
 
         CheckUser checkUser = new CheckUser();
-        checkUser.validate(userName, userEmail);
+        checkUser.validate(userEmail,userSenha);
         
-//      request.getRequestDispatcher("index.html").forward(request, resp);
+      request.getRequestDispatcher("index.html").forward(request, resp);
 
     }
 

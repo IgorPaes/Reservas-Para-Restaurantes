@@ -1,0 +1,60 @@
+
+.cabecalho {
+    width: 100%;
+    height: 7.875rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--cor-azul-escuro1);
+}
+
+
+.botoes_nav {
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    gap: 35px;
+}
+
+.botoes_nav a{ 
+    font-size: 20px;
+    font-weight: 700;
+    color: #BEBEBE; 
+    text-decoration: none;
+}
+
+.botao_ativo{
+    color: #FFF !important;
+    font-size: 20px;
+    font-weight: 800;
+}
+
+.bloco_usuario{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.bloco_usuario span {
+    color: #FFF;
+    font-size: 20px;
+    font-weight: 600;    
+}
+    
+.icone_usuario {
+    background-color: #8A8A8A;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.filtros {
+    color: #FFF;
+    font-family: Montserrat;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    gap: 80px;
+    
+}
