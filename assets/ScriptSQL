@@ -11,3 +11,14 @@ CREATE TABLE IF NOT EXISTS Clientes (
  Senha varchar(50)
 );
 
+CREATE TABLE IF NOT EXISTS Reservas (
+    Id int auto_increment primary key,
+    ClienteId int,
+    FOREIGN KEY (ClienteId) REFERENCES Clientes(Id),
+    Datas date,
+    Horarios time(6),
+    QtdPessoas int,
+    Informacoes varchar(50)
+);
+
+
