@@ -25,7 +25,7 @@ public class CreateUser extends HttpServlet {
         SaveUser saveUser = new SaveUser();
         saveUser.save(new User(userName, userEmail, userCpf, userTelefone, userSenha));
 
-       request.getRequestDispatcher("pages/reservas/reservas.html").forward(request, resp);
+       request.getRequestDispatcher("/pages/login-register/login.html").forward(request, resp);
         //.forward(request, resp)
 
     }
