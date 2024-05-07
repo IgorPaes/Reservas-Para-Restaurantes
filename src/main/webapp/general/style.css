@@ -25,6 +25,7 @@ body {
     height: 100vh;
     margin: 0;
     background: var(--cor-gradient-azul-escura) !important; 
+    color: var(--cor-branca);
 
 }
 

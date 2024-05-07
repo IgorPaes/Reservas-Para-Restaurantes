@@ -77,7 +77,7 @@ button {
     margin-top: 5.25rem;
     text-align: center;
     font-size: 1.25rem;
-    color: var(--cor-principal);
+    color: var(--cor-azul-escuro2);
     width: 15.8125rem;
     height: 3.3125rem;
     border-radius: 62.5rem;
@@ -99,136 +99,251 @@ button {
     width: 100%;
     position: relative;
     bottom: -2.5rem;
-    
-
-
 }
 
 .opcoes_restaurante{
-    width: 120rem;
-    height: 85.75rem;
     background: var(--cor-branca);
-    
 }
 
 .tela_resturantes{
-
+    padding-top: 7.88rem;
     background-color: var(--cor-branca);
     width: 100%;
-    height: 85.75rem;
+    padding: 7.88rem 5.37rem 3.76rem 5.37rem;
 }
 
 .bloco_navegacao{
-
     display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+    
     
 }
 
-.bloco_mais_populares{
-    
-    margin-right: 57.62rem;
-    margin-top: 7.94rem;
-    margin-left: 5.38rem;
-    width: 16.25rem;
-    height: 3.25rem;
-    border-radius: 0.625rem;
-    background-color: var(--cor-azul-escuro2);
-    
-}
-
-.inputs > h2 {
-    
-    margin-left: 1.88rem;
-    margin-top: 0.87rem;
-    color: var(--cor-branca);
-    display: inline-block;
-
-    
-    
-
-}
-
-
-.inputs > .mais_populares[type="checkbox"]  {
-    
-    width: 50px;
-    height: 50px;
-    border-top-width: 2px;
-    border-right-width: 4px;
-    border-bottom-width: 2px;
-    border-left-width: 20px;
-    border-style:solid;
-    border-radius: 5px;
-    border-color: var(--cor-branca);
-    margin-left: 50px;
-    
-}
-
-.inputs > .mais_populares[type="checkbox" ]:checked {
-    
-    background-color: var(--cor-gradient-azul-escura); 
-    border-color: var(--cor-gradient-azul-escura); 
-}
-
-.bloco_navegaca > .bloco_pesquisa{
-    
-
-}
-
-
-.encontrar_restaurante > .input_encontre_seu_restaurante{
-    position: absolute;
-    padding-left: 1.56rem;
-    margin-top: 7.88rem;
-    margin-right: 5.54rem;
+.bloco_pesquisa{
+    display: flex;
+    justify-content: space-between;
     width: 35.3125rem;
     height: 3.3125rem;
-    border-style:solid;
     border-radius: 0.5rem;
-    border-color: var(--cor-azul-escuro2);
+    border: 4px solid var(--cor-azul-escuro2);
     
-   
+
 }
 
-.encontrar_restaurante > .button_encontrar{
+.bloco_pesquisa input{
+    width: 100%;
+    padding-right: 10px;
+    margin-left: 1.56rem;
     align-items: center;
-    margin-top: 8.70rem;
-    margin-left: 32.69rem;
-    margin-right: 1rem;
-    width: 1.875rem;
-    height: 1.8125rem;
-    background-color: var(--cor-azul-escuro2);
-    border-radius: 0.31rem;
-    
-
+    color: var(--cor-azul-escuro2);
 
 }
+
+.bloco_pesquisa button{
+    display: flex;
+    justify-content:center;
+    width: 1.875rem;
+    height: 1.8125rem; 
+    margin-top: 0.5rem;
+    margin-right: 0.75rem;
+    background-color: var(--cor-azul-escuro2);
+    border-radius: 3px;
+    cursor: pointer;
+    align-items: center;
+}
+
 
 .restaurante{
 
     display: flex;
+    
+    
 }
 
-.restaurante > .bloco_restaurante_um{
-
+.lista_restaurantes{
     
-    width: 120rem;
-    height: 72.0625rem;
-
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(30rem,1fr)); 
+    grid-auto-rows: 33.375rem;
+    grid-gap: 1.44rem;
+    margin-top: 2.5rem; 
+    position: relative;
+    
 
 }
 
 .bloco_conteudo{
+    display: flex;
+    align-items:flex-end;
+    width: 100%;
+    height: 100%;
+    background-image: url('/src/main/webapp/assets/imagem_restaurante_outback.png');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.bloco_informacao {
     
-    margin-left: 5.38rem;
-    margin-top: 2.5rem;
-    width: 35.375rem;
-    height: 33.375rem;
-    border-radius: 1.5625rem;
-    background-color: var(--cor-azul-escuro2);
+    width: 100%;
+    height: 15.6795rem;
+    background-color: rgba(18, 16, 24, 0.85);;
+    border-radius: 25px;
+    
 
 }
 
+.topo{
+    display: flex;
+    justify-content: space-between;
+}
+
+.topo h3{
+    
+    margin-left: 31px;
+    margin-top: 31px;
+    margin-bottom: 10px;
+    font-size: 45px;
+    color: #FFF;
+    font-size: 45px;
+    font-weight: 900;
+    letter-spacing: 3px;
+    
+}
+
+.topo svg {
+    margin-left: 46px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    margin-right: 30px;
+}
+
+.bloco_inf{
+    display: flex;
+    justify-content: space-between;
+}
+
+.bloco_inf svg{
+    margin-left: 31px;
+    margin-bottom: 12px;
+}
+
+.bloco_inf span{
+    margin-bottom: 10px;
+    margin-right: 100px;
+
+}
+
+.tefone {
+    display: flex;
+    justify-content: space-between;
+}
+
+.tefone svg{
+    margin-left: 31px;
+    margin-bottom: 20px;
+}
+
+.tefone span{
+    margin-bottom: 0px;
+    margin-right: 362px;
+
+}
+
+.bloco_abaixo{
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    margin-top: 15px;
+    margin-left: 31px;
+}
+
+.Aberto{ 
+    color: greenyellow;
+    margin-right: 8px;
+}
+
+.horario span{
+    color: rgba(255, 255, 255, 0.50);
+}
+.horario svg{
+    margin-bottom: 2px;
+    margin-right: 100px;
+}
+
+.reservar{
+    display: flex;
+    position: absolute;
+    
+}
+.reservar button{
+    
+    margin-left: 300px;
+    margin-top: -20px;
+    width: 202.399px;
+    height: 51.966px;
+    border-radius: 15px;
+    color: var(--cor-azul-escuro2);
+    font-size: 17px;
+    font-weight: 800;
+    text-align: center;
+    background-color: var(--cor-branca);
+    cursor: pointer;
+}
+
+.chekbox_filtro{
+    display: flex;
+    align-items: center;
+    gap: 1.75rem;
+    padding: .95rem 1.62rem .95rem 1.87rem;
+    background-color: var(--cor-azul-escuro2);
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.chekbox_filtro input{
+    width: 22px;
+    height: 22px;
+    background-color: var(--cor-branca);
+    border-radius: 5px;
+}
+
+.chekbox_filtro span{
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+
+#checkbox {
+    display: none;
+}
+
+.custom-checkbox {
+    background-color: var(--cor-branca);
+    width: 20px; 
+    height: 20px; 
+    display: inline-block; 
+    border-radius: 5px;
+    
+    
+}
+
+/* Define a imagem para quando o checkbox estiver marcado */
+#checkbox:checked + .custom-checkbox {
+    background-image: url('/src/main/webapp/assets/chek.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 0.3px 2px;
+}
+
+.clientes{
+    display: flex;
+    margin-bottom: 61px;
+    width: 100%;
+    height: 490px;
+    background-color: var(--cor-gradient-azul-escura);
+
+}
 
 
 
