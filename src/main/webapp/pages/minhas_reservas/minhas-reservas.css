@@ -24,7 +24,7 @@
 }
 
 .botao_ativo{
-    color: #FFF !important;
+    color: var(--cor-branca) !important;
     font-size: 20px;
     font-weight: 800;
 }
@@ -36,7 +36,7 @@
 }
 
 .bloco_usuario span {
-    color: #FFF;
+    color: var(--cor-branca) !important;
     font-size: 20px;
     font-weight: 600;    
 }
@@ -48,13 +48,41 @@
     border-radius: 50%;
 }
 
-.filtros {
-    color: #FFF;
-    font-family: Montserrat;
-    font-size: 25px;
-    font-style: normal;
+.tabela_minhas_reservas{
+    display: flex;
+    margin-top: 70px;
+    color: var(--cor-branca) !important;
+    font-size: 20px;
+    font-weight: 600; 
+}
+
+.tabela_minhas_reservas th {
+    padding-right: 60px; 
+    padding-left: 70px;
+}
+
+.tabela_historico_reserva {
+    display: flex;
+    margin-top: 70px;
+    justify-content: center;
+
+    color: var(--cor-branca) !important;
+    font-size: 20px;
     font-weight: 600;
-    line-height: normal;
-    gap: 80px;
     
 }
+
+.tabela_historico_reserva th {
+    padding-right: 60px; 
+    padding-left: 70px;
+
+}
+
+.arrow {
+    height: 20px;
+    width: 20px;
+    vertical-align: middle;
+    margin-left: 4px;
+}
+
+

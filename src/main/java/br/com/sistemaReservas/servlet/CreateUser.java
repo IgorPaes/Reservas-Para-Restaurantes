@@ -23,11 +23,20 @@ public class CreateUser extends HttpServlet {
         String userSenha = request.getParameter("senha");
 
         SaveUser saveUser = new SaveUser();
-        saveUser.save(new User(userName, userEmail, userCpf, userTelefone, userSenha));
 
-       request.getRequestDispatcher("pages/reservas/reservas.html").forward(request, resp);
-        //.forward(request, resp)
+        try {
+            saveUser.save(new User(userName, userEmail, userCpf, userTelefone, userSenha));
+            request.getRequestDispatcher("/pages/login-register/login.html").forward(request, resp);
+        } catch (SaveUser.EmailAlreadyInUseException e) {
 
+            // System.out.println("Teste"); usei para ver se estava saindo aqui pela exception
+
+            // usado para mandar um alerta e voltar para tela de registro novamente
+            resp.getWriter().println("<script>alert('Email já está em uso. Por favor, tente outro email.'); window.location.href='/pages/login-register/register.html';</script>");
+
+            // request.getRequestDispatcher("/pages/login-register/register.html").forward(request, resp);
+
+        }
     }
 
 }
