@@ -27,7 +27,6 @@ public class ValidateUser extends HttpServlet {
         boolean isValid = checkUser.validate(userEmail,userSenha);
 
         if(isValid){
-
             Cookie cookie = new Cookie("isValid", "true");
             cookie.setMaxAge(3600);
             resp.addCookie(cookie);

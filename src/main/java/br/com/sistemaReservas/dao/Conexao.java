@@ -12,7 +12,7 @@ public class Conexao {
    //public static String SENHA = "P@$$w0rd";
     //senha andre
    //public static String SENHA = "210215";
-    public static String SENHA = "Lucas1309";
+    public static String SENHA = "1309";
     public static String URL = "jdbc:mysql://" + SERVER + ":3306/" + DATABASE;
     public static Connection CONEXAO;
     public Conexao() {}
