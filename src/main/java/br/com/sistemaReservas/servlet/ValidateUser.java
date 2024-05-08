@@ -6,6 +6,7 @@ import com.mysql.cj.conf.PropertyDefinitions;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -26,6 +27,10 @@ public class ValidateUser extends HttpServlet {
         boolean isValid = checkUser.validate(userEmail,userSenha);
 
         if(isValid){
+
+            Cookie cookie = new Cookie("isValid", "true");
+            cookie.setMaxAge(3600);
+            resp.addCookie(cookie);
             request.getRequestDispatcher("index.html").forward(request, resp);
         }else{
             // request.setAttribute("errorMessage","Credenciais invalidas. Tente novamente.");
@@ -38,5 +43,6 @@ public class ValidateUser extends HttpServlet {
       //request.getRequestDispatcher("index.html").forward(request, resp);
 
     }
+
 
 }
