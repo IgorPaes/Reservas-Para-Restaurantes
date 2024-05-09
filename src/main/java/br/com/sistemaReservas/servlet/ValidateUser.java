@@ -25,10 +25,9 @@ public class ValidateUser extends HttpServlet {
         //System.out.println("SELECT email, senha FROM Clientes WHERE email = '" + userEmail + "' AND senha = '" + userSenha + "'");
 
         boolean isValid = checkUser.validate(userEmail,userSenha);
-
         if(isValid){
-            Cookie cookie = new Cookie("isValid", "true");
-            cookie.setMaxAge(3600);
+            Cookie cookie = new Cookie("user", "true");
+            cookie.setMaxAge(30600);
             resp.addCookie(cookie);
             request.getRequestDispatcher("index.html").forward(request, resp);
         }else{

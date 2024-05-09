@@ -18,7 +18,7 @@ CREATE TABLE IF NOT EXISTS Reservas (
     Datas date,
     Horarios time(6),
     QtdPessoas int,
-    Informacoes varchar(50)
+    comentarios varchar(500)
 );
 
 

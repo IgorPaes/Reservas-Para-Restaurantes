@@ -71,9 +71,8 @@ function emailValidate() {
 }
 
 function emailValidateLogin() {
-    let emailValue = document.getElementById('input_email').value;
+        let emailValue = document.querySelector('#input_email');
 
-        console.log(emailValue);
         if (emailRegex.test(emailValue)) {
             document.getElementById('input_email').style.borderColor = "green";
             console.log("E-mail Validado");
