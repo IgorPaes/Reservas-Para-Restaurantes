@@ -13,6 +13,8 @@ import java.sql.ResultSet;
 public class CheckUser {
     public static Connection connection = null;
     public boolean validate(String email, String senha) {
+        System.out.println(email);
+        System.out.println(senha);
         PreparedStatement comandoSQL = null;
         ResultSet resultSet = null;
         try {
@@ -25,6 +27,7 @@ public class CheckUser {
 
             //Executando comando
             resultSet = comandoSQL.executeQuery();
+
             return resultSet.next();
 
         } catch (ClassNotFoundException ex) {

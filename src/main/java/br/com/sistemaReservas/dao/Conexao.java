@@ -11,7 +11,8 @@ public class Conexao {
     public static String LOGIN = "root";
    //public static String SENHA = "P@$$w0rd";
     //senha andre
-   public static String SENHA = "210215";
+   //public static String SENHA = "210215";
+    public static String SENHA = "1309";
     public static String URL = "jdbc:mysql://" + SERVER + ":3306/" + DATABASE;
     public static Connection CONEXAO;
     public Conexao() {}
@@ -21,8 +22,8 @@ public class Conexao {
             try {
 
                 Class.forName(DRIVER);
-                 //CONEXAO = DriverManager.getConnection("jdbc:h2:~/test", "sa", "sa");
-                CONEXAO = DriverManager.getConnection(URL, LOGIN, SENHA);
+                 CONEXAO = DriverManager.getConnection("jdbc:h2:~/test", "sa", "sa");
+                //CONEXAO = DriverManager.getConnection(URL, LOGIN, SENHA);
 
                 if (CONEXAO != null) {
                     STATUS = "Conexão realizada com sucesso!";

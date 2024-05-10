@@ -71,9 +71,8 @@ function emailValidate() {
 }
 
 function emailValidateLogin() {
-    let emailValue = document.getElementById('input_email').value;
+        let emailValue = document.querySelector('#input_email');
 
-        console.log(emailValue);
         if (emailRegex.test(emailValue)) {
             document.getElementById('input_email').style.borderColor = "green";
             console.log("E-mail Validado");
@@ -94,7 +93,7 @@ function cpfValidate() {
     }
     if (cpfRegex.test(cpfValue) && cpfValue.length === 14) {
         campos[2].style.borderColor = "green";
-        verificacoes.push(true) = true;
+        verificacoes.push(true);
     } else {
         campos[2].style.borderColor = "red";
     }
