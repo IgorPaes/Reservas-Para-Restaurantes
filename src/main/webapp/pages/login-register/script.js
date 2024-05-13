@@ -71,7 +71,9 @@ function emailValidate() {
 }
 
 function emailValidateLogin() {
-        let emailValue = document.querySelector('#input_email');
+
+        //let emailValue = document.querySelector('#input_email');
+        let emailValue = document.getElementById('input_email').value;
 
         if (emailRegex.test(emailValue)) {
             document.getElementById('input_email').style.borderColor = "green";
