@@ -107,7 +107,13 @@ function telefoneValidate() {
     let telefoneFormatado = telefoneValue.replace(telefoneRegex, "($1)$2-$3");
     campos[3].value = telefoneFormatado;
 
-    if (telefoneFormatado === campos[3].value && telefoneValue.length === 11) {
+    const telefone = document.getElementById('input_telefone').value;
+    if(telefone.length === 0){
+
+         document.getElementById('input_telefone').style.borderColor= "";
+   }
+
+    else if (telefoneFormatado === campos[3].value && telefoneValue.length === 11) {
         campos[3].style.borderColor = "green";
         verificacoes.push(true);
     } else {
@@ -115,23 +121,48 @@ function telefoneValidate() {
     }
 }
 
-function senhaValidate() {
+function campoSenha() {
     const senhaInput = document.getElementById('input_senha').value;
-    const confirmarSenhaInput = document.getElementById('input_confirmarSenha').value;
 
-    const confirmarSenha = senhaInput === confirmarSenhaInput;
+    //const confirmarSenha = senhaInput === confirmarSenhaInput;
 
-    if (senhaInput.length < 6 || senhaInput.length > 20 || !confirmarSenha) {
+    if(senhaInput.length === 0) {
+        document.getElementById('input_senha').style.borderColor= "";
+        }
+
+    else if (senhaInput.length < 6 || senhaInput.length > 20) {
         document.getElementById('input_senha').style.borderColor = "red";
-        document.getElementById('input_confirmarSenha').style.borderColor = "red";
+        verificacoes.push(false)
     } else {
         document.getElementById('input_senha').style.borderColor = "green";
+
+        verificacoes.push(true)
+    }
+}
+
+function campoConfirmaSenha() {
+
+    const confirmaSenhaInput = document.getElementById('input_confirmarSenha').value;
+    const senhaInput = document.getElementById('input_senha').value;
+
+    if(confirmaSenhaInput.length === 0 && senhaInput.length === 0){
+    document.getElementById('input_confirmarSenha').style.borderColor = "";
+    }
+
+    else if (confirmaSenhaInput !== senhaInput) {
+        document.getElementById('input_confirmarSenha').style.borderColor = "red";
+        console.log("os campos de senha não batem");
+        verificacoes.push(false)
+    }
+
+    else if (senhaInput === confirmaSenhaInput)  {
         document.getElementById('input_confirmarSenha').style.borderColor = "green";
+        console.log("Campo senha igual ao de confirma senha");
         verificacoes.push(true)
     }
 
-    return confirmarSenha;
 }
+
 
 function senhaValidateLogin() {
     const senhaInput = document.getElementById('input_senha').value;
