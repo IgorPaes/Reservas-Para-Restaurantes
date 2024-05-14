@@ -26,9 +26,9 @@ public class ValidateUser extends HttpServlet {
 
         boolean isValid = checkUser.validate(userEmail,userSenha);
         if(isValid){
-            Cookie cookie = new Cookie("user", "true");
-            cookie.setMaxAge(30600);
-            resp.addCookie(cookie);
+//            Cookie cookie = new Cookie("user", "true");
+//            cookie.setMaxAge(30600);
+//            resp.addCookie(cookie);
             request.getRequestDispatcher("index.html").forward(request, resp);
         }else{
             // request.setAttribute("errorMessage","Credenciais invalidas. Tente novamente.");
