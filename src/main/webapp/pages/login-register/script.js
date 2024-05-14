@@ -87,37 +87,50 @@ function emailValidateLogin() {
 
 
 function cpfValidate() {
-    let cpfValue = campos[2].value.replace(/\D/g, '');
 
-    if (cpfValue.length <= 11) {
-        cpfValue = cpfValue.replace(/^(\d{3})(\d{3})(\d{3})(\d{0,2})$/, "$1.$2.$3-$4");
-        campos[2].value = cpfValue;
+    let cpfValue = document.getElementById('input_cpf').value;
+
+    console.log(cpfValue);
+
+    if (cpfValue.trim().length === 0 ){
+    document.getElementById('input_cpf').style.borderColor = "";
+    console.log("Primeiro if");
     }
-    if (cpfRegex.test(cpfValue) && cpfValue.length === 14) {
-        campos[2].style.borderColor = "green";
+
+   else if (cpfValue.length <= 11) {
+   console.log("segundo if");
+        cpfValue = cpfValue.replace(cpfRegex , "$1.$2.$3-$4");
+        document.getElementById('input_cpf').value = cpfValue;
+    }
+    else if (cpfRegex.test(cpfValue) && cpfValue.length === 14) {
+        document.getElementById('input_cpf').style.borderColor = "green";
+        console.log("Terceiro if");
         verificacoes.push(true);
-    } else {
-        campos[2].style.borderColor = "red";
+    }
+    else {
+        document.getElementById('input_cpf').style.borderColor = "red";
+        console.log("Quarto if");
     }
 }
 
 function telefoneValidate() {
-    let telefoneValue = campos[3].value.replace(/\D/g, '');
+
+    let telefoneValue = document.getElementById('input_telefone').value.replace(/\D/g, '');
 
     let telefoneFormatado = telefoneValue.replace(telefoneRegex, "($1)$2-$3");
-    campos[3].value = telefoneFormatado;
+    telefoneValue = telefoneFormatado;
 
-    const telefone = document.getElementById('input_telefone').value;
-    if(telefone.length === 0){
+
+    if(telefoneFormatado.length === 0){
 
          document.getElementById('input_telefone').style.borderColor= "";
    }
 
     else if (telefoneFormatado === campos[3].value && telefoneValue.length === 11) {
-        campos[3].style.borderColor = "green";
+       document.getElementById('input_telefone').style.borderColor = "green";
         verificacoes.push(true);
     } else {
-        campos[3].style.borderColor = "red";
+        document.getElementById('input_telefone').style.borderColor = "red";
     }
 }
 
