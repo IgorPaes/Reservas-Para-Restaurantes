@@ -21,14 +21,12 @@ public class ValidateUser extends HttpServlet {
         String userSenha = request.getParameter("senha");
 
         CheckUser checkUser = new CheckUser();
-         // Só pra ver se o retorno do select está correto
+        //Só pra ver se o retorno do select está correto
         //System.out.println("SELECT email, senha FROM Clientes WHERE email = '" + userEmail + "' AND senha = '" + userSenha + "'");
 
         boolean isValid = checkUser.validate(userEmail,userSenha);
         if(isValid){
-//            Cookie cookie = new Cookie("user", "true");
-//            cookie.setMaxAge(30600);
-//            resp.addCookie(cookie);
+
             request.getRequestDispatcher("index.html").forward(request, resp);
         }else{
             // request.setAttribute("errorMessage","Credenciais invalidas. Tente novamente.");
@@ -42,5 +40,7 @@ public class ValidateUser extends HttpServlet {
 
     }
 
-
 }
+
+
+

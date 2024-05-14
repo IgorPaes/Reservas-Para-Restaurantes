@@ -105,24 +105,18 @@
     color: rgba(15, 13, 23, .85);
 }
 
-.section_info_reserva .title {
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 10px;
-    text-align: center;
-}
-
 .title_container .line {
     height: 2px;
     background-color: var(--cor-azul-escuro1);
     margin: 0 auto 20px; 
 }
 
-.section .title {
+.title {
     font-size: 24px;
     font-weight: bold;
     margin-bottom: 10px;
     text-align: center;
+    color: var(--cor-azul-escuro1);
 }
 
 .line {

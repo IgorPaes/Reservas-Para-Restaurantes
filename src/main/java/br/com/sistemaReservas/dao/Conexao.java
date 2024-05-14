@@ -12,7 +12,7 @@ public class Conexao {
    //public static String SENHA = "P@$$w0rd";
     //senha andre
    //public static String SENHA = "210215";
-    public static String SENHA = "1309";
+    public static String SENHA = "sa";
     public static String URL = "jdbc:mysql://" + SERVER + ":3306/" + DATABASE;
     public static Connection CONEXAO;
     public Conexao() {}
@@ -48,7 +48,8 @@ public class Conexao {
         {
             try {
                 if(CONEXAO.isClosed())
-                    CONEXAO = DriverManager.getConnection(URL, LOGIN, SENHA);
+                    //CONEXAO = DriverManager.getConnection(URL, LOGIN, SENHA);
+                    CONEXAO = DriverManager.getConnection("jdbc:h2:~/test", "sa", "sa");
             } catch (SQLException ex) {
                 throw new SQLException("Falha ao fechar a conexão.");
             }
