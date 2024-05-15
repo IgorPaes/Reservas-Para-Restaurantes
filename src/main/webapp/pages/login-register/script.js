@@ -9,8 +9,6 @@ let verificacoes = []
 function submitForm(element) {
     /*console.log("Element recebido:", element); // Imprime o valor de element no console
 
-
-
      Cria um objeto para armazenar os valores do formulário
     const formData = {};
 
@@ -23,9 +21,7 @@ function submitForm(element) {
 
     Imprime os valores do formulário no console
     console.log("Valores do formulário:", formData);*/
-
     if (botaoVerificar()) {
-     //Obtém o formulário pelo ID
         const form = document.getElementById(element);
         form.submit();
     } else {
@@ -59,14 +55,11 @@ function nameValidate() {
 function emailValidate() {
     let emailValue = document.getElementById('input_email').value;
 
-    console.log(emailValue);
     if (emailRegex.test(emailValue)) {
         document.getElementById('input_email').style.borderColor = "green";
-        console.log("E-mail Validado");
         verificacoes.push(true);
     } else {
         document.getElementById('input_email').style.borderColor = "red";
-        console.log("E-mail Não Validado");
     }
 }
 
@@ -77,59 +70,41 @@ function emailValidateLogin() {
 
         if (emailRegex.test(emailValue)) {
             document.getElementById('input_email').style.borderColor = "green";
-            console.log("E-mail Validado");
             verificacoes.push(true);
         } else {
             document.getElementById('input_email').style.borderColor = "red";
-            console.log("E-mail Não Validado");
         }
     }
 
 
 function cpfValidate() {
-
     let cpfValue = document.getElementById('input_cpf').value;
 
-    console.log(cpfValue);
-
     if (cpfValue.trim().length === 0 ){
-    document.getElementById('input_cpf').style.borderColor = "";
-    console.log("Primeiro if");
-    }
-
-   else if (cpfValue.length <= 11) {
-   console.log("segundo if");
-        cpfValue = cpfValue.replace(cpfRegex , "$1.$2.$3-$4");
+        document.getElementById('input_cpf').style.borderColor = "";
+    }else if (cpfValue.length <= 11) {
+        cpfValue = cpfValue.replace(cpfRegex, "$1.$2.$3-$4");
         document.getElementById('input_cpf').value = cpfValue;
-    }
-    else if (cpfRegex.test(cpfValue) && cpfValue.length === 14) {
+    }else if (cpfRegex.test(cpfValue) && cpfValue.length === 14) {
         document.getElementById('input_cpf').style.borderColor = "green";
-        console.log("Terceiro if");
         verificacoes.push(true);
-    }
-    else {
+    }else {
         document.getElementById('input_cpf').style.borderColor = "red";
-        console.log("Quarto if");
     }
 }
 
 function telefoneValidate() {
-
     let telefoneValue = document.getElementById('input_telefone').value.replace(/\D/g, '');
 
     let telefoneFormatado = telefoneValue.replace(telefoneRegex, "($1)$2-$3");
     telefoneValue = telefoneFormatado;
 
-
     if(telefoneFormatado.length === 0){
-
          document.getElementById('input_telefone').style.borderColor= "";
-   }
-
-    else if (telefoneFormatado === campos[3].value && telefoneValue.length === 11) {
+    }else if (telefoneFormatado === campos[3].value && telefoneValue.length === 11) {
        document.getElementById('input_telefone').style.borderColor = "green";
         verificacoes.push(true);
-    } else {
+    }else {
         document.getElementById('input_telefone').style.borderColor = "red";
     }
 }
@@ -141,39 +116,28 @@ function campoSenha() {
 
     if(senhaInput.length === 0) {
         document.getElementById('input_senha').style.borderColor= "";
-        }
-
-    else if (senhaInput.length < 6 || senhaInput.length > 20) {
+    }else if (senhaInput.length < 6 || senhaInput.length > 20) {
         document.getElementById('input_senha').style.borderColor = "red";
         verificacoes.push(false)
-    } else {
+    }else {
         document.getElementById('input_senha').style.borderColor = "green";
-
-        verificacoes.push(true)
+        verificacoes.push(true);
     }
 }
 
 function campoConfirmaSenha() {
-
     const confirmaSenhaInput = document.getElementById('input_confirmarSenha').value;
     const senhaInput = document.getElementById('input_senha').value;
 
     if(confirmaSenhaInput.length === 0 && senhaInput.length === 0){
-    document.getElementById('input_confirmarSenha').style.borderColor = "";
-    }
-
-    else if (confirmaSenhaInput !== senhaInput) {
+        document.getElementById('input_confirmarSenha').style.borderColor = "";
+    }else if (confirmaSenhaInput !== senhaInput) {
         document.getElementById('input_confirmarSenha').style.borderColor = "red";
-        console.log("os campos de senha não batem");
         verificacoes.push(false)
-    }
-
-    else if (senhaInput === confirmaSenhaInput)  {
+    }else if (senhaInput === confirmaSenhaInput)  {
         document.getElementById('input_confirmarSenha').style.borderColor = "green";
-        console.log("Campo senha igual ao de confirma senha");
         verificacoes.push(true)
     }
-
 }
 
 
@@ -182,7 +146,7 @@ function senhaValidateLogin() {
 
     if (senhaInput.length < 6 || senhaInput.length > 20) {
         document.getElementById('input_senha').style.borderColor = "red";
-    } else {
+    }else {
         document.getElementById('input_senha').style.borderColor = "green";
         verificacoes.push(true)
     }

@@ -24,34 +24,31 @@
             <form class="form_lr" id="userFormRegister" action="/create-user" method="post">
                 <div class="form_inputs">
                     <div class="grupo_input">
-
-                        <label for="nome">Nome</label>
+                        <label for="input_nome">Nome completo</label>
                         <input type="text" name="nome" id="input_nome" placeholder="Digite o seu nome" oninput="nameValidate()">
                     </div>
                     <div class="grupo_input">
-                        <label for="email">E-mail</label>
+                        <label for="input_email">E-mail</label>
                         <input type="email" name="email" id="input_email" placeholder="Digite o seu e-mail" oninput="emailValidate()">
                     </div>
                     <div class="grupo_input">
-                        <label for="cpf">CPF</label>
+                        <label for="input_cpf">CPF</label>
                         <input type="text" name="cpf" id="input_cpf" placeholder="Digite o seu cpf" oninput="cpfValidate()" maxlength="14">
                     </div>
                     <div class="grupo_input">
-                        <label for="telefone">Telefone</label>
+                        <label for="input_telefone">Telefone</label>
                         <input type="tel" name="telefone" id="input_telefone" placeholder="Digite o seu telefone" oninput="telefoneValidate()" maxlength="14">
                     </div>
                     <div class="grupo_input">
-                        <label for="senha">Senha</label>
+                        <label for="input_senha">Senha</label>
                         <input type="password" name="senha" id="input_senha" placeholder="Digite a sua senha" oninput="campoSenha()">
                     </div>
                     <div class="grupo_input">
-                        <label for="confirmarSenha">Confirmar Senha</label>
+                        <label for="input_confirmarSenha">Confirmar Senha</label>
                         <input type="password" name="confirmarSenha" id="input_confirmarSenha" placeholder="Digite a sua senha novamente" oninput="campoConfirmaSenha()">
-
                     </div>
                 </div>
             </form>
-
             <div class="caixa_adicionais">
                 <button type="button" onclick="location.href='./login.html'">Fazer login</button>
             </div>
