@@ -2,7 +2,7 @@ const form = document.getElementById('userForm');
 const campos = document.querySelectorAll('.form_lr input');
 const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 const nomeRegex = /^[a-zA-Z]{3,}$/;
-const cpfRegex = /^(\d{3})\.(\d{3})\.(\d{3})\-(\d{2})$/
+const cpfRegex = /^(\d{3})\.(\d{3})\.(\d{3})\-(\d{2})$/;
 const telefoneRegex = /^\(\d{2}\) \d{5}-\d{4}$/;
 let verificacoes = []
 
@@ -78,18 +78,35 @@ function emailValidateLogin() {
 
 
 function cpfValidate() {
-    let cpfValue = document.getElementById('input_cpf').value;
+    let cpfInput = document.getElementById('input_cpf');
+    let cpfValue = cpfInput.value;
 
-    if (cpfValue.trim().length === 0 ){
-        document.getElementById('input_cpf').style.borderColor = "";
-    }else if (cpfValue.length <= 11) {
-        cpfValue = cpfValue.replace(cpfRegex, "$1.$2.$3-$4");
-        document.getElementById('input_cpf').value = cpfValue;
-    }else if (cpfRegex.test(cpfValue) && cpfValue.length === 14) {
-        document.getElementById('input_cpf').style.borderColor = "green";
+    // Remove todos os caracteres não numéricos
+    cpfValue = cpfValue.replace(/\D/g, '');
+
+    // Se o campo estiver vazio, remove a borda colorida
+    if (cpfValue.length === 0 || !/\d/.test(cpfInput.value.slice(-1))) {
+    cpfInput.value = cpfInput.value.slice(0, -1)
+        cpfInput.style.borderColor = "";
+        return;
+    }
+
+    // Se o CPF tiver menos de 11 dígitos, define a borda como vermelha e retorna
+    if (cpfValue.length < 11) {
+        cpfInput.style.borderColor = "red";
+        return;
+    }
+
+    // Se o CPF tiver exatamente 11 dígitos, formata e valida
+    cpfValue = cpfValue.replace(/^(\d{3})(\d{3})(\d{3})(\d{2})$/, "$1.$2.$3-$4");
+
+    cpfInput.value = cpfValue;
+
+    if (cpfRegex.test(cpfValue)) {
+        cpfInput.style.borderColor = "green";
         verificacoes.push(true);
-    }else {
-        document.getElementById('input_cpf').style.borderColor = "red";
+    } else {
+        cpfInput.style.borderColor = "red";
     }
 }
 
