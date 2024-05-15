@@ -8,20 +8,6 @@ let verificacoesLogin = [];
 let verificacoesRegister = [];
 
 function submitForm(element) {
-    /*console.log("Element recebido:", element); // Imprime o valor de element no console
-
-     Cria um objeto para armazenar os valores do formulário
-    const formData = {};
-
-    Itera sobre os elementos do formulário e armazena os valores no objeto formData
-    for (const input of form.elements) {
-        if (input.name) {
-            formData[input.name] = input.value;
-        }
-    }
-
-    Imprime os valores do formulário no console
-    console.log("Valores do formulário:", formData);*/
     if (botaoVerificar()) {
         const form = document.getElementById(element);
         form.submit();
@@ -33,7 +19,7 @@ function submitForm(element) {
 function verificar() {
     let verificacoes = converteVecs();
     for (let i = 0; i < verificacoes.length; i++) {
-        if (!verificacoes[i]) { // Não altera a borda do campo de e-mail se a verificação falhar
+        if (!verificacoes[i]) {
             campos[i].style.borderColor = "red";
         }
     }

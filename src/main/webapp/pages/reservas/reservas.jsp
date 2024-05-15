@@ -13,91 +13,53 @@
     <script src="/pages/reservas/script_reserva.js" defer></script>
 </head>
 <body>
-    <div class="back">
-        <header>
-            <figure class="logo">
-                <img src="../../assets/logo.png" alt="Logo">
-            </figure>
-        </header>
+    <div class="container_xl">
+        <figure class="logo">
+            <img src="../../assets/logo.png" alt="Logo">
+        </figure>
         <main class="form_container">
-            <form class="form_reserve" id="userFormReserve" action="" method="post">
-                <div class="form_header">
-                    <h1>FAÇA SUA RESERVA</h1>
-                </div>
-                <div class="section">
-                    <h2 class="title">INFORMAÇÕES DO RESPONSÁVEL</h2>
-                    <div class="line">
+            <div class="title_box">
+                <h1>CRIA A SUA RESERVA</h1>
+            </div> 
+            <div class="main_cont">
+                <div class="booking_information">
+                    <div class="infos_title">
+                        <h2>INFORMAÇÕES DA RESERVA</h2>
+                        <div></div>
                     </div>
-                    <div class="form_inputs">
-                        <div class="grupo_input">
-                            <label for="nome">Nome</label>
-                            <input type="text" name="nome" id="input_nome" placeholder="Digite o seu nome" value="<%= request.getAttribute("NOME") %>" oninput="nameValidate()">
-
+                    <div class="fields_box">
+                        <div class="input_block">
+                            <label for="data">DATAS</label>
+                            <div class="bg_input">
+                                <input type="date" name="" id="data">
+                            </div>
                         </div>
-                        <div class="grupo_input">
-                            <label for="telefone">Telefone</label>
-                            <input type="tel" name="telefone" id="input_telefone" placeholder="Digite o seu telefone" oninput="telefoneValidate()" maxlength="14">      
+                        <div class="input_block">
+                            <span>HORÁRIOS</span>
+                            <div>
+                                
+                            </div>
                         </div>
-                        <div class="grupo_input">
-                            <label for="email">E-mail</label>
-                            <input type="email" name="email" id="input_email" placeholder="Digite o seu e-mail" oninput="emailValidate()">
+                        <div class="input_block">
+                            <label for="qtdPessoas">QTD DE PESSOAS</label>
+                            <div class="bg_input">
+                                <input type="number" name="" id="qtdPessoas">
+                            </div>
                         </div>
-                        <div class="grupo_input">
-                            <label for="cpf">CPF</label>
-                            <input type="text" name="cpf" id="input_cpf" placeholder="Digite o seu cpf" oninput="cpfValidate()" maxlength="14">
+                        <div class="input_block">
+                            <label for="comentario">COMENTÁRIO</label>
+                            <div class="bg_input">
+                                <textarea name="" id="comentario" cols="30" rows="10"></textarea>
+                            </div>
                         </div>
                     </div>
                 </div>
-
-                <div class="title_container">
-                    <h2 class="title">INFORMAÇÕES DA RESERVA</h2>
-                    <div class="line"></div>
-                </div>    
-
-                <div class="section_info_reserva">
-                    
-                    <div class="input_group">
-                        <label for="datas">Datas</label>
-                        <input type="date" id="datas" name="data">
-                    </div>
-                    <div class="input_group">
-                        <label for="horarios">Horários</label>
-                        <input type="time" id="horarios" name="horario">
-                    </div>
-                    <div class="input_group">
-                        <label for="n_pessoas">Qtd de Pessoas</label>
-                        <select name="n_pessoas">
-                            <option></option>
-                            <option>1</option>
-                            <option>2</option>
-                            <option>3</option>
-                            <option>4</option>
-                            <option>5</option>
-                            <option>6</option>
-                            <option>7</option>
-                            <option>8</option>
-                            <option>9</option>
-                            <option>10</option>
-                        </select>
-                    </div>
-
-                    <div class="input_group">
-                        <label for="comentario">Comentário</label>
-                        <textarea name="comentario" id="comentario" placeholder="Comentário"></textarea>
-                    </div>
-                    
+                <div>
+                    <button type="button">CANCELAR</button>
+                    <button type="button">CONFIRMAR RESERVA</button>
                 </div>
-
-                <div class="buttons">
-                    <button type="reset">CANCELAR</button>
-                    <button type="submit">CONFIRMAR RESERVA</button>
-                </div>
-            </form>
-
-
+            </div>
         </main>
     </div>
-
 </body>
-
 </html>
