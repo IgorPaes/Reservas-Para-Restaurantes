@@ -4,7 +4,8 @@ const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 const nomeRegex = /^[a-zA-Z]{3,}$/;
 const cpfRegex = /^(\d{3})\.(\d{3})\.(\d{3})\-(\d{2})$/;
 const telefoneRegex = /^\(\d{2}\) \d{5}-\d{4}$/;
-let verificacoes = []
+let verificacoesLogin = [];
+let verificacoesRegister = [];
 
 function submitForm(element) {
     /*console.log("Element recebido:", element); // Imprime o valor de element no console
@@ -30,6 +31,7 @@ function submitForm(element) {
 }
 
 function verificar() {
+    let verificacoes = converteVecs();
     for (let i = 0; i < verificacoes.length; i++) {
         if (!verificacoes[i]) { // Não altera a borda do campo de e-mail se a verificação falhar
             campos[i].style.borderColor = "red";
@@ -47,48 +49,48 @@ function nameValidate() {
     if (nomeValue.length === 0){
         nomeInput.style.borderColor = "";
         return;
-        }
+    }
 
     if (nomeValue.length < 3 || nomeValue.length >= 30) {
         nomeInput.style.borderColor = "red";
+        verificacoesRegister[0] = false;
     } else {
         nomeInput.style.borderColor = "green";
-        verificacoes.push(true);
+        verificacoesRegister[0] = true;
     }
 }
-
 
 function emailValidate() {
     let emailValue = document.getElementById('input_email').value;
 
     if (emailValue.length === 0){
-    document.getElementById('input_email').style.borderColor = "";
-    return;
+        document.getElementById('input_email').style.borderColor = "";
+        return;
     }
 
     if (emailRegex.test(emailValue)) {
         document.getElementById('input_email').style.borderColor = "green";
-        verificacoes.push(true);
+        verificacoesRegister[1] = true;
     } else {
         document.getElementById('input_email').style.borderColor = "red";
+        verificacoesRegister[1] = false;
     }
 }
 
 function emailValidateLogin() {
-
-        //let emailValue = document.querySelector('#input_email');
         let emailValue = document.getElementById('input_email').value;
 
         if (emailValue.length === 0){
             document.getElementById('input_email').style.borderColor = "";
             return;
-            }
+        }
 
         if (emailRegex.test(emailValue)) {
             document.getElementById('input_email').style.borderColor = "green";
-            verificacoes.push(true);
+            verificacoesLogin[0] = true;
         } else {
             document.getElementById('input_email').style.borderColor = "red";
+            verificacoesLogin[0] = false;
         }
     }
 
@@ -120,13 +122,12 @@ function cpfValidate() {
 
     if (cpfRegex.test(cpfValue)) {
         cpfInput.style.borderColor = "green";
-        verificacoes.push(true);
+        verificacoesRegister[2] = true;
     } else {
         cpfInput.style.borderColor = "red";
+        verificacoesRegister[2] = false;
     }
 }
-
-
 
 function telefoneValidate() {
     let telefoneInput = document.getElementById('input_telefone');
@@ -143,9 +144,10 @@ function telefoneValidate() {
     if (telefoneRegex.test(telefoneFormatado)) {
         telefoneInput.value = telefoneFormatado;
         telefoneInput.style.borderColor = "green";
-        verificacoes.push(true);
+        verificacoesRegister[3] = true;
     } else {
         telefoneInput.style.borderColor = "red";
+        verificacoesRegister[3] = false;
     }
 }
 
@@ -158,10 +160,10 @@ function campoSenha() {
         document.getElementById('input_senha').style.borderColor= "";
     }else if (senhaInput.length < 6 || senhaInput.length > 20) {
         document.getElementById('input_senha').style.borderColor = "red";
-        verificacoes.push(false)
+        verificacoesRegister[4] = false;
     }else {
         document.getElementById('input_senha').style.borderColor = "green";
-        verificacoes.push(true);
+        verificacoesRegister[4] = true;
     }
 }
 
@@ -173,31 +175,31 @@ function campoConfirmaSenha() {
         document.getElementById('input_confirmarSenha').style.borderColor = "";
     }else if (confirmaSenhaInput !== senhaInput) {
         document.getElementById('input_confirmarSenha').style.borderColor = "red";
-        verificacoes.push(false)
+        verificacoesRegister[5] = false;
     }else if (senhaInput === confirmaSenhaInput)  {
         document.getElementById('input_confirmarSenha').style.borderColor = "green";
-        verificacoes.push(true)
+        verificacoesRegister[5] = true;
     }
 }
-
 
 function senhaValidateLogin() {
     const senhaInput = document.getElementById('input_senha').value;
 
     if(senhaInput.length === 0) {
-            document.getElementById('input_senha').style.borderColor= "";
-            return;
-        }
+        document.getElementById('input_senha').style.borderColor= "";
+        return;
+    }
     if (senhaInput.length < 6 || senhaInput.length > 20) {
         document.getElementById('input_senha').style.borderColor = "red";
+        verificacoesLogin[1] = false;
     }else {
         document.getElementById('input_senha').style.borderColor = "green";
-        verificacoes.push(true)
+        verificacoesLogin[1] = true;
     }
 }
 
-
 function botaoVerificar() {
+    let verificacoes = converteVecs();
     return !verificacoes.includes(false);
 }
 
@@ -210,4 +212,14 @@ function visualizarSenha(inputId, toggleIcon) {
         input.type = "password";
         toggleIcon.src = "../../assets/olho.png";
     }
+}
+
+function converteVecs() {
+    let verificacoes = [];
+    if(verificacoesLogin.length != 0) {
+        verificacoes = verificacoesLogin;
+    }else {
+        verificacoes = verificacoesRegister;
+    }
+    return verificacoes;
 }
