@@ -1,3 +1,4 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!doctype html>
 <html lang="en">
 
@@ -16,6 +17,7 @@
 </head>
 
 <body>
+
     <div class="back">
         <header>
             <figure class="logo">
@@ -34,7 +36,8 @@
                     <div class="form_inputs">
                         <div class="grupo_input">
                             <label for="nome">Nome</label>
-                            <input type="text" name="nome" id="input_nome" placeholder="Digite o seu nome" oninput="nameValidate()">
+                            <input type="text" name="nome" id="input_nome" placeholder="Digite o seu nome" value="<%= request.getAttribute("NOME") %>" oninput="nameValidate()">
+
                         </div>
                         <div class="grupo_input">
                             <label for="telefone">Telefone</label>

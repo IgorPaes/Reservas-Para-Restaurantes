@@ -17,16 +17,67 @@ import java.sql.SQLException;
 @WebServlet("/infosUser")
 public class Cookies extends HttpServlet {
 
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException, IOException, IOException, IOException {
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         // Pegando Email do cookies
         String email = getEmailFromCookie(request);
 
         boolean userAuthenticated = infos(email, request);
 
-        //Passando os cookies para Json
-        response.setContentType("application/json");
-        response.setCharacterEncoding("UTF-8");
-        response.getWriter().write("{\"authenticated\": " + userAuthenticated + "}");
+        if (userAuthenticated) {
+            //Pega o nome do uuario relacionado ao email
+            request.setAttribute("NOME", getNomeFromDatabase(email));
+            System.out.println(request.getAttribute("NOME"));
+
+            //envia a resposta JSON para minha function userOnline
+            response.setContentType("application/json");
+            response.setCharacterEncoding("UTF-8");
+            response.getWriter().write("{\"authenticated\": " + userAuthenticated + "}");
+
+        } else {
+
+            System.out.println("erro ao autenticar");
+        }
+    }
+
+    private String getNomeFromDatabase(String email) {
+        Connection connection = null;
+        PreparedStatement comandoSQL = null;
+        ResultSet resultSet = null;
+
+        try {
+            connection = Conexao.abrirConexao();
+            comandoSQL = connection.prepareStatement("SELECT NOME FROM Clientes WHERE email = ?");
+            comandoSQL.setString(1, email);
+
+            resultSet = comandoSQL.executeQuery();
+
+            if (resultSet.next()) {
+                System.out.println(resultSet.getString("NOME"));
+                        return resultSet.getString("NOME");
+            } else {
+                return null;
+            }
+        } catch (ClassNotFoundException | SQLException ex) {
+            ex.printStackTrace();
+            return null;
+        } finally {
+            // Fechar recursos
+            try {
+                if (resultSet != null) resultSet.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+            try {
+                if (comandoSQL != null) comandoSQL.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+            try {
+                if (connection != null) connection.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
     }
 
     private boolean infos(String email, HttpServletRequest request) {
@@ -58,9 +109,21 @@ public class Cookies extends HttpServlet {
             return false;
         } finally {
             // Fechar recursos
-            try { if (resultSet != null) resultSet.close(); } catch (SQLException e) { e.printStackTrace(); }
-            try { if (comandoSQL != null) comandoSQL.close(); } catch (SQLException e) { e.printStackTrace(); }
-            try { if (connection != null) connection.close(); } catch (SQLException e) { e.printStackTrace(); }
+            try {
+                if (resultSet != null) resultSet.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+            try {
+                if (comandoSQL != null) comandoSQL.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+            try {
+                if (connection != null) connection.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
         }
     }
 

@@ -79,7 +79,7 @@ function cpfValidate() {
     }
     if (cpfRegex.test(cpfValue) && cpfValue.length === 14) {
         campos[3].style.borderColor = "green";
-        verificacoes.push(true) = true;
+        verificacoes.push(true);
     } else {
         campos[3].style.borderColor = "red";
     }
