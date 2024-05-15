@@ -38,15 +38,21 @@ function verificar() {
 }
 
 function nameValidate() {
-    let nomeValue = campos[0].value;
+    let nomeInput = document.getElementById('input_nome');
+    let nomeValue = nomeInput.value;
+
+    // Remove caracteres que não sejam letras ou espaços
     nomeValue = nomeValue.replace(/[^a-zA-Z\s]+/g, '');
 
-    campos[0].value = nomeValue;
+    if (nomeValue.length === 0){
+        nomeInput.style.borderColor = "";
+        return;
+        }
 
     if (nomeValue.length < 3 || nomeValue.length >= 30) {
-        campos[0].style.borderColor = "red";
+        nomeInput.style.borderColor = "red";
     } else {
-        campos[0].style.borderColor = "green";
+        nomeInput.style.borderColor = "green";
         verificacoes.push(true);
     }
 }
@@ -54,6 +60,11 @@ function nameValidate() {
 
 function emailValidate() {
     let emailValue = document.getElementById('input_email').value;
+
+    if (emailValue.length === 0){
+    document.getElementById('input_email').style.borderColor = "";
+    return;
+    }
 
     if (emailRegex.test(emailValue)) {
         document.getElementById('input_email').style.borderColor = "green";
@@ -67,6 +78,11 @@ function emailValidateLogin() {
 
         //let emailValue = document.querySelector('#input_email');
         let emailValue = document.getElementById('input_email').value;
+
+        if (emailValue.length === 0){
+            document.getElementById('input_email').style.borderColor = "";
+            return;
+            }
 
         if (emailRegex.test(emailValue)) {
             document.getElementById('input_email').style.borderColor = "green";
@@ -168,6 +184,10 @@ function campoConfirmaSenha() {
 function senhaValidateLogin() {
     const senhaInput = document.getElementById('input_senha').value;
 
+    if(senhaInput.length === 0) {
+            document.getElementById('input_senha').style.borderColor= "";
+            return;
+        }
     if (senhaInput.length < 6 || senhaInput.length > 20) {
         document.getElementById('input_senha').style.borderColor = "red";
     }else {
