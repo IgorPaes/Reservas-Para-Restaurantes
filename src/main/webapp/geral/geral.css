@@ -1,7 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
 :root {
     
     --cor-gradient-azul-escura: linear-gradient(180deg, #191622 0%, #0E0B15 100%);
-    --cor-branca: #FFF;
+    --cor-branca: #FFFFFF;
     --cor-azul-escuro1: #0F0D17;
     --cor-azul-escuro2: #121018;
     --tempo-transicao-45: .45s;

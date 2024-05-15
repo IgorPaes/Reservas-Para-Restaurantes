@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../general/style.css">
-    <link rel="stylesheet" href="minhas-reservas.css">
+    <link rel="stylesheet" href="/src/main/webapp/general/style.css">
+    <!-- <link rel="stylesheet" href="minhas-reservas.css"> -->
     <title>Minhas Reservas</title>
 </head>
 <body>
@@ -15,8 +15,8 @@
             <img src="../../assets/logo.png" alt="Logo">
         </figure>
         <nav class="botoes_nav">
-            <a href="minhas-reservas.jsp" class="botao_ativo">Minhas Reservas</a>
-            <a href="historico-reservas.jsp">Histórico de reservas</a>
+            <a href="minhas-reservas.jsp" >Minhas Reservas</a>
+            <a href="historico-reservas.jsp" class="botao_ativo">Histórico de reservas</a>
         </nav>
         <div class="bloco_usuario">
             <span>Carlos Henrique</span>
@@ -27,7 +27,7 @@
 
     </header>
 
-    <section class="tabela_minhas_reservas">
+    <section class="tabela_historico_reserva">
         <table>
             <thead>
                 <tr>
@@ -35,7 +35,7 @@
                     <th> Restaurante </th>
                     <th> Data <img src="../../assets/Arrow_branco.png" class="arrow"></th>
                     <th> Horário </th>
-                    <th> Pessoas </th>
+                    <th> N* Pessoas </th>
                 </tr>
             </thead>
         </table>
@@ -44,5 +44,4 @@
 
 </body>
 </html>
-
 
