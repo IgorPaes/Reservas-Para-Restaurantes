@@ -107,6 +107,7 @@ function telefoneValidate() {
     }else {
         document.getElementById('input_telefone').style.borderColor = "red";
     }
+
 }
 
 function campoSenha() {
