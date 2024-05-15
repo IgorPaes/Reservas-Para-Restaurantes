@@ -3,7 +3,7 @@ const campos = document.querySelectorAll('.form_lr input');
 const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 const nomeRegex = /^[a-zA-Z]{3,}$/;
 const cpfRegex = /^(\d{3})\.(\d{3})\.(\d{3})\-(\d{2})$/
-const telefoneRegex = /^(\d{2})(\d{5})(\d{4})$/
+const telefoneRegex = /^\(\d{2}\) \d{5}-\d{4}$/;
 let verificacoes = []
 
 function submitForm(element) {
@@ -93,21 +93,27 @@ function cpfValidate() {
     }
 }
 
+
+
 function telefoneValidate() {
-    let telefoneValue = document.getElementById('input_telefone').value.replace(/\D/g, '');
+    let telefoneInput = document.getElementById('input_telefone');
+    let telefoneValue = telefoneInput.value;
+    let telefoneFormatado = telefoneValue.replace(/^(\d{2})(\d{5})(\d{4})$/, "($1) $2-$3");
 
-    let telefoneFormatado = telefoneValue.replace(telefoneRegex, "($1)$2-$3");
-    telefoneValue = telefoneFormatado;
-
-    if(telefoneFormatado.length === 0){
-         document.getElementById('input_telefone').style.borderColor= "";
-    }else if (telefoneFormatado === campos[3].value && telefoneValue.length === 11) {
-       document.getElementById('input_telefone').style.borderColor = "green";
-        verificacoes.push(true);
-    }else {
-        document.getElementById('input_telefone').style.borderColor = "red";
+    if (telefoneValue === '' || !/\d/.test(telefoneInput.value.slice(-1))) {
+    telefoneInput.value = telefoneInput.value.slice(0, -1)
+        telefoneInput.style.borderColor = "";
+        console.log("primeiro IF");
+        return;
     }
 
+    if (telefoneRegex.test(telefoneFormatado)) {
+        telefoneInput.value = telefoneFormatado;
+        telefoneInput.style.borderColor = "green";
+        verificacoes.push(true);
+    } else {
+        telefoneInput.style.borderColor = "red";
+    }
 }
 
 function campoSenha() {

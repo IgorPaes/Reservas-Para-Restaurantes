@@ -31,7 +31,7 @@ public class ValidateUser extends HttpServlet {
             resp.addCookie(emailCookie);
            // resp.sendRedirect("index.html");
 
-            request.getRequestDispatcher("index.html").forward(request, resp);
+            request.getRequestDispatcher("/pages/home/home.html").forward(request, resp);
         }else{
             // request.setAttribute("errorMessage","Credenciais invalidas. Tente novamente.");
             // System.out.println("Credenciais invalidas");
