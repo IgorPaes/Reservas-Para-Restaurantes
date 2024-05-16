@@ -24,13 +24,14 @@
 .form_container {
 
     width: 62.5rem;
+    /* transform: scale(1.1); */
 
 }
 
 .form_container .title_box {
 
     width: 100%;
-    height: 6.5rem;
+    height: 6rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -41,8 +42,9 @@
 
 .form_container .title_box h1 {
 
-    font-size: 2.1875rem;
+    font-size: 2rem;
     font-weight: 700;
+    letter-spacing: .5px;
 
 }
 
@@ -51,7 +53,7 @@
     width: 100%;
     background-color: var(--cor-branca);
     border-radius: 0 0 15px 15px;
-    padding: 2.5rem 1.25rem 1.25rem 1.25rem;
+    padding: 2rem 1.25rem 1.25rem 1.25rem;
 
 }
 
@@ -77,6 +79,7 @@
     font-size: 1.25rem;
     font-weight: 800;
     letter-spacing: .5px;
+    margin-bottom: 5px;
 
 }
 
@@ -92,7 +95,7 @@
 
     width: 100%;
     display: grid;
-    grid-template-columns: 1.35fr .2fr .82fr;
+    grid-template-columns: 1.4fr 1.07fr 1fr;
     grid-auto-rows: min-content;
     column-gap: 30px;
     row-gap: 20px;
@@ -114,9 +117,47 @@
 
 }
 
+.input_block .bg_input.qtdPessoas {
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.input_block .bg_input.qtdPessoas span {
+
+    width: 70%;
+    max-width: 70%;
+    height: 100%;
+    margin-bottom: 0;
+    text-align: center;
+    user-select: none;
+
+}
+
+.input_block .bg_input.qtdPessoas .extend_btn {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 20px;
+    cursor: pointer;
+
+}
+
 .input_block .bg_input textarea {
 
-    width: 100%;
+    max-height: 10rem;
+    max-width: 100%;
+    word-wrap: break-word;
+
+}
+
+.input_block .bg_input input {
+
+    font-weight: 500;
 
 }
 
@@ -134,11 +175,63 @@
     font-weight: 600;
     letter-spacing: .36px;
     margin-bottom: 8px;
+    user-select: none !important;
 
 }
 
 .fields_box .input_block:last-child {
 
     grid-column: span 3;
+
+}
+
+.main_cont input {
+
+    user-select: none !important;
+
+}
+
+.main_cont .buttons_box {
+
+    display: flex;
+    gap: 1.25rem;
+    width: 100%;
+    height: 3.5rem;
+    margin: 3rem auto 0 auto;
+
+}
+
+.main_cont .buttons_box .btn_cancelar, .main_cont .buttons_box .btn_confirmar {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    color: var(--cor-branca);
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: .08rem;
+    border-radius: 8px;
+    transition: all ease .45s;
+
+}
+
+.main_cont .buttons_box .btn_cancelar:hover, .main_cont .buttons_box .btn_confirmar:hover {
+
+    transform: scale(.97);
+
+}
+
+.main_cont .buttons_box .btn_cancelar {
+
+    flex: 1;
+    background-color: rgb(160, 160, 160);
+        
+}
+
+.main_cont .buttons_box .btn_confirmar {
+
+    width: 66%;
+    background-color: var(--cor-azul-escuro2);
 
 }
