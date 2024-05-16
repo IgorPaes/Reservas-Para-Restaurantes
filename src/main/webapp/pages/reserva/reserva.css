@@ -18,7 +18,8 @@
     position: absolute;
     top: 20px;
     left: 0;
-        
+    cursor: pointer;    
+
 }
 
 .form_container {
@@ -155,6 +156,12 @@
 
 }
 
+.input_block .bg_input textarea::placeholder {
+
+    user-select: none;
+
+}
+
 .input_block .bg_input input {
 
     font-weight: 500;
@@ -171,11 +178,17 @@
 .input_block label, .input_block span {
 
     color: var(--cor-azul-escuro2);
-    font-size: 17px;
+    font-size: 16px;
     font-weight: 600;
     letter-spacing: .36px;
     margin-bottom: 8px;
     user-select: none !important;
+
+}
+
+.input_block label span, .input_block span span {
+
+    color: rgba(255, 0, 0, .85);
 
 }
 

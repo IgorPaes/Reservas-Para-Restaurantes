@@ -15,23 +15,21 @@
 //}
 
 function userOnline() {
-
-     var xhr = new XMLHttpRequest();
-            xhr.open('GET', '/infosUser', true);
-            xhr.onreadystatechange = function() {
-                if (xhr.readyState === XMLHttpRequest.DONE) {
-                    if (xhr.status === 200) {
-                        var data = JSON.parse(xhr.responseText);
-                        if (data.authenticated) {
-                            window.location.href = '../reservas/reservas.jsp';
-                        } else {
-                            console.log('Cliente não está logado');
-                        }
-                    } else {
-                        console.error('Erro ao verificar autenticação:', xhr.status);
-                    }
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', '/infosUser', true);
+    xhr.onreadystatechange = function() {
+        if (xhr.readyState === XMLHttpRequest.DONE) {
+            if (xhr.status === 200) {
+                var data = JSON.parse(xhr.responseText);
+                if (data.authenticated) {
+                    window.location.href = '../reservas/reservas.jsp';
+                } else {
+                    console.log('Cliente não está logado');
                 }
-            };
-            xhr.send();
-
+            } else {
+                console.error('Erro ao verificar autenticação:', xhr.status);
+            }
+        }
+    };
+    xhr.send();
 }

@@ -155,11 +155,12 @@ button {
     grid-gap: 1.44rem;
     margin-top: 2.5rem; 
     position: relative;
-    
+    padding: 0;
 
 }
 
 .bloco_conteudo{
+    
     display: flex;
     align-items:flex-end;
     width: 100%;
@@ -167,6 +168,9 @@ button {
     background-image: url('/assets/Imagens_dos_restaurantes/img_outback.png');
     background-repeat: no-repeat;
     background-position: center;
+    background-size: cover;
+    border-radius: 25px;
+
 }
 
 .bloco_informacao {
@@ -175,7 +179,6 @@ button {
     height: 15.6795rem;
     background-color: rgba(18, 16, 24, 0.85);;
     border-radius: 25px;
-    
 
 }
 
@@ -239,42 +242,28 @@ button {
 .bloco_abaixo{
     display: flex;
     justify-content: space-between;
-    position: absolute;
-    margin-top: 15px;
-    margin-left: 31px;
+    margin-top: 0;
+    padding: 0 30px 0 30px;
+
 }
 
-.Aberto{ 
-    color: greenyellow;
-    margin-right: 8px;
+.bloco_abaixo .esquerda {
+
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+}
+
+.aberto{ 
+    color: rgba(32, 255, 28, .8);
 }
 
 .horario span{
-    color: rgba(255, 255, 255, 0.50);
+    color: rgba(255, 255, 255, .5);
 }
 .horario svg{
     margin-bottom: 2px;
-    margin-right: 100px;
-}
-
-.reservar{
-    display: flex;
-    position: absolute;
-    
-}
-.reservar button{
-    
-    margin-left: 300px;
-    margin-top: -20px;
-    width: 202.399px;
-    height: 51.966px;
-    border-radius: 15px;
-    color: var(--cor-azul-escuro2);
-    font-size: 17px;
-    font-weight: 800;
-    text-align: center;
-    background-color: var(--cor-branca);
-    cursor: pointer;
 }
 
 
@@ -434,5 +423,28 @@ button {
 .conteudo_rodape img{
 
     margin-left: 864px;
+
+}
+
+.btn_reservar {
+
+    color: var(--cor-azul-escuro2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.0625rem;
+    font-weight: 800;
+    padding: 14px 22px;
+    border-radius: 0.9375rem;
+    background: var(--cor-branca);
+    border: 2px solid var(--cor-branca);
+
+}
+
+.btn_reservar:hover {
+
+    color: var(--cor-branca);
+    background-color: transparent;
+    border: 2px solid var(--cor-branca);
 
 }

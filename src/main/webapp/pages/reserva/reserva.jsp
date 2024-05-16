@@ -20,7 +20,7 @@
 </head>
 <body>
     <div class="container_xl">
-        <figure class="logo">
+        <figure class="logo" onclick="location.href='/'">
             <img src="../../assets/logo.png" alt="Logo">
         </figure>
         <main class="form_container">
@@ -35,19 +35,19 @@
                     </div>
                     <div class="fields_box">
                         <div class="input_block">
-                            <label for="data">DATAS</label>
+                            <label for="data">DATAS <span>*</span></label>
                             <div class="bg_input">
                                 <input type="date" name="" id="data" oninput="limitarAno(this)">
                             </div>
                         </div>
                         <div class="input_block">
-                            <span>HORÁRIOS</span>
+                            <span>HORÁRIOS <span>*</span></span>
                             <div class="bg_input">
                                 <input type="time" name="" id="data">
                             </div>
                         </div>
                         <div class="input_block">
-                            <span>QTD DE PESSOAS</span>
+                            <span>QTD DE PESSOAS <span>*</span></span>
                             <div class="bg_input qtdPessoas">
                                 <div class="extend_btn" onclick="menosUm()">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="18" height="2" viewBox="0 0 18 2" fill="none">
