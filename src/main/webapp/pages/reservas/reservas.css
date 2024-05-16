@@ -9,6 +9,7 @@
     background: url(/assets/back_reserva.png);
     background-size: 100%;
     background-repeat: no-repeat;
+    padding: 15px;
 
 }
 
@@ -76,7 +77,6 @@
     font-size: 1.25rem;
     font-weight: 800;
     letter-spacing: .5px;
-    margin-bottom: .31rem;
 
 }
 
@@ -92,7 +92,7 @@
 
     width: 100%;
     display: grid;
-    grid-template-columns: 1.35fr .85fr .78fr;
+    grid-template-columns: 1.35fr .2fr .82fr;
     grid-auto-rows: min-content;
     column-gap: 30px;
     row-gap: 20px;
@@ -102,9 +102,38 @@
 .fields_box .input_block {
 
     height: 100%;
+
+}
+
+.input_block .bg_input {
+
     border-radius: 8px;
     background: rgba(216, 216, 216, .25);
     padding: .94rem;
+    margin-top: 8px;
+
+}
+
+.input_block .bg_input textarea {
+
+    width: 100%;
+
+}
+
+.input_block .bg_input input, .input_block .bg_input textarea {
+
+    width: 100%;
+    color: var(--cor-azul-escuro1);
+
+}
+
+.input_block label, .input_block span {
+
+    color: var(--cor-azul-escuro2);
+    font-size: 17px;
+    font-weight: 600;
+    letter-spacing: .36px;
+    margin-bottom: 8px;
 
 }
 

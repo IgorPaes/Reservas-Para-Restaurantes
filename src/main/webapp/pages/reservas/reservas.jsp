@@ -5,12 +5,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
     <title>R&R Reservas</title>
+    <script src="/pages/reservas/script_reserva.js" defer></script>
+
+    <meta http-equiv="cache-control" content="max-age=0" />
+    <meta http-equiv="cache-control" content="no-cache" />
+    <meta http-equiv="expires" content="0" />
+    <meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
+    <meta http-equiv="pragma" content="no-cache" />
 
     <link rel="stylesheet" href="/pages/reservas/reservas.css">
     <link rel="stylesheet" href="/geral/geral.css">
-
-    <script src="/pages/reservas/script_reserva.js" defer></script>
 </head>
 <body>
     <div class="container_xl">
@@ -36,8 +42,8 @@
                         </div>
                         <div class="input_block">
                             <span>HORÁRIOS</span>
-                            <div>
-                                
+                            <div class="bg_input">
+                                <input type="time" name="" id="data">
                             </div>
                         </div>
                         <div class="input_block">

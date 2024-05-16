@@ -4,8 +4,8 @@ const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 const nomeRegex = /^[a-zA-Z]{3,}$/;
 const cpfRegex = /^(\d{3})\.(\d{3})\.(\d{3})\-(\d{2})$/;
 const telefoneRegex = /^\(\d{2}\) \d{5}-\d{4}$/;
-let verificacoesLogin = [];
-let verificacoesRegister = [];
+let verificacoesLogin = [false, false];
+let verificacoesRegister = [false, false, false, false, false, false];
 
 function submitForm(element) {
     if (botaoVerificar()) {
@@ -88,9 +88,8 @@ function cpfValidate() {
     // Remove todos os caracteres não numéricos
     cpfValue = cpfValue.replace(/\D/g, '');
 
-    // Se o campo estiver vazio, remove a borda colorida
     if (cpfValue.length === 0 || !/\d/.test(cpfInput.value.slice(-1))) {
-    cpfInput.value = cpfInput.value.slice(0, -1)
+        cpfInput.value = cpfInput.value.slice(0, -1);
         cpfInput.style.borderColor = "";
         return;
     }
@@ -121,9 +120,8 @@ function telefoneValidate() {
     let telefoneFormatado = telefoneValue.replace(/^(\d{2})(\d{5})(\d{4})$/, "($1) $2-$3");
 
     if (telefoneValue === '' || !/\d/.test(telefoneInput.value.slice(-1))) {
-    telefoneInput.value = telefoneInput.value.slice(0, -1)
+        telefoneInput.value = telefoneInput.value.slice(0, -1)
         telefoneInput.style.borderColor = "";
-        console.log("primeiro IF");
         return;
     }
 
@@ -143,6 +141,7 @@ function campoSenha() {
     //const confirmarSenha = senhaInput === confirmarSenhaInput;
 
     if(senhaInput.length === 0) {
+        campoConfirmaSenha();
         document.getElementById('input_senha').style.borderColor= "";
     }else if (senhaInput.length < 6 || senhaInput.length > 20) {
         document.getElementById('input_senha').style.borderColor = "red";
@@ -150,6 +149,10 @@ function campoSenha() {
     }else {
         document.getElementById('input_senha').style.borderColor = "green";
         verificacoesRegister[4] = true;
+    }
+    const inputConfirmarSenha = document.getElementById('input_confirmarSenha');
+    if(senhaInput.length >= 6 && inputConfirmarSenha.value.trim() != 0) {
+        campoConfirmaSenha();
     }
 }
 
@@ -202,10 +205,10 @@ function visualizarSenha(inputId, toggleIcon) {
 
 function converteVecs() {
     let verificacoes = [];
-    if(verificacoesLogin.length != 0) {
-        verificacoes = verificacoesLogin;
-    }else {
+    if(verificacoesLogin.length != 2) {
         verificacoes = verificacoesRegister;
+    }else {
+        verificacoes = verificacoesLogin;
     }
     return verificacoes;
 }

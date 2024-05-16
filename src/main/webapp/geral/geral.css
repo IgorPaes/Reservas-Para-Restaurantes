@@ -39,7 +39,7 @@ body {
 
 }
 
-button, input {
+button, input, textarea {
 
     all: unset;
     box-sizing: border-box;
