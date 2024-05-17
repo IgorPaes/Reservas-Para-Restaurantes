@@ -33,3 +33,8 @@ function userOnline() {
     };
     xhr.send();
 }
+
+function scrollParaSecao(id) {
+    const secao = document.getElementById(id);
+    secao.scrollIntoView({ behavior: 'smooth' });
+}

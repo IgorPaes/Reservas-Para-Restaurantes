@@ -32,6 +32,13 @@ button {
     font-weight: 700;
 }
 
+.botoes_nav > button:hover {
+
+    color: var(--cor-branca);
+
+
+}
+
 .btn_entrar > button {
     margin-right: 5rem;
     text-align: center;
@@ -42,6 +49,14 @@ button {
     height: 2.625rem;
     border-radius: 3.25rem;
     background: #FFF;
+}
+
+.btn_entrar > button:hover {
+
+    color: var(--cor-branca);
+    background-color: transparent;
+    border: 2px solid var(--cor-branca);
+
 }
 
 .principal {
@@ -155,22 +170,19 @@ button {
 
 }
 
-.restaurante{
-
-    display: flex;
-    
-    
-}
-
 .lista_restaurantes{
-    
+
+    max-height: 800px;
+    overflow-y: auto;
+    margin-top: 2.5rem;
+    list-style-type: none;
+    padding: 0 5px 0 0;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(30rem,1fr)); 
+    grid-template-columns: repeat(auto-fill, minmax(30rem,1fr));
     grid-auto-rows: 33.375rem;
     grid-gap: 1.44rem;
-    margin-top: 2.5rem; 
     position: relative;
-    padding: 0;
+
 
 }
 
@@ -189,7 +201,8 @@ button {
 }
 
 .bloco_informacao {
-    
+
+
     width: 100%;
     height: 15.6795rem;
     background-color: rgba(18, 16, 24, 0.85);;
@@ -266,7 +279,7 @@ button {
     
     display: flex;
     align-items:flex-start;
-    width: 000%;
+    width: 100%;
     height: 490px;
     background-color: var(--cor-azul-escuro2);
 
@@ -274,16 +287,14 @@ button {
 
 
 .titulo_restaurates{
-    
+
     display: flex;
-    justify-content: space-between;
-    
-    
+
 
 }
 
 .titulo_restaurates h1{
-    
+
     position: absolute;
     margin-top: 115px;
     margin-left: 612px;
@@ -333,7 +344,7 @@ button {
     display: flex;
     align-items:flex-start;
     width: 100%;
-    height: 610px;
+    min-height: 610px;
     background-color: var(--cor-branca);
 
 }
@@ -440,4 +451,13 @@ button {
     background-color: transparent;
     border: 2px solid var(--cor-branca);
 
+}
+
+
+.bloco_conteudo{
+  border-bottom: 1px solid #ccc; /
+}
+
+.bloco_conteudo:last-child {
+  border-bottom: none;
 }
