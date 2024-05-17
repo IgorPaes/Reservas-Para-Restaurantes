@@ -1,0 +1,58 @@
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>outback</title>
+    <link rel="stylesheet" href="../../general/style.css">
+    <link rel="stylesheet" href="../../general/reset.css">
+    <link rel="stylesheet" href="gerenciamento.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="script.js" defer></script>
+</head>
+<body>
+<header class="cabecalho">
+    <figure class="outback">
+        <img src="../../assets/outback.png" alt="">
+    </figure>
+    <nav class="botoes_nav">
+        <a href="reservas-pendentes.html">Reservas pendentes</a>
+        <a href="gerenciamento.html">Reservas em andamento</a>
+        <a href="historico-reservas.html" class="botao_ativo">Histórico de reservas</a>
+        <a href="funcionarios.html" >Cadastrar Funcionários</a>
+    </nav>
+    <div class="bloco_usuario">
+        <span>Carlos Henrique</span>
+        <figure class="icone_usuario">
+            <img src="" alt="">
+        </figure>
+    </div>
+</header>
+<main>
+    <div class="filtros">
+        <label for="id">Id: </label>
+        <input type="text" id="id" name="id">
+        <label for="restaurante">Restaurante:</label>
+        <input type="text" id="restaurante" name="restaurante">
+        <label for="data">Data:</label>
+        <input type="text" id="data" name="data">
+
+        <label for="horario">Horario:</label>
+        <input type="text" id="horario" name="horario">
+
+        <label for="pessoas">Pessoas:</label>
+        <input type="text" id="pessoas" name="pessoas">
+
+        <label for="cpf">CPF Cliente:</label>
+        <input type="text" id="cpf" name="cpf">
+        <div class="btn_cancelar">
+            <button type="button">Cancelar Reserva</button>
+        </div>
+        <div class="btn_aprovar">
+            <button type="button">Editar Reserva</button>
+        </div>
+    </div>
+</main>
+</body>
+</html>

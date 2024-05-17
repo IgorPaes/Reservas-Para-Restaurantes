@@ -5,7 +5,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: linear-gradient(90deg, rgba(10, 9, 13, 0.34) 0%, rgba(0, 0, 0, 0.00) 100%);
+    /*/background: linear-gradient(90deg, rgba(10, 9, 13, 0.34) 0%, rgba(0, 0, 0, 0.00) 100%);/*/
+    background: linear-gradient(180deg, #191622 0%, #0E0B15 100%);
 }
 
 .outback {
@@ -19,7 +20,7 @@
     gap: 10px;
     position: absolute;
     width: 767px;
-    height: auto;
+    height: auto; /* Definido como 'auto' para permitir que a altura se ajuste ao conteúdo */
     left: 350px;
     top: 51px;
 
@@ -30,7 +31,7 @@
     font-weight: 700;
     color: #BEBEBE;
     text-decoration: none;
-    white-space: nowrap;
+    white-space: nowrap; /* Impede a quebra de linha automática */
 
 
 }
