@@ -5,55 +5,62 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: linear-gradient(90deg, rgba(10, 9, 13, 0.34) 0%, rgba(0, 0, 0, 0.00) 100%);
+    background: linear-gradient(180deg, #191622 0%, #0E0B15 100%);
 }
 
 .outback {
     margin-left: 5.37rem;
-    
+
 }
 
 .botoes_nav {
+    font-family: Montserrat;
     display: flex;
-    align-items:center;
-    gap: 35px;
+    align-items: center;
+    gap: 10px;
     position: absolute;
     width: 767px;
-    height: 24px;
-    left: 582px;
-    top: 51px; 
-    
+    height: auto;
+    left: 250px;
+    top: 51px;
+
+
 }
-    .botoes_nav a{ 
+
+.botoes_nav a{
     font-size: 20px;
     font-weight: 700;
-    color: #BEBEBE; 
+    color: #BEBEBE;
     text-decoration: none;
-    }
-    .botao_ativo{
+    white-space: nowrap;
+
+
+
+}
+.botao_ativo{
     color: #FFF !important;
     font-size: 20px;
     font-weight: 800;
 }
-    .bloco_usuario{
+.bloco_usuario{
     display: flex;
     align-items: center;
     gap: 15px;
-    }
-    .bloco_usuario span {
+}
+.bloco_usuario span {
     color: #FFF;
     font-size: 20px;
-    font-weight: 600;    
+    font-weight: 600;
 
-    }
-    .icone_usuario {
+}
+.icone_usuario {
     background-color: #8A8A8A;
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    }
+}
 
-    .filtros {
+.filtros {
     color: #FFF;
     font-family: Montserrat;
     font-size: 25px;
@@ -61,22 +68,22 @@
     font-weight: 600;
     line-height: normal;
     gap: 80px;
-    
-    }
-    /* .btn_cancelar {
-    width: 225px;
-    height: 62px;
-    flex-shrink: 0;
-    border-radius: 10px;
-    background: #FF4646;
-    }
-    .btn_aprovar {
-    width: 216px;
-    height: 62px;
-    flex-shrink: 0; 
-    border-radius: 10px;
-    background: #e1dfe6;
-    color: #160707;
-    font-size: 20px;
-    font-weight: 500; */
+
+}
+/* .btn_cancelar {
+width: 225px;
+height: 62px;
+flex-shrink: 0;
+border-radius: 10px;
+background: #FF4646;
+}
+.btn_aprovar {
+width: 216px;
+height: 62px;
+flex-shrink: 0;
+border-radius: 10px;
+background: #e1dfe6;
+color: #160707;
+font-size: 20px;
+font-weight: 500; */
 
