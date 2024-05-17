@@ -18,3 +18,13 @@ function maisUm() {
         txtQtdPessoas.textContent = ++QtdPessoas;
     }
 }
+
+const modalBox = document.querySelector('.modal_cont')
+const modalManager = {
+    abrir: () => {
+        modalBox.style.display = 'flex';
+    },
+    fechar: () => {
+        modalBox.style.display = 'none';
+    }
+}

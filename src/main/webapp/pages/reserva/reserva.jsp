@@ -19,6 +19,20 @@
     <link rel="stylesheet" href="/geral/geral.css">
 </head>
 <body>
+    <div class="modal_cont" style="display: none;">
+        <div class="notification_bg"></div>
+        <div class="notification_modal">
+            <div class="notify_title">
+                <h2>CONFIRMAÇÃO DA RESERVA</h2>
+                <div></div>
+            </div>
+            <p>Eu <span>Joãozinho</span> confirmo a reserva no restaurante <span>MADEIRO</span> as <span>10:10h</span> no dia <span>21/10/2024</span> para <span>10</span> pessoas.</p>
+            <div class="notify_btns">
+                <button type="button" onclick="modalManager.fechar()">EDITAR</button>
+                <button type="button" onclick="">CONFIRMAR</button>
+            </div>
+        </div>
+    </div>
     <div class="container_xl">
         <figure class="logo" onclick="location.href='/'">
             <img src="../../assets/logo.png" alt="Logo">
@@ -71,8 +85,8 @@
                     </div>
                 </div>
                 <div class="buttons_box">
-                    <button type="button" class="btn_cancelar">CANCELAR</button>
-                    <button type="button" class="btn_confirmar">CONFIRMAR RESERVA</button>
+                    <button type="button" class="btn_cancelar" onclick="location.href='/'">CANCELAR</button>
+                    <button type="button" class="btn_confirmar" onclick="modalManager.abrir()">CONFIRMAR RESERVA</button>
                 </div>
             </div>
         </main>

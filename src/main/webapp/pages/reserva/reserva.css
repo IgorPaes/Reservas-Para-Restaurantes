@@ -17,7 +17,7 @@
 
     position: absolute;
     top: 20px;
-    left: 0;
+    left: 20px;
     cursor: pointer;    
 
 }
@@ -229,7 +229,7 @@
 
 }
 
-.main_cont .buttons_box .btn_cancelar:hover, .main_cont .buttons_box .btn_confirmar:hover {
+.main_cont .buttons_box button:hover {
 
     transform: scale(.97);
 
@@ -246,5 +246,141 @@
 
     width: 66%;
     background-color: var(--cor-azul-escuro2);
+
+}
+
+/* -------- MODAL -------- */
+
+.modal_cont {
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;  
+    z-index: 100;
+
+}
+
+.notification_modal {
+
+    width: 37.5rem;
+    background-color: var(--cor-branca);
+    border-radius: 15px;
+    padding: 1.25rem .94rem .94rem .94rem;
+    animation: scale-up-center .45s both;
+
+}
+
+@keyframes scale-up-center {
+    0% {
+        transform: scale(.65);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.notification_modal .notify_title {
+
+    width: 100%;
+    margin-bottom: 2.5rem;
+
+}
+
+.notification_modal .notify_title h2 {
+
+    color: var(--cor-azul-escuro2);
+    font-size: 1.125rem;
+    font-weight: 600;
+    letter-spacing: .0225rem;
+    text-align: center;
+    margin-bottom: 4px;
+
+}
+
+.notification_modal .notify_title > div {
+
+    width: 100%;
+    max-width: 152px;
+    height: 2px;
+    background-color: var(--cor-azul-escuro2);
+    margin: 0 auto;
+
+}
+
+.notification_modal p {
+
+    color: var(--cor-azul-escuro2);
+    font-size: 1.25rem;
+    font-weight: 500;
+    letter-spacing: .00625rem;
+    text-align: center;
+    max-width: 31.875rem;
+    margin: 2.5rem auto 2.5rem auto;
+
+}
+
+.notification_modal p span {
+
+    font-weight: 700;
+
+}
+
+.notification_modal .notify_btns {
+
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+}
+
+.notification_modal .notify_btns button {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    font-weight: 600;
+    letter-spacing: .0225rem;
+    width: 13.75rem;
+    height: 2.5rem;
+    border-radius: .5rem;
+    transition: all ease .45s;
+
+}
+
+.notification_modal .notify_btns button:hover {
+
+    transform: scale(.97);
+
+}
+
+.notification_modal .notify_btns button:nth-child(1) {
+
+    background: rgba(17, 15, 25, .5);
+
+}
+
+.notification_modal .notify_btns button:nth-child(2) {
+
+    background: var(--cor-azul-escuro1);
+
+}
+
+.modal_cont .notification_bg {
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .5);
+    z-index: -1;
 
 }
