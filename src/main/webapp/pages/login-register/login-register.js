@@ -8,18 +8,19 @@ let verificacoesLogin = [false, false];
 let verificacoesRegister = [false, false, false, false, false, false];
 
 function submitForm(element) {
-    if (botaoVerificar()) {
+    let vecVerificacoes = converteVecs(element);
+    if (verificaInputs(vecVerificacoes)) {
+        console.log("Aaaaaaaaaaaaaaaaaaaa");
         const form = document.getElementById(element);
         form.submit();
     } else {
-        verificar();
+        verificar(vecVerificacoes);
     }
 }
 
-function verificar() {
-    let verificacoes = converteVecs();
-    for (let i = 0; i < verificacoes.length; i++) {
-        if (!verificacoes[i]) {
+function verificar(vecVerificacoes) {
+    for (let i = 0; i < vecVerificacoes.length; i++) {
+        if (!vecVerificacoes[i]) {
             campos[i].style.borderColor = "red";
         }
     }
@@ -36,13 +37,12 @@ function nameValidate() {
         nomeInput.style.borderColor = "";
         return;
     }
-
-    if (nomeValue.length < 3 || nomeValue.length >= 30) {
-        nomeInput.style.borderColor = "red";
-        verificacoesRegister[0] = false;
-    } else {
+    if (nomeValue.length > 3 && nomeValue.length <= 30) {
         nomeInput.style.borderColor = "green";
         verificacoesRegister[0] = true;
+    } else {
+        nomeInput.style.borderColor = "red";
+        verificacoesRegister[0] = false;
     }
 }
 
@@ -53,7 +53,7 @@ function emailValidate() {
         document.getElementById('input_email').style.borderColor = "";
         return;
     }
-
+    
     if (emailRegex.test(emailValue)) {
         document.getElementById('input_email').style.borderColor = "green";
         verificacoesRegister[1] = true;
@@ -64,22 +64,21 @@ function emailValidate() {
 }
 
 function emailValidateLogin() {
-        let emailValue = document.getElementById('input_email').value;
+    let emailValue = document.getElementById('input_email').value;
 
-        if (emailValue.length === 0){
-            document.getElementById('input_email').style.borderColor = "";
-            return;
-        }
-
-        if (emailRegex.test(emailValue)) {
-            document.getElementById('input_email').style.borderColor = "green";
-            verificacoesLogin[0] = true;
-        } else {
-            document.getElementById('input_email').style.borderColor = "red";
-            verificacoesLogin[0] = false;
-        }
+    if (emailValue.length === 0){
+        document.getElementById('input_email').style.borderColor = "";
+        return;
     }
 
+    if (emailRegex.test(emailValue)) {
+        document.getElementById('input_email').style.borderColor = "green";
+        verificacoesLogin[0] = true;
+    } else {
+        document.getElementById('input_email').style.borderColor = "red";
+        verificacoesLogin[0] = false;
+    }
+}
 
 function cpfValidate() {
     let cpfInput = document.getElementById('input_cpf');
@@ -137,9 +136,6 @@ function telefoneValidate() {
 
 function campoSenha() {
     const senhaInput = document.getElementById('input_senha').value;
-
-    //const confirmarSenha = senhaInput === confirmarSenhaInput;
-
     if(senhaInput.length === 0) {
         campoConfirmaSenha();
         document.getElementById('input_senha').style.borderColor= "";
@@ -187,9 +183,8 @@ function senhaValidateLogin() {
     }
 }
 
-function botaoVerificar() {
-    let verificacoes = converteVecs();
-    return !verificacoes.includes(false);
+function verificaInputs(vecVerificacoes) {
+    return !vecVerificacoes.includes(false);
 }
 
 function visualizarSenha(inputId, toggleIcon) {
@@ -203,12 +198,6 @@ function visualizarSenha(inputId, toggleIcon) {
     }
 }
 
-function converteVecs() {
-    let verificacoes = [];
-    if(verificacoesLogin.length != 2) {
-        verificacoes = verificacoesRegister;
-    }else {
-        verificacoes = verificacoesLogin;
-    }
-    return verificacoes;
+function converteVecs(screen) {
+    return verificacoes = (screen == "userFormRegister") ? verificacoesRegister : verificacoesLogin;
 }

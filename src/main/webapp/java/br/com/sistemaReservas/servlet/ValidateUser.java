@@ -26,7 +26,6 @@ public class ValidateUser extends HttpServlet {
 
         boolean isValid = checkUser.validate(userEmail,userSenha);
         if(isValid){
-
             Cookie emailCookie = new Cookie("email", userEmail);
             resp.addCookie(emailCookie);
            // resp.sendRedirect("index.html");
@@ -40,8 +39,7 @@ public class ValidateUser extends HttpServlet {
             //esse codigo aqui serve apenas para redirecionar a pagina informada. resp.sendRedirect("/pages/login-register/login.html");
         }
 
-      //request.getRequestDispatcher("index.html").forward(request, resp);
-
+        // request.getRequestDispatcher("/pages/home/home.html").forward(request, resp);
     }
 
 }
