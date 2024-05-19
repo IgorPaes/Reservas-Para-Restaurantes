@@ -1,8 +1,5 @@
 package br.com.sistemaReservas.model;
 
-
-import javax.servlet.http.Cookie;
-
 public class Reservas {
     private String data;
     private String horario;
