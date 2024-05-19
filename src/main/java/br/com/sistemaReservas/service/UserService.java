@@ -2,9 +2,7 @@ package br.com.sistemaReservas.service;
 
 import br.com.sistemaReservas.dao.UserDao;
 import br.com.sistemaReservas.model.User;
-import lombok.extern.slf4j.Slf4j;
 
-@Slf4j
 public class UserService {
 
     private static UserService userService;

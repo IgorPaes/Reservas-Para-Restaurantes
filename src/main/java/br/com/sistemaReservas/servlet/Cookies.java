@@ -1,6 +1,5 @@
 package br.com.sistemaReservas.servlet;
 
-import br.com.sistemaReservas.dao.Conexao;
 import br.com.sistemaReservas.model.User;
 import br.com.sistemaReservas.service.UserService;
 import br.com.sistemaReservas.utils.CookiesUtils;
@@ -12,12 +11,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.Cookie;
 import java.io.IOException;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
 
 @Slf4j
 @WebServlet("/infosUser")
