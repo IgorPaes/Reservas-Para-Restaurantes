@@ -13,6 +13,8 @@ CREATE TABLE IF NOT EXISTS Clientes (
 
 CREATE TABLE IF NOT EXISTS Reservas (
     Id int auto_increment primary key,
+    RestauranteId int,
+        FOREIGN KEY (RestauranteId) REFERENCES Restaurantes(Id),
     ClienteId int,
     FOREIGN KEY (ClienteId) REFERENCES Clientes(Id),
     Datas date,
@@ -20,5 +22,23 @@ CREATE TABLE IF NOT EXISTS Reservas (
     QtdPessoas int,
     comentarios varchar(500)
 );
+
+CREATE TABLE IF NOT EXISTS Restaurantes (
+ Id int auto_increment primary key,
+ Nome_Restaurante varchar(30),
+ Endereco varchar(50),
+ Cep varchar(20),
+ Telefone varchar(20)
+
+);
+
+// Inserts table Restaurantes
+
+INSERT INTO Restaurantes (NOME_RESTAURANTE, ENDERECO, CEP, TELEFONE)
+VALUES
+    ('OUTBACK', 'Av. Robert Kennedy 3999', '04772004', '11971704067'),
+    ('COCO BAMBU', 'Av. das Nações Unidas, 22540', '04795000', '1155484712'),
+    ('FOGO DE CHAO', 'Av. Roque Petroni Júnior, 1089', '04707000', '11970656874');
+
 
 
