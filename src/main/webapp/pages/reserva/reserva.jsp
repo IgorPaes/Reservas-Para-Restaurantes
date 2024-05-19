@@ -47,20 +47,17 @@
                         <h2>INFORMAÇÕES DA RESERVA</h2>
                         <div></div>
                     </div>
-
                     <form class="form_reserve" id="userFormReserve" action="/InsertReserve" method="post">
                         <div class="fields_box">
                             <div class="input_block">
                                 <label for="data">DATAS <span>*</span></label>
-                                <div class="bg_input">
-                                    <input type="date" name="data" id="data" oninput="limitarAno(this)">
-                                </div>
+                                <!-- COLOCAR INPUT CORRETO DE ACORDO COM O FIGMA -->
+ 
                             </div>
                             <div class="input_block">
                                 <span>HORÁRIOS <span>*</span></span>
-                                <div class="bg_input">
-                                    <input type="time" name="horario" id="hours">
-                                </div>
+                                <!-- COLOCAR INPUT CORRETO DE ACORDO COM O FIGMA -->
+                            
                             </div>
                             <div class="input_block">
                                 <span>QTD DE PESSOAS <span>*</span></span>
