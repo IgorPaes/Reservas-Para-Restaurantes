@@ -1,11 +1,11 @@
 package br.com.sistemaReservas.model;
 
 public class Reservas {
+
     private String data;
     private String horario;
     private int qtdPessoas;
     private String comentario;
-
     private User usuario;
 
     public Reservas(String data, String horario, int qtdPessoas, String comentario, User usuario) {
@@ -35,6 +35,5 @@ public class Reservas {
     public User getUsuario() {
         return usuario;
     }
+
 }
-
-

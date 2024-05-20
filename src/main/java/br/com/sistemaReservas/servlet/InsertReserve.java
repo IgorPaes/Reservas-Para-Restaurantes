@@ -18,6 +18,7 @@ import java.time.format.DateTimeFormatter;
 @Slf4j
 @WebServlet("/InsertReserve")
 public class InsertReserve extends HttpServlet {
+
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String client = CookiesUtils.getEmailFromCookie(request);
@@ -48,4 +49,5 @@ public class InsertReserve extends HttpServlet {
             throw new RuntimeException(e);
         }
     }
+    
 }

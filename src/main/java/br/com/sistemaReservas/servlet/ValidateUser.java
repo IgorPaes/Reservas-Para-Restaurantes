@@ -27,7 +27,6 @@ public class ValidateUser extends HttpServlet {
         String userEmail = request.getParameter("email");
         String userSenha = request.getParameter("senha");
 
-
         User user = userService.login(userEmail, userSenha);
         if (user != null) {
 
@@ -50,6 +49,7 @@ public class ValidateUser extends HttpServlet {
             //esse codigo aqui serve apenas para redirecionar a pagina informada. resp.sendRedirect("/pages/login-register/login.html");
         }
     }
+    
 }
 
 

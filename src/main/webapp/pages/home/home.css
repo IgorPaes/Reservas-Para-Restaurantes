@@ -207,7 +207,7 @@ button {
     position: relative;
     width: 100%;
     height: 100%;
-    background-image: url('/assets/Imagens_dos_restaurantes/img_outback.png');
+    /* background-image: url('/assets/ImagensRestaurantes/bgRestaurantes/'); */
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;

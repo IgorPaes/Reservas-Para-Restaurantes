@@ -28,7 +28,6 @@ public class Cookies extends HttpServlet {
         this.userService = UserService.getInstance();
     }
 
-
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
         // Pegando Email do cookies
         String email = CookiesUtils.getEmailFromCookie(request);
@@ -38,13 +37,11 @@ public class Cookies extends HttpServlet {
         if (user != null) {
             log.info("Usuário já autenticado => {}", user);
             request.setAttribute("NOME", user.getNome());
-
             response.setStatus(OK);
-
-
         } else {
             response.setStatus(NOT_FOUND);
             log.error("Usuário não está autenticado");
         }
     }
+
 }
