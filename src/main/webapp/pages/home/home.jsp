@@ -56,7 +56,7 @@
             </nav>
             <ul class="lista_restaurantes">
                 <c:forEach var="restaurante" items="${restaurantes}">
-                    <li class="bloco_item" id="${restaurante.id}" style="background-image: url('/assets/ImagensRestaurantes/bgRestaurantes/${restaurante.img}');">
+                    <li class="bloco_item" id="${restaurante.id}" style="background-image: url('/assets/ImagensRestaurantes/fundosRestaurantes/${restaurante.img}');">
                         <div class="conteudo_item">
                             <div class="item_top">
                                 <h3>${restaurante.nome}</h3>
@@ -98,10 +98,10 @@
                 <h1>ALGUNS DE NOSSOS CLIENTES</h1>
             </div>
             <div class="clientes_restaurantes">
-                <img src="/assets/Imagens_dos_restaurantes/outback.png" class="restaurante_um">
-                <img src="/assets/Imagens_dos_restaurantes/coco_bambu.png" class="restaurante_dois">
-                <img src="/assets/Imagens_dos_restaurantes/fogo_de_chao.png" class="restaurante_tres">
-                <img src="/assets/Imagens_dos_restaurantes/restaurante.png" class="restaurante_quatro">
+                <img src="/assets/ImagensRestaurantes/logosRestaurantes/outback.png">
+                <img src="/assets/ImagensRestaurantes/logosRestaurantes/coco_bambu.png">
+                <img src="/assets/ImagensRestaurantes/logosRestaurantes/fogo_de_chao.png">
+                <img src="/assets/ImagensRestaurantes/logosRestaurantes/restaurant.png">
             </div>
         </section>
 

@@ -363,9 +363,11 @@ button {
     
 }
 
-.restaurante_quatro{
-    height: 130px;   
+.clientes_restaurantes img:last-child {
+
+    height: 120px;   
     filter: invert(100%);
+
 }
 
 .conteudo_cadastre {
