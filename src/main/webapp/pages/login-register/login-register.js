@@ -32,6 +32,7 @@ function nameValidate() {
 
     // Remove caracteres que não sejam letras ou espaços
     nomeValue = nomeValue.replace(/[^a-zA-Z\s]+/g, '');
+    nomeInput.value = nomeValue;
 
     if (nomeValue.length === 0){
         nomeInput.style.borderColor = "";
