@@ -27,7 +27,6 @@ public class ValidateUser extends HttpServlet {
         String userEmail = request.getParameter("email");
         String userSenha = request.getParameter("senha");
 
-
         User user = userService.login(userEmail, userSenha);
         if (user != null) {
 
@@ -41,7 +40,7 @@ public class ValidateUser extends HttpServlet {
             resp.addCookie(cpf);
             // resp.sendRedirect("index.html");
 
-            request.getRequestDispatcher("/pages/home/home.html").forward(request, resp);
+            request.getRequestDispatcher("/pages/home/home.jsp").forward(request, resp);
         } else {
             // request.setAttribute("errorMessage","Credenciais invalidas. Tente novamente.");
             // System.out.println("Credenciais invalidas");
@@ -50,6 +49,7 @@ public class ValidateUser extends HttpServlet {
             //esse codigo aqui serve apenas para redirecionar a pagina informada. resp.sendRedirect("/pages/login-register/login.html");
         }
     }
+    
 }
 
 

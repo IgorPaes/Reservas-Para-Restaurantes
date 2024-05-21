@@ -23,7 +23,7 @@ public class ReserveList extends HttpServlet {
                 // Recupera o email do usuário armazenado nos cookies
                 String userEmail = CookiesUtils.getEmailFromCookie(request);
 
-                // Verifica se o usuário está logado (se o cookie contém um email)
+
                 if (userEmail != null) {
                     // Chama o método findReservesByUserId() do seu DAO para obter a lista de reservas do usuário
                     ClientesDAO dao = new ClientesDAO();

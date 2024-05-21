@@ -14,6 +14,7 @@ public class ClientesDAO {
     static PreparedStatement comandoSQL = null;
     static ResultSet resultSet = null;
 
+    //Metodo erroneo para resgatar todas as reservas
     /*public List<Reservas> findAllReserves() {
         String SQL = "SELECT Id, RestauranteId, Datas, Horarios, QtdPessoas FROM reservas";
 

@@ -33,13 +33,13 @@ public class Conexao {
                     STATUS = "Conexão realizada com sucesso!";
                     log.info("Conectado com sucesso");
                 } else {
-                    STATUS = "Não foi possivel realizar a conexão";
+                    STATUS = "Não foi possível realizar a conexão";
                     log.error("falha na conexão ");
                 }
 
             } catch (ClassNotFoundException e) {
 
-                throw new ClassNotFoundException("O driver expecificado nao foi encontrado.");
+                throw new ClassNotFoundException("O driver especificado nao foi encontrado.");
 
             } catch (SQLException e) {
 

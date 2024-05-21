@@ -12,10 +12,9 @@ public class Reservas {
     public Reservas(int id, String nomeRestaurante, Date data, String horario, int quantidadePessoas) {
         this.id = id;
         this.nomeRestaurante = nomeRestaurante;
-        this.data = data;
-        this.horario = horario;
-        this.quantidadePessoas = quantidadePessoas;
     }
+
+
 
     public int getId() {
         return id;
@@ -37,4 +36,7 @@ public class Reservas {
     public int getQuantidadePessoas() {
         return quantidadePessoas;
     }
+
+
 }
+

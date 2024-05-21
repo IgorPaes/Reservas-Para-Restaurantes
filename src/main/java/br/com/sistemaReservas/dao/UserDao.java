@@ -55,7 +55,7 @@ public class UserDao {
         }
     }
 
-    public static User login (String email, String password){
+    public static User login(String email, String password){
         log.info(email);
         log.info(password);
         Connection connection = null;

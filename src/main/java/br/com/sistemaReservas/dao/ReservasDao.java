@@ -13,7 +13,7 @@ public class ReservasDao {
     static PreparedStatement comandoSQL = null;
     static ResultSet resultSet = null;
 
-    public static void insertReserve(String email, String nameRestaurant, LocalDate data, LocalTime horario, int qtdPessoas, String comentarios) throws SQLException, ClassNotFoundException {
+    public static void insertReserve(String email, String nomeRestaurante, LocalDate data, LocalTime horario, int qtdPessoas, String comentario) throws SQLException, ClassNotFoundException {
         connection = Conexao.abrirConexao();
 
         try {
@@ -25,21 +25,21 @@ public class ReservasDao {
             }
 
             // Verificar se o restaurante existe
-            int restaurantId = getRestaurantIdByName(connection, nameRestaurant);
+            int restaurantId = getRestaurantIdByName(connection, nomeRestaurante);
             if (restaurantId == -1) {
                 log.error("Restaurante não encontrado.");
                 return;
             }
 
             // Inserir a reserva
-            String insertReservaQuery = "INSERT INTO Reservas (RestauranteId, ClienteId, Datas, Horarios, QtdPessoas, comentarios) VALUES (?, ?, ?, ?, ?, ?)";
+            String insertReservaQuery = "INSERT INTO Reservas (IdRestaurante, IdCliente, Data, Horario, QtdPessoas, comentario) VALUES (?, ?, ?, ?, ?, ?)";
             comandoSQL = connection.prepareStatement(insertReservaQuery);
             comandoSQL.setInt(1, restaurantId);
             comandoSQL.setInt(2, clientId);
             comandoSQL.setDate(3, Date.valueOf(data));
             comandoSQL.setTime(4, Time.valueOf(horario));
             comandoSQL.setInt(5, qtdPessoas);
-            comandoSQL.setString(6, comentarios);
+            comandoSQL.setString(6, comentario);
 
             int rowsInserted = comandoSQL.executeUpdate();
             if (rowsInserted > 0) {
@@ -69,10 +69,10 @@ public class ReservasDao {
         return -1; // Cliente não encontrado
     }
 
-    private static int getRestaurantIdByName(Connection connection, String nameRestaurant) throws SQLException {
-        String query = "SELECT Id FROM Restaurantes WHERE NOME_RESTAURANTE = ?";
+    private static int getRestaurantIdByName(Connection connection, String nomeRestaurante) throws SQLException {
+        String query = "SELECT Id FROM Restaurantes WHERE NomeRestaurante = ?";
         try (PreparedStatement stmt = connection.prepareStatement(query)) {
-            stmt.setString(1, nameRestaurant);
+            stmt.setString(1, nomeRestaurante);
             try (ResultSet rs = stmt.executeQuery()) {
                 if (rs.next()) {
                     return rs.getInt("Id");

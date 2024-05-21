@@ -7,6 +7,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
     width: 100%;
     height: 100%;
     background: linear-gradient(90deg, rgba(10, 9, 13, .4) 0%, rgba(0, 0, 0, .2) 100%);
@@ -29,13 +30,16 @@ button {
 .botoes_nav > button { 
     color: rgba(255, 255, 255, .65);
     font-size: 1.25rem;
-    font-weight: 700;
+    font-weight: 600;
 }
 
 .botoes_nav > button:hover {
-
     color: var(--cor-branca);
+}
 
+.btn_entrar {
+
+    width: min-content;
 
 }
 
@@ -203,7 +207,7 @@ button {
     position: relative;
     width: 100%;
     height: 100%;
-    background-image: url('/assets/Imagens_dos_restaurantes/img_outback.png');
+    /* background-image: url('/assets/ImagensRestaurantes/bgRestaurantes/'); */
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -260,7 +264,7 @@ button {
 
 .bloco_infos_item {
 
-    margin: .85rem 0 1.25rem 0;
+    margin: .85rem 0 1.1rem 0;
     display: grid;
     gap: 6px;
     
@@ -284,12 +288,22 @@ button {
 
 .conteudo_item .item_baixo button {
 
-    font-size: .9rem;
+    font-size: .8rem;
     font-weight: 700;
     color: var(--cor-azul-escuro1);
     background-color: var(--cor-branca);
-    padding: 10px 18px;
+    border: 2px solid transparent;
+    padding: 9px 15px;
     border-radius: 10px;
+    transition: all ease .3s;
+
+}
+
+.item_baixo button:hover {
+
+    color: var(--cor-branca);
+    background-color: transparent;
+    border: 2px solid var(--cor-branca);
 
 }
 
@@ -311,28 +325,6 @@ button {
 
 }
 
-.btn_reservar {
-
-    color: var(--cor-azul-escuro2);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.0625rem;
-    font-weight: 800;
-    padding: 14px 22px;
-    border-radius: 15px;
-    background: var(--cor-branca);
-    border: 2px solid var(--cor-branca);
-
-}
-
-.btn_reservar:hover {
-
-    color: var(--cor-branca);
-    background-color: transparent;
-    border: 2px solid var(--cor-branca);
-
-}
 
 /* ------------------ */
 
@@ -358,22 +350,24 @@ button {
 
 }
 
-.clientes_restaurates{
+.clientes_restaurantes {
     
    display: flex;
    align-items: center;
    justify-content: space-between;
    flex-wrap: wrap;
+   gap: 2rem;
    max-width: 75%;
    margin: 0 auto;
    padding: 80px 0 60px 0;
     
 }
 
-.restaurante_quatro{
-    height: 130px;   
+.clientes_restaurantes img:last-child {
+
+    height: 120px;   
     filter: invert(100%);
-    
+
 }
 
 .conteudo_cadastre {
@@ -386,7 +380,7 @@ button {
 
 }
 
-.bloco_texto{
+.bloco_texto {
 
     display: flex;
     justify-content: space-between;
@@ -400,12 +394,6 @@ button {
     color: var(--cor-azul-escuro2);
     font-size: 60px;
     font-weight: 900;
-
-}
-
-.conteudo_cadastre{
-
-    display: flex;
 
 }
 
@@ -439,21 +427,23 @@ button {
     max-width: 100%;
 }
 
-.caixa img{
+.caixa img {
     
+    width: 100%;
     position: relative;
     bottom: -2.5rem;
-    margin-left: 150px;
-    margin-top: 15px;
+    margin-left: 30%;
+    margin-top: 20px;
     
 }
-.rodape{
+
+.rodape {
 
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
-    height: 180px;
+    height: 150px;
     background-color: var(--cor-azul-escuro2);
 }
 

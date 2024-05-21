@@ -35,16 +35,14 @@ public class SaveUser {
         }finally{
             if (resultSet != null){
                 resultSet.close();
-            }if (statement != null){
+            }
+            if (statement != null){
                 statement.close();
             }
-
         }
+
         return false;
     }
-
-
-
 
     public void save(User user) throws EmailAlreadyInUseException{
 
@@ -54,7 +52,6 @@ public class SaveUser {
             if(isEmailInUse(user.getEmail())){
                 throw new EmailAlreadyInUseException("Email já cadastrado. Por favor, utilize outro email");
             }
-
 
             PreparedStatement comandoSQL = connection.prepareStatement("INSERT INTO Clientes (nome, cpf, email, telefone, senha) VALUES(?,?,?,?,?)");
                     //PreparedStatement.RETURN_GENERATED_KEYS);
@@ -67,10 +64,8 @@ public class SaveUser {
 
             //Executando comando
             comandoSQL.executeUpdate();
-
             connection.close();
-
-    } catch (ClassNotFoundException ex) {
+        } catch (ClassNotFoundException ex) {
             Logger.getLogger(SaveUser.class.getName()).log(Level.SEVERE, null, ex);
         } catch (SQLException ex) {
             Logger.getLogger(SaveUser.class.getName()).log(Level.SEVERE, null, ex);

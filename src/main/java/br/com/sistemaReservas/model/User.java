@@ -6,7 +6,7 @@ import lombok.ToString;
 @Builder
 @ToString
 public class User {
-
+    
     private String nome, email, cpf, telefone, senha;
 
     public User(String nome, String email, String cpf, String telefone, String senha) {
