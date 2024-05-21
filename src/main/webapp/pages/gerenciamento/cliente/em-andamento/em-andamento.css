@@ -1,0 +1,62 @@
+.cabecalho {
+    width: 100%;
+    height: 7.875rem;
+}
+
+.navegacao {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(10, 9, 13, .4) 0%, rgba(0, 0, 0, .2) 100%);
+}
+
+.logo {
+    margin-left: 5.37rem;
+}
+button {
+    all: unset;
+    cursor: pointer;
+}
+
+.botoes_nav {
+    display: flex;
+    gap: 2.12rem;
+}
+
+.botoes_nav > button {
+    color: rgba(255, 255, 255, .65);
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+.botoes_nav > button:hover {
+
+    color: var(--cor-branca);
+
+
+}
+.reservas-container {
+    max-width: 800px;
+    margin-left: 5.37rem;
+
+}
+
+#reservas-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#reservas-table thead th {
+    color: white;
+    padding: 10px;
+    text-align: left;
+}
+
+#reservas-table tbody td {
+    padding: 10px;
+    text-align: left;
+    background-color: white; /* Fundo branco para as linhas */
+    color: black; /* Letras pretas */
+}

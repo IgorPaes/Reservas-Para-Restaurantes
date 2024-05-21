@@ -19,9 +19,6 @@ CREATE TABLE IF NOT EXISTS Reservas (
     ClienteId int,
     FOREIGN KEY (ClienteId) REFERENCES Clientes(Id),
 
-    RestauranteId int, FOREIGN KEY (RestauranteId) REFERENCES Restaurantes(Id),
-    ClienteId int, FOREIGN KEY (ClienteId) REFERENCES Clientes(Id),
-
     Datas date,
     Horarios time(6),
     QtdPessoas int,

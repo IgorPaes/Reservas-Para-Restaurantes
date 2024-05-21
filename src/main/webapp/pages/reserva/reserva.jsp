@@ -40,7 +40,7 @@
         <main class="form_container">
             <div class="title_box">
                 <h1>CRIAR RESERVA</h1>
-            </div> 
+            </div>
             <div class="main_cont">
                 <div class="booking_information">
                     <div class="infos_title">
@@ -59,7 +59,7 @@
                             <div class="input_block">
                                 <span>HORÁRIOS <span>*</span></span>
                                 <div class="bg_input">
-                                    <input type="time" name="horario" id="hours">
+                                  <input type="time" name="horario" id="hours">
                                 </div>
                             </div>
                             <div class="input_block">
