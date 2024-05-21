@@ -25,6 +25,7 @@ public class DAORestaurante {
             comandoSQL = connection.prepareStatement("SELECT * FROM Restaurantes");
             resultSet = comandoSQL.executeQuery();
 
+
             while(resultSet.next()) {
                 Restaurante restaurante = new Restaurante(
                     (long) resultSet.getInt("Id"), 

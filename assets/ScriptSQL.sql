@@ -34,8 +34,7 @@ CREATE TABLE IF NOT EXISTS Reservas (
     Comentario VARCHAR(500)
 );
 
-
 INSERT INTO Restaurantes (NomeRestaurante, Endereco, Cep, Telefone, nomeImagem) VALUES
     ('OUTBACK', 'Av. Robert Kennedy 3999', '04772004', '11971704067', 'outback.png'),
-    ('COCO BAMBU', 'Av. das Nações Unidas, 22540', '04795000', '1155484712', 'cocoBambu.jpg'),
+    ('COCO BAMBU', 'Av. das Nações Unidas, 22540', '04795000', '11554847124', 'cocoBambu.jpg'),
     ('FOGO DE CHAO', 'Av. Roque Petroni Júnior, 1089', '04707000', '11970656874', 'fogodechao.png');
