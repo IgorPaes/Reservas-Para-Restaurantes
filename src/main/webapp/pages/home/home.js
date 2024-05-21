@@ -1,3 +1,9 @@
+
+if(getCookieValue("cpf")) {
+    document.getElementById('btnEntrar').style.display = 'none';
+    document.getElementById('btnSair').style.display = 'block';
+}
+
 function userOnline() {
     fetch('/infosUser').then(function (res) {
         console.log(res);
@@ -19,4 +25,20 @@ function userOnline() {
 function scrollParaSecao(id) {
     const secao = document.getElementById(id);
     secao.scrollIntoView({ behavior: 'smooth' });
+}
+
+// Cria um padrão de busca para o nome do cookie
+function getCookieValue(name) {
+    let pattern = new RegExp("(^|;)\\s*" + name + "\\s*=\\s*([^;]+)");
+    let match = document.cookie.match(pattern);
+    return match ? match[2] : null;
+}
+
+function limparLogin() {
+    const listaInfosCookies = ['cpf', 'email', 'nome', 'telefone'];
+    listaInfosCookies.forEach((name) => {
+        document.cookie = name + '=; Max-Age=-99999999; path=/';
+    });
+    document.getElementById('btnEntrar').style.display = 'block';
+    document.getElementById('btnSair').style.display = 'none';
 }

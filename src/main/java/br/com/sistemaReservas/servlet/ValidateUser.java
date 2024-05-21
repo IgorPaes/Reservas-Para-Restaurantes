@@ -38,19 +38,12 @@ public class ValidateUser extends HttpServlet {
             resp.addCookie(nomeCookie);
             resp.addCookie(telefoneCookie);
             resp.addCookie(cpf);
-            // resp.sendRedirect("index.html");
 
-            request.getRequestDispatcher("/pages/home/home.jsp").forward(request, resp);
+            resp.sendRedirect("/");
+            // request.getRequestDispatcher("/pages/home/home.jsp").forward(request, resp);
         } else {
-            // request.setAttribute("errorMessage","Credenciais invalidas. Tente novamente.");
-            // System.out.println("Credenciais invalidas");
-            // Alert na tela.
             resp.getWriter().println("<script>alert('Credenciais inválidas. Por favor, tente novamente.'); window.location.href='/pages/login-register/login.html';</script>");
-            //esse codigo aqui serve apenas para redirecionar a pagina informada. resp.sendRedirect("/pages/login-register/login.html");
         }
     }
     
 }
-
-
-

@@ -39,21 +39,27 @@ button {
 
 .btn_entrar {
 
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: min-content;
+    margin-right: 5rem;
 
 }
 
 .btn_entrar > button {
-    margin-right: 5rem;
+
     text-align: center;
     color: var(--cor-azul-escuro2);
-    font-size: 0.9375rem;
+    font-size: .94rem;
     font-weight: 500;
     width: 6.375rem;
     height: 2.625rem;
     border-radius: 3.25rem;
     border: 2px solid transparent;
     background: var(--cor-branca);
+    transition: all ease .45s;
+
 }
 
 .btn_entrar > button:hover {
@@ -61,6 +67,21 @@ button {
     color: var(--cor-branca);
     background-color: transparent;
     border: 2px solid var(--cor-branca);
+
+}
+
+.btn_entrar .log_out {
+
+    color: var(--cor-branca);
+    background-color: transparent;
+    border: 2px solid var(--cor-branca);  
+
+}
+
+.btn_entrar .log_out:hover {
+
+    color: var(--cor-azul-escuro2);
+    background: var(--cor-branca);
 
 }
 
@@ -244,7 +265,7 @@ button {
 
 }
 
-.conteudo_item .item_top svg {
+/* .conteudo_item .item_top svg {
 
     cursor: pointer;
 
@@ -260,7 +281,7 @@ button {
 
     fill-opacity: 1;
 
-}
+} */
 
 .bloco_infos_item {
 
@@ -359,7 +380,7 @@ button {
    gap: 2rem;
    max-width: 75%;
    margin: 0 auto;
-   padding: 80px 0 60px 0;
+   padding: 5rem 0 4rem 0;
     
 }
 
