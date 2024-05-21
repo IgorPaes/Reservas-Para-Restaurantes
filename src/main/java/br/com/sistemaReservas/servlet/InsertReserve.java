@@ -45,9 +45,11 @@ public class InsertReserve extends HttpServlet {
 
         try {
             ReservasDao.insertReserve(client, restaurantName, date, time, qtaPeople, comments);
+
         } catch (SQLException | ClassNotFoundException e) {
             throw new RuntimeException(e);
         }
+
     }
     
 }

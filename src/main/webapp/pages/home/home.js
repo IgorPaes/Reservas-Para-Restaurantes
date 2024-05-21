@@ -16,7 +16,6 @@ function userOnline() {
         if (restaurantElement) {
             const restaurantName = restaurantElement.textContent;
             document.cookie = "restaurant_Name=" + encodeURIComponent(restaurantName) + "; path=/";
-
         }
         window.location.href = 'pages/reserva/reserva.jsp';
     }).catch(erro => console.error(erro));

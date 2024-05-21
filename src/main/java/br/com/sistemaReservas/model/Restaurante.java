@@ -4,7 +4,7 @@ import lombok.Getter;
 
 @Getter
 public class Restaurante {
-    
+
     private Long id;
     private String nome;
     private String endereco;

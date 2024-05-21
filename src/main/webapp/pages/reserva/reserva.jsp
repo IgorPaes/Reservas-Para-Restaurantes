@@ -40,7 +40,7 @@
         <main class="form_container">
             <div class="title_box">
                 <h1>CRIAR RESERVA</h1>
-            </div> 
+            </div>
             <div class="main_cont">
                 <div class="booking_information">
                     <div class="infos_title">
@@ -56,8 +56,12 @@
                             </div>
                             <div class="input_block">
                                 <span>HORÁRIOS <span>*</span></span>
+
+                                <div class="bg_input">
+                                    <input type="time" name="horario" id="hours">
+                                </div>
+
                                 <!-- COLOCAR INPUT CORRETO DE ACORDO COM O FIGMA -->
-                            
                             </div>
                             <div class="input_block">
                                 <span>QTD DE PESSOAS <span>*</span></span>
