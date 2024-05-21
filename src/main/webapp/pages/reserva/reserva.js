@@ -1,14 +1,20 @@
-function limitarAno(input) {
-    const inputValue = input.value;
-    if(inputValue.length > 10) {
-        input.value = inputValue.slice(0, 10);
-    }
-}
+// function limitarAno(input) {
+//     const inputValue = input.value;
+//     if(inputValue.length > 10) {
+//         input.value = inputValue.slice(0, 10);
+//     }
+// }
+
+document.addEventListener('DOMContentLoaded', function() {
+    const container = document.querySelector('.container_xl');
+    const bgUrl = container.getAttribute('data-bg-url');
+    container.style.setProperty('--bg-url', `url(${bgUrl})`);
+});
 
 let txtQtdPessoas = document.getElementById('qtdPessoas');
 let QtdPessoas = parseInt(txtQtdPessoas.textContent);
 function menosUm() {
-    if(QtdPessoas > 0) {
+    if(QtdPessoas > 1) {
         txtQtdPessoas.textContent = --QtdPessoas;
     }
 }
@@ -19,20 +25,9 @@ function maisUm() {
     }
 }
 
-const modalBox = document.querySelector('.modal_cont')
-const modalManager = {
-    abrir: () => {
-        modalBox.style.display = 'flex';
-    },
-    fechar: () => {
-        modalBox.style.display = 'none';
-    }
-}
-
-
 function limitarAno(input) {
-input.removeAttribute('min');
-input.removeAttribute('max');
+    input.removeAttribute('min');
+    input.removeAttribute('max');
     const today = new Date();
     const nextYear = new Date();
     nextYear.setFullYear(today.getFullYear() + 1);
@@ -101,30 +96,53 @@ function criarSelectHorarios() {
 criarSelectHorarios();
 */
 
-function insertReserve() {
-    var data = document.getElementById("data").value;
-    var horario = document.getElementById("hours").value;
-    var qtdPessoas = document.getElementById("qtdPessoas").textContent;
-    var comentarios = document.getElementById("comentario").value;
 
-    fetch('/InsertReserve', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/x-www-form-urlencoded'
-        },
-        body: 'data=' + encodeURIComponent(data) +
-              '&horario=' + encodeURIComponent(horario) +
-              '&qtdPessoas=' + encodeURIComponent(qtdPessoas) +
-              '&comentario=' + encodeURIComponent(comentarios)
-    })
-    .then(response => {
-        if (!response.ok) {
-            throw new Error('Erro ao inserir reserva');
-        }
-        console.log('Reserva inserida com sucesso!');
-        window.location.href = '/pages/gerenciamento/cliente/em-andamento/em-andamento.jsp'
-    })
-    .catch(error => {
-        console.error('Erro:', error);
-    });
+const notificacao = document.getElementById('notificacao');
+const modalManager = {
+    abrir: (data, horario, qtdPessoas) => {
+        document.querySelector('.notification_modal #dt').textContent = data;
+        document.querySelector('.notification_modal #hr').textContent = horario
+        document.querySelector('.notification_modal #qp').textContent = qtdPessoas;
+        notificacao.style.display = 'flex';
+    },
+    fechar: () => {
+        notificacao.style.display = 'none';
+    }
+}
+
+function confirmarReserva() {
+    
+    
+    const data = document.getElementById("data").value;
+    const horario = document.getElementById("hours").value;
+    const qtdPessoas = document.getElementById("qtdPessoas").textContent;
+    const comentarios = document.getElementById("comentario").value;
+    
+    modalManager.abrir(data, horario, qtdPessoas);
+    
+    if(data.length.trim() == "" && horario.length.trim() == "" && qtdPessoas.length.trim() == "") {
+    
+    
+        // fetch('/InsertReserve', {
+        //     method: 'POST',
+        //     headers: {
+        //         'Content-Type': 'application/x-www-form-urlencoded'
+        //     },
+        //     body: 'data=' + encodeURIComponent(data) +
+        //           '&horario=' + encodeURIComponent(horario) +
+        //           '&qtdPessoas=' + encodeURIComponent(qtdPessoas) +
+        //           '&comentario=' + encodeURIComponent(comentarios)
+        // })
+        // .then(response => {
+        //     if (!response.ok) {
+        //         throw new Error('Erro ao inserir reserva');
+        //     }
+        //     console.log('Reserva inserida com sucesso!');
+        //     window.location.href = '/pages/gerenciamento/cliente/em-andamento/em-andamento.jsp'
+        // })
+        // .catch(error => {
+        //     console.error('Erro:', error);
+        // });
+    }
+
 }

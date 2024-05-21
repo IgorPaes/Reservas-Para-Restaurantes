@@ -2,20 +2,28 @@ package br.com.sistemaReservas.model;
 
 import java.util.Date;
 
+import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 
 @Getter
+@NoArgsConstructor
+@AllArgsConstructor
 public class Reserva {
 
-    private int id;
-    private String nomeRestaurante, horario;
+    private long id, idRestaurante;
     private Date data;
-    private int quantidadePessoas;
+    private String horario;
+    private byte quantidadePessoas;
+    private String comentairo;
 
-    public Reserva(int id, String nomeRestaurante, Date data, String horario, int quantidadePessoas) {
+    public Reserva(long id, long idRestaurante, Date data, String horario, byte quantidadePessoas) {
         this.id = id;
-        this.nomeRestaurante = nomeRestaurante;
+        this.idRestaurante = idRestaurante;
+        this.data = data;
+        this.horario = horario;
+        this.quantidadePessoas = quantidadePessoas;
     }
-
+    
 }
 

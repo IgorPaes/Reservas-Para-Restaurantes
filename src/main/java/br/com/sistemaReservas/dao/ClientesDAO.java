@@ -60,23 +60,23 @@ public class ClientesDAO {
             }
 
             // Consulta as reservas associadas ao ID do cliente
-            String SQL = "SELECT Id, RestauranteId, Datas, Horarios, QtdPessoas FROM reservas WHERE ClienteId = ?";
-            PreparedStatement preparedStatement = connection.prepareStatement(SQL);
+            String comandoSQL = "SELECT * FROM reservas WHERE ClienteId = ?";
+            PreparedStatement preparedStatement = connection.prepareStatement(comandoSQL);
             preparedStatement.setInt(1, clientId);
             ResultSet resultSet = preparedStatement.executeQuery();
             List<Reserva> reservas = new ArrayList<>();
 
             // Constrói a lista de reservas
             while (resultSet.next()) {
-                int idReserva = resultSet.getInt("Id");
-                int idRestaurante = resultSet.getInt("RestauranteId");
+                long idReserva = resultSet.getInt("Id");
+                long idRestaurante = resultSet.getInt("RestauranteId");
                 Date dataReserva = resultSet.getDate("Datas");
                 Time horarioReserva = resultSet.getTime("Horarios");
                 int quantidadePessoas = resultSet.getInt("QtdPessoas");
 
-                String nomeRestaurante = obterNomeRestaurantePorId(idRestaurante);
+                // String nomeRestaurante = obterNomeRestaurantePorId(idRestaurante);
 
-                Reserva reserva = new Reserva(idReserva, nomeRestaurante, dataReserva, horarioReserva.toString(), quantidadePessoas);
+                Reserva reserva = new Reserva(idReserva, idRestaurante, dataReserva, horarioReserva.toString(), (byte) quantidadePessoas);
 
                 reservas.add(reserva);
             }
