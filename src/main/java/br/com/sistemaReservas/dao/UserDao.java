@@ -9,7 +9,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 @Slf4j
-public class UserDao {
+public class UserDAO {
     private static final String NOME = "NOME";
     private static final String CPF = "CPF";
     private static final String EMAIL = "EMAIL";

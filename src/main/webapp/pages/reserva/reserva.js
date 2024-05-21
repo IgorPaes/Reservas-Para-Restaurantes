@@ -107,42 +107,38 @@ const modalManager = {
     },
     fechar: () => {
         notificacao.style.display = 'none';
+    },
+    confirmar: () => {
+        const path = window.location.pathname;
+        let idRestaurante = path.split('/').pop();
+        fetch('/insert-reserve', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded'
+            },
+            body: 'idRestaurante=' + encodeURIComponent(idRestaurante) +
+                'data=' + encodeURIComponent(document.getElementById("data").value) +
+                '&horario=' + encodeURIComponent(document.getElementById("horario").value) +
+                '&qtdPessoas=' + encodeURIComponent(document.getElementById("qtdPessoas").textContent) +
+                '&comentario=' + encodeURIComponent(document.getElementById("comentario").value)
+        }).then(response => {
+            if (!response.ok) throw new Error('Erro ao inserir reserva');
+            window.location.href = '/pages/gerenciamento/cliente/em-andamento/em-andamento.jsp';
+        }).catch(error => {
+            console.error('Erro:', error);
+        });
     }
 }
 
 function confirmarReserva() {
-    
-    
     const data = document.getElementById("data").value;
-    const horario = document.getElementById("hours").value;
+    const horario = document.getElementById("horario").value;
     const qtdPessoas = document.getElementById("qtdPessoas").textContent;
-    const comentarios = document.getElementById("comentario").value;
-    
-    modalManager.abrir(data, horario, qtdPessoas);
-    
-    if(data.length.trim() == "" && horario.length.trim() == "" && qtdPessoas.length.trim() == "") {
-    
-    
-        // fetch('/InsertReserve', {
-        //     method: 'POST',
-        //     headers: {
-        //         'Content-Type': 'application/x-www-form-urlencoded'
-        //     },
-        //     body: 'data=' + encodeURIComponent(data) +
-        //           '&horario=' + encodeURIComponent(horario) +
-        //           '&qtdPessoas=' + encodeURIComponent(qtdPessoas) +
-        //           '&comentario=' + encodeURIComponent(comentarios)
-        // })
-        // .then(response => {
-        //     if (!response.ok) {
-        //         throw new Error('Erro ao inserir reserva');
-        //     }
-        //     console.log('Reserva inserida com sucesso!');
-        //     window.location.href = '/pages/gerenciamento/cliente/em-andamento/em-andamento.jsp'
-        // })
-        // .catch(error => {
-        //     console.error('Erro:', error);
-        // });
+
+    if(data.trim().length == "" && horario.trim().length == "" && qtdPessoas.trim().length == "") { 
+        modalManager.abrir(data, horario, qtdPessoas);
+    }else {
+        alert("Complete os campos para continuar.")
     }
 
 }

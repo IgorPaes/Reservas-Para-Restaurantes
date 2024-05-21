@@ -26,10 +26,10 @@
                 <h2>CONFIRMAÇÃO DA RESERVA</h2>
                 <div></div>
             </div>
-            <p>Eu <span>Joãozinho</span> confirmo a reserva no restaurante <span>${restaurante.nome}</span> as <span id="hr">...</span> no dia <span id="dt">...</span> para <span id="qp">...</span> pessoas.</p>
+            <p>Eu <span>Joãozinho</span> confirmo a reserva no restaurante <span>${restaurante.nome}</span> as <span id="hr">...</span> no dia <span id="dt">...</span> para <span id="qp">...</span> pessoa(s).</p>
             <div class="notify_btns">
                 <button type="button" onclick="modalManager.fechar()">EDITAR</button>
-                <button type="button" onclick="location.href='/create-reserve'">CONFIRMAR</button>
+                <button type="button" onclick="modalManager.confirmar()">CONFIRMAR</button>
             </div>
         </div>
     </div>
@@ -53,14 +53,14 @@
                                 <label for="data">DATAS <span>*</span></label>
                                 <div class="bg_input">
                                     <!-- COLOCAR INPUT CORRETO DE ACORDO COM O FIGMA -->
-                                    <!-- <input type="date" name="" id="data"> -->
+                                    <input type="date" name="" id="data">
                                 </div>
                             </div>
                             <div class="input_block">
                                 <span>HORÁRIOS <span>*</span></span>
                                 <div class="bg_input">
                                     <!-- COLOCAR INPUT CORRETO DE ACORDO COM O FIGMA -->
-                                    <!-- <input type="time" name="horario" id="hours"> -->
+                                    <input type="time" id="horario">
                                 </div>
                             </div>
                             <div class="input_block">

@@ -1,6 +1,6 @@
 package br.com.sistemaReservas.servlet;
 
-import br.com.sistemaReservas.dao.ClientesDAO;
+import br.com.sistemaReservas.dao.DAOCliente;
 import br.com.sistemaReservas.model.Reserva;
 import java.io.IOException;
 import java.util.List;
@@ -25,7 +25,7 @@ public class ReserveList extends HttpServlet {
 
             if (userEmail != null) {
                 // Chama o método findReservesByUserId() do seu DAO para obter a lista de reservas do usuário
-                ClientesDAO dao = new ClientesDAO();
+                DAOCliente dao = new DAOCliente();
                 List<Reserva> reservas = dao.findReservesByUserId(userEmail);
 
                 // Log para registrar a quantidade de reservas recuperadas

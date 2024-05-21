@@ -8,7 +8,7 @@ import java.util.Collections;
 import java.util.List;
 import lombok.extern.slf4j.Slf4j;
 @Slf4j
-public class ClientesDAO {
+public class DAOCliente {
     static Connection connection = null;
     static PreparedStatement comandoSQL = null;
     static ResultSet resultSet = null;
@@ -69,16 +69,17 @@ public class ClientesDAO {
             // Constrói a lista de reservas
             while (resultSet.next()) {
                 long idReserva = resultSet.getInt("Id");
+                long idCliente = resultSet.getInt("IdCliente");
                 long idRestaurante = resultSet.getInt("RestauranteId");
                 Date dataReserva = resultSet.getDate("Datas");
                 Time horarioReserva = resultSet.getTime("Horarios");
-                int quantidadePessoas = resultSet.getInt("QtdPessoas");
+                byte qtdPessoas = (byte )resultSet.getInt("QtdPessoas");
 
                 // String nomeRestaurante = obterNomeRestaurantePorId(idRestaurante);
 
-                Reserva reserva = new Reserva(idReserva, idRestaurante, dataReserva, horarioReserva.toString(), (byte) quantidadePessoas);
+                // Reserva reserva = new Reserva(idReserva, idCliente, idRestaurante, dataReserva, horarioReserva.toString(), qtdPessoas);
 
-                reservas.add(reserva);
+                // reservas.add(reserva);
             }
 
             log.info("Consulta de reservas realizada com sucesso para o usuário: {}", userEmail);
