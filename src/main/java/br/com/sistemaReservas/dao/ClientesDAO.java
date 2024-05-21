@@ -1,7 +1,6 @@
 package br.com.sistemaReservas.dao;
 
-import br.com.sistemaReservas.model.Reservas;
-import br.com.sistemaReservas.model.Restaurante;
+import br.com.sistemaReservas.model.Reserva;
 
 import java.sql.*;
 import java.util.ArrayList;
@@ -50,7 +49,7 @@ public class ClientesDAO {
         }
     }*/
 
-    public List<Reservas> findReservesByUserId(String userEmail) throws SQLException, ClassNotFoundException {
+    public List<Reserva> findReservesByUserId(String userEmail) throws SQLException, ClassNotFoundException {
         connection = Conexao.abrirConexao();
         try {
             // Obtém o ID do cliente a partir do email
@@ -65,7 +64,7 @@ public class ClientesDAO {
             PreparedStatement preparedStatement = connection.prepareStatement(SQL);
             preparedStatement.setInt(1, clientId);
             ResultSet resultSet = preparedStatement.executeQuery();
-            List<Reservas> reservas = new ArrayList<>();
+            List<Reserva> reservas = new ArrayList<>();
 
             // Constrói a lista de reservas
             while (resultSet.next()) {
@@ -77,7 +76,7 @@ public class ClientesDAO {
 
                 String nomeRestaurante = obterNomeRestaurantePorId(idRestaurante);
 
-                Reservas reserva = new Reservas(idReserva, nomeRestaurante, dataReserva, horarioReserva.toString(), quantidadePessoas);
+                Reserva reserva = new Reserva(idReserva, nomeRestaurante, dataReserva, horarioReserva.toString(), quantidadePessoas);
 
                 reservas.add(reserva);
             }

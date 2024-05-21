@@ -57,11 +57,10 @@
                             <div class="input_block">
                                 <span>HORÁRIOS <span>*</span></span>
 
+                                <!-- COLOCAR INPUT CORRETO DE ACORDO COM O FIGMA -->
                                 <div class="bg_input">
                                     <input type="time" name="horario" id="hours">
                                 </div>
-
-                                <!-- COLOCAR INPUT CORRETO DE ACORDO COM O FIGMA -->
                             </div>
                             <div class="input_block">
                                 <span>QTD DE PESSOAS <span>*</span></span>

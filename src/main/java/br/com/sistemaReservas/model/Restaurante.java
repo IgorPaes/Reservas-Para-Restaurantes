@@ -1,24 +1,15 @@
 package br.com.sistemaReservas.model;
 
+import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 
 @Getter
+@NoArgsConstructor
+@AllArgsConstructor
 public class Restaurante {
 
     private Long id;
-    private String nome;
-    private String endereco;
-    private String cep;
-    private String telefone;
-    private String img;
-
-    public Restaurante(Long id, String nome, String endereco, String cep, String telefone, String img) {
-        this.id = id;
-        this.nome = nome;
-        this.endereco = endereco;
-        this.cep = cep;
-        this.telefone = telefone;
-        this.img = img;
-    }
+    private String nome, endereco, cep, telefone, img;
 
 }

@@ -57,7 +57,7 @@
             </nav>
             <ul class="lista_restaurantes">
                 <c:forEach var="restaurante" items="${restaurantes}">
-                    <li class="bloco_item" id="${restaurante.id}" style="background-image: url('/assets/ImagensRestaurantes/fundosRestaurantes/${restaurante.img}');">
+                    <li class="bloco_item" style="background-image: url('/assets/ImagensRestaurantes/fundosRestaurantes/${restaurante.img}');">
                         <div class="conteudo_item">
                             <div class="item_top">
                                 <h3>${restaurante.nome}</h3>
@@ -86,7 +86,7 @@
                                     <span class="verde">Aberto</span>
                                     
                                 </div>
-                                <button type="button">CRIAR RESERVA</button>
+                                <button type="button" onclick="location.href='/create-reserve/{restaurante.id}'">CRIAR RESERVA</button>
                             </div>
                         </div>
                     </li>
