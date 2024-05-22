@@ -26,13 +26,13 @@ public class ReserveList extends HttpServlet {
             if (userEmail != null) {
                 // Chama o método findReservesByUserId() do seu DAO para obter a lista de reservas do usuário
                 DAOCliente dao = new DAOCliente();
-                List<Reserva> reservas = dao.findReservesByUserId(userEmail);
+                // List<Reserva> reservas = dao.findReservesByUserId(userEmail);
 
                 // Log para registrar a quantidade de reservas recuperadas
-                log.info("Total de reservas encontradas para o usuário {}: {}", userEmail, reservas.size());
+                // log.info("Total de reservas encontradas para o usuário {}: {}", userEmail, reservas.size());
 
                 // Define a lista de reservas como um atributo da requisição
-                request.setAttribute("reservas", reservas);
+                // request.setAttribute("reservas", reservas);
 
                 // Encaminha a requisição para a página JSP que irá exibir as reservas
                 //request.getRequestDispatcher("/pages/gerenciamento/cliente/em-andamento/em-andamento.jsp").forward(request, response);

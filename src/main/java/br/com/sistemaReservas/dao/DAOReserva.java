@@ -3,8 +3,6 @@ package br.com.sistemaReservas.dao;
 import lombok.extern.slf4j.Slf4j;
 
 import java.sql.*;
-import java.time.LocalDate;
-import java.time.LocalTime;
 
 import br.com.sistemaReservas.model.Reserva;
 
