@@ -35,7 +35,7 @@
     </div>
     <div class="container_xl" data-bg-url="/assets/ImagensRestaurantes/fundosRestaurantes/${restaurante.img}">
         <figure class="logo" onclick="location.href='/'">
-            <img src="../../assets/logo.png" alt="Logo">
+            <img src="/assets/logo.png" alt="Logo">
         </figure>
         <main class="form_container">
             <div class="title_box">

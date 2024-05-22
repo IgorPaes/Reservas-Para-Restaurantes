@@ -31,7 +31,8 @@ CREATE TABLE IF NOT EXISTS Reservas (
     Data DATE,
     Horario TIME,
     QtdPessoas INT,
-    Comentario VARCHAR(500)
+    Comentario VARCHAR(500),
+    -- Status CHAR(1)
 );
 
 INSERT INTO Restaurantes (NomeRestaurante, Endereco, Cep, Telefone, nomeImagem) VALUES

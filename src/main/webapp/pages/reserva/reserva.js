@@ -1,4 +1,3 @@
-
 document.addEventListener('DOMContentLoaded', function() {
     const container = document.querySelector('.container_xl');
     const bgUrl = container.getAttribute('data-bg-url');
@@ -105,7 +104,7 @@ const modalManager = {
             body: params.toString()
         }).then(response => {
             if (!response.ok) throw new Error('Erro ao inserir reserva');
-            location.href = '/pages/gerenciamento/cliente/em-andamento/em-andamento.jsp';
+            location.href = '/pages/gerenciamento/cliente/minhas-reservas/minhas-reservas.jsp';
         }).catch(error => {
             console.error('Erro:', error);
         });
@@ -122,5 +121,4 @@ function confirmarReserva() {
     }else {
         alert("Complete os campos para continuar.")
     }
-
 }

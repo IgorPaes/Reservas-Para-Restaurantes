@@ -46,14 +46,16 @@
         </section>
         <section class="tela_resturantes" id="secao2">
             <nav class="bloco_navegacao">
-                <div class="bloco_pesquisa">
-                    <input type="text" placeholder="Encontre seu restaurante...">
-                    <button>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 13 13" fill="none">
-                            <path d="M6.38462 10.8662L11 6.4331L6.38462 1.99998M10.359 6.4331L1 6.4331" stroke="white" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/>
-                        </svg>
-                    </button>
-                </div>
+                <form action="/" method="GET"> <!-- Use um formulário para enviar o parâmetro -->
+                    <div class="bloco_pesquisa">
+                        <input type="text" name="nomeRestaurante" placeholder="Encontre seu restaurante...">
+                        <button type="submit"> <!-- Use type="submit" para enviar o formulário -->
+                            <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 13 13" fill="none">
+                                <path d="M6.38462 10.8662L11 6.4331L6.38462 1.99998M10.359 6.4331L1 6.4331" stroke="white" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/>
+                            </svg>
+                        </button>
+                    </div>
+                </form>
             </nav>
             <ul class="lista_restaurantes">
                 <c:forEach var="restaurante" items="${restaurantes}">
@@ -86,7 +88,7 @@
                                     <span class="verde">Aberto</span>
                                     
                                 </div>
-                                <button type="button" onclick="location.href='/open-reserve/${restaurante.id}'">CRIAR RESERVA</button>
+                                <button type="button" onclick="criarReserva('${restaurante.id}')">CRIAR RESERVA</button>
                             </div>
                         </div>
                     </li>

@@ -19,7 +19,6 @@ public class OpenReserve extends HttpServlet {
 
         String pathInfo = request.getPathInfo();
         if (pathInfo != null) {
-
             String IdReserva = pathInfo.substring(1); // Remove a barra inicial
             Restaurante restaurante = new DAORestaurante().buscaRestauranteID(IdReserva);
             request.setAttribute("restaurante", restaurante);

@@ -5,27 +5,19 @@ if(getCookieValue(ID)) {
 
 function btnEntrar() {
     if(getCookieValue(ID)) {
-        location.href = '/pages/gerenciamento/cliente/em-andamento/em-andamento.jsp';
+        location.href = '/pages/gerenciamento/cliente/minhas-reservas/minhas-reservas.jsp';
     }else {
         location.href='/pages/login-register/login.html';
     }
 }
 
-// function userOnline() {
-//     fetch('/infosUser').then(function (res) {
-//         console.log(res);
-//         if (!res.ok) {
-//             throw new Error("Erro na autenticação -> " + res.status);
-//         }
-//         //Pegando o nome do restaurante e adicionando nos cookies
-//         const restaurantElement = document.getElementById('restaurant_Name');
-//         if (restaurantElement) {
-//             const restaurantName = restaurantElement.textContent;
-//             document.cookie = "restaurant_Name=" + encodeURIComponent(restaurantName) + "; path=/";
-//         }
-//         window.location.href = 'pages/reserva/reserva.jsp';
-//     }).catch(erro => console.error(erro));
-// }
+function criarReserva(id) {
+    if(getCookieValue(ID)) {
+        location.href=`/open-reserve/${id}`;
+    }else {
+        location.href='/pages/login-register/login.html';
+    }
+}
 
 function scrollParaSecao(id) {
     const secao = document.getElementById(id);
