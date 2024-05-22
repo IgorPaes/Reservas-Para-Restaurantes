@@ -5,20 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b28e0256-4d91-4be9-b173-bf0c4be51c1d" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/assets/ScriptSQL.sql" beforeDir="false" afterPath="$PROJECT_DIR$/assets/ScriptSQL.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/sistemaReservas/model/Reserva.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/sistemaReservas/model/Reserva.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/sistemaReservas/model/Restaurante.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/sistemaReservas/model/Restaurante.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/gerenciamento/backup/funcionarios.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/gerenciamento/backup/funcionarios.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/gerenciamento/backup/funcionarios.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/gerenciamento/backup/gerenciamento.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/gerenciamento/backup/gerenciamento.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/gerenciamento/backup/gerenciamento.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/gerenciamento/backup/historico-reserva.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/gerenciamento/backup/historico-reservas.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/gerenciamento/backup/reservas-pendentes.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/gerenciamento/backup/reservas.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/gerenciamento/backup/reservas.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/sistemaReservas/dao/DAORestaurante.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/sistemaReservas/dao/DAORestaurante.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,10 +16,8 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="JavaAutoRunManager">
-    <enabled-run-configurations>
-      <run-configuration type="MavenRunConfiguration" name="reservas-para-restaurantes [org.apache.tomcat.maven:tomcat7-maven-plugin:2.1:run]" />
-    </enabled-run-configurations>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
@@ -42,19 +28,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Maven.reservas-para-restaurantes [org.apache.tomcat.maven:tomcat7-maven-plugin:2.1:run].executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Maven.reservas-para-restaurantes [org.apache.tomcat.maven:tomcat7-maven-plugin:2.1:run].executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true"
   }
-}</component>
+}]]></component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="jdk-21.0.2-corretto-21.0.2-4caba194b151-51586f01" />
+      </set>
+    </attachedChunks>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="971880aa-123f-4f90-b760-5dc1989dfa10" name="Changes" comment="" />
+      <changelist id="b28e0256-4d91-4be9-b173-bf0c4be51c1d" name="Changes" comment="" />
       <created>1716396658834</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />

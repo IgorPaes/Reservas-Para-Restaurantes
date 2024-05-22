@@ -58,8 +58,8 @@ public class DAORestaurante {
 
         try {
             connection = Conexao.abrirConexao();
-            comandoSQL = connection.prepareStatement("SELECT * FROM Restaurantes WHERE NomeRestaurante LIKE ?");
-            comandoSQL.setString(1, "%" + nome + "%"); // Usamos LIKE para buscar por parte do nome
+            comandoSQL = connection.prepareStatement("SELECT * FROM Restaurantes WHERE UPPER(NomeRestaurante) LIKE ?");
+            comandoSQL.setString(1, "%" + nome.toUpperCase() + "%"); // Usamos LIKE para buscar por parte do nome
             resultSet = comandoSQL.executeQuery();
 
             while(resultSet.next()) {
