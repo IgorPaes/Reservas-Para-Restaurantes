@@ -26,7 +26,7 @@ public class Conexao {
             try {
 
                 Class.forName(DRIVER);
-                 CONEXAO = DriverManager.getConnection("jdbc:h2:~/test", "sa", "sa");
+                CONEXAO = DriverManager.getConnection("jdbc:h2:~/test", "sa", "sa");
                 //CONEXAO = DriverManager.getConnection(URL, LOGIN, SENHA);
 
                 if (CONEXAO != null) {

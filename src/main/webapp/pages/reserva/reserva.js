@@ -160,7 +160,7 @@ const modalManager = {
             body: params.toString()
         }).then(response => {
             if (!response.ok) throw new Error('Erro ao inserir reserva');
-            location.href = '/pages/gerenciamento/cliente/em-andamento/em-andamento.jsp';
+            location.href = '/pages/gerenciamento/cliente/minhas-reservas/minhas-reservas.jsp';
         }).catch(error => {
             console.error('Erro:', error);
         });
@@ -171,37 +171,6 @@ function confirmarReserva() {
     const data = document.getElementById("data").value;
     const horario = document.getElementById("horario").value;
     const qtdPessoas = document.getElementById("qtdPessoas").textContent;
-<<<<<<< HEAD
-    const comentarios = document.getElementById("comentario").value;
-    
-    modalManager.abrir(data, horario, qtdPessoas);
-    
-    if(data.length.trim() == "" && horario.length.trim() == "" && qtdPessoas.length.trim() == "") {
-    
-    
-        // fetch('/InsertReserve', {
-        //     method: 'POST',
-        //     headers: {
-        //         'Content-Type': 'application/x-www-form-urlencoded'
-        //     },
-        //     body: 'data=' + encodeURIComponent(data) +
-        //           '&horario=' + encodeURIComponent(horario) +
-        //           '&qtdPessoas=' + encodeURIComponent(qtdPessoas) +
-        //           '&comentario=' + encodeURIComponent(comentarios)
-        // })
-        // .then(response => {
-        //     if (!response.ok) {
-        //         throw new Error('Erro ao inserir reserva');
-        //     }
-        //     console.log('Reserva inserida com sucesso!');
-        //     window.location.href = '/pages/gerenciamento/cliente/minhas-reservas/minhas-reservas.jsp'
-        // })
-        // .catch(error => {
-        //     console.error('Erro:', error);
-        // });
-    }
-=======
->>>>>>> 732a41dac73a8bd908eaa773fcb30dfe019535a7
 
     if(data.trim().length != "" && horario.trim().length != "" && qtdPessoas.trim().length != "") {
         modalManager.abrir(data, horario, qtdPessoas);

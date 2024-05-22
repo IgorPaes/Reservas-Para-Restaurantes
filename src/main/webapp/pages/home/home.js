@@ -5,7 +5,7 @@ if(getCookieValue(ID)) {
 
 function btnEntrar() {
     if(getCookieValue(ID)) {
-        location.href = '/pages/gerenciamento/cliente/em-andamento/em-andamento.jsp';
+        location.href = '/pages/gerenciamento/cliente/minhas-reservas/minhas-reservas.jsp';
     }else {
         location.href='/pages/login-register/login.html';
     }

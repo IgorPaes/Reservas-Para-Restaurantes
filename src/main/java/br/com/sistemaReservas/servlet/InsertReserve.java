@@ -3,7 +3,6 @@ package br.com.sistemaReservas.servlet;
 import br.com.sistemaReservas.dao.DAOReserva;
 import br.com.sistemaReservas.model.Reserva;
 import br.com.sistemaReservas.utils.CookiesUtils;
-import lombok.extern.slf4j.Slf4j;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
