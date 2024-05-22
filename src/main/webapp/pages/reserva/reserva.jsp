@@ -63,10 +63,13 @@
                                     <input type="time" id="horario">
                                 </div>
                             </div>
+
                             <div class="input_block">
                                 <span>QTD DE PESSOAS <span>*</span></span>
                                 <div class="bg_input qtdPessoas">
                                     <div class="extend_btn" onclick="menosUm()">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="2" viewBox="0 0 18 2" fill="none">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="2" viewBox="0 0 18 2" fill="none">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="18" height="2" viewBox="0 0 18 2" fill="none">
                                             <path d="M18 2H0V0H18V2Z" fill="#110F19"/>
                                         </svg>
