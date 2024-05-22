@@ -138,7 +138,7 @@ function confirmarReserva() {
         //         throw new Error('Erro ao inserir reserva');
         //     }
         //     console.log('Reserva inserida com sucesso!');
-        //     window.location.href = '/pages/gerenciamento/cliente/em-andamento/em-andamento.jsp'
+        //     window.location.href = '/pages/gerenciamento/cliente/minhas-reservas/minhas-reservas.jsp'
         // })
         // .catch(error => {
         //     console.error('Erro:', error);

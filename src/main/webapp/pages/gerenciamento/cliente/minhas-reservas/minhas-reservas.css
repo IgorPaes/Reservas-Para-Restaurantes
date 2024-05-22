@@ -82,8 +82,6 @@ button {
     width: 100%;
     padding: 1.37rem 0 3.13rem 0;
     margin-top: 4rem;
-    
-    
 
 }
 
@@ -107,10 +105,8 @@ button {
     flex-direction: column;
     flex: 1;
     width: 100%;
-    max-width: 65%;
     margin-top: 40px;
     padding: 0 5rem;
-    margin: 0 auto;
 
 }
 
@@ -136,11 +132,12 @@ button {
 .list_titles {
 
     width: 100%;
+    max-width: var(--max-wid);
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin-bottom: 1.5rem;
-    padding: 0 3rem 0 4rem;
+    padding-left: 2rem;
     position: relative;
 
 }
@@ -174,23 +171,24 @@ button {
 
 .list_titles span.arrow.id::before {
 
-    right: 72px;
+    right: 68px;
 
 }
 
 .list_titles span.arrow.data::before {
 
-    right: 60px;
+    right: 57px;
 
 }
-
-/* .list_titles span:first-child {
+/* 
+.list_titles span:first-child {
 
     text-align: start;
 
 } */
 
-/* .list_titles span:last-child {
+/* 
+.list_titles span:last-child {
 
     text-align: end;
 
@@ -209,8 +207,19 @@ button {
     text-align: center;
     position: relative;
     cursor: pointer;
-    padding: 0 2.85rem 0 4rem;
     transition: all ease .45s;
+
+}
+
+.list_block .list_item .left_box {
+
+    width: 100%;
+    max-width: var(--max-wid);
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 2rem;
 
 }
 
@@ -262,5 +271,57 @@ button {
     object-fit: contain;
     width: 100%;
     height: 100%;
+
+}
+
+.list_block .list_item .btns_box {
+
+    display: flex;
+    gap: 1.25rem;
+    padding-right: 1.94rem;
+
+}
+
+.list_item .btns_box button {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 3.1rem;
+    max-height: 3.1rem;
+    color: var(--white-color);
+    font-size: .85rem;
+    font-weight: 500;
+    border-radius: 0.625rem;
+    white-space: nowrap;
+
+}
+
+.list_item .btns_box .btnCancelar {
+
+    padding: 0 1.4rem;
+    background: #FF4646;
+    text-wrap: nowrap;
+
+}
+
+.list_item .btns_box .btnCancelar:hover {
+
+    padding: 0 1.4rem;
+    background: #7c1818;
+    text-wrap: nowrap;
+
+}
+.list_item .btns_box .btnEditar {
+
+    padding: 0 .9rem;
+    background: rgba(18, 16, 24, .5);
+
+}
+
+.list_item .btns_box .btnEditar:hover {
+
+    padding: 0 .9rem;
+    background: rgb(33, 28, 46);
 
 }

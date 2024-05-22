@@ -35,7 +35,7 @@ public class ReserveList extends HttpServlet {
                 request.setAttribute("reservas", reservas);
 
                 // Encaminha a requisição para a página JSP que irá exibir as reservas
-                //request.getRequestDispatcher("/pages/gerenciamento/cliente/em-andamento/em-andamento.jsp").forward(request, response);
+                //request.getRequestDispatcher("/pages/gerenciamento/cliente/minhas-reservas/minhas-reservas.jsp").forward(request, response);
             } else {
                 // O usuário não está logado, redireciona para a página de login
                 response.sendRedirect("/pages/login-register/login.html");
@@ -64,7 +64,7 @@ public class ReserveList extends HttpServlet {
             // Encaminhe a requisição para a página JSP que irá exibir as reservas
             log.info("Redirecionando para a página de reservas em andamento");
 
-            request.getRequestDispatcher("/pages/gerenciamento/cliente/em-andamento/em-andamento.jsp").forward(request, response);
+            request.getRequestDispatcher("/pages/gerenciamento/cliente/minhas-reservas/minhas-reservas.jsp").forward(request, response);
 
 
         } catch (Exception e) {
