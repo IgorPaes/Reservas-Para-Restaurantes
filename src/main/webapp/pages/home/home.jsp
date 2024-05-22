@@ -86,7 +86,7 @@
                                     <span class="verde">Aberto</span>
                                     
                                 </div>
-                                <button type="button" onclick="location.href='/open-reserve/${restaurante.id}'">CRIAR RESERVA</button>
+                                <button type="button" onclick="criarReserva('${restaurante.id}')">CRIAR RESERVA</button>
                             </div>
                         </div>
                     </li>

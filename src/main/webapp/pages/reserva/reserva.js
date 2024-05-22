@@ -144,5 +144,4 @@ function confirmarReserva() {
     }else {
         alert("Complete os campos para continuar.")
     }
-
 }
