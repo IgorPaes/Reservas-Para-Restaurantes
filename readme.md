@@ -7,15 +7,11 @@
 **5.** Pesquisar Restaurantes;    
 **6.** Editar Reserva;   
 	- Editar data ou horário;    
- 	- Editar Mesa;    
- 	- Editar número de pessoas;    
-**7.** Gerenciar Reserva (Funcionário)     
- 	- Confirmar a reserva;  
- 	- Recusar a reserva;  
- 	- Cancelar a reserva;
+ 	- Editar Nome, Telefone, E-mail, CPF;    
+ 	- Editar número de pessoas;
 
 **Modelo de entidade e Relacionamento**
-![Modelo de entidade e relacionamento](/assets/imgs-projeto/MER-restaurante.png)
+![Modelo de entidade e relacionamento](/assets/imgs-projeto/MER-Restaurantes.png)
 
 
 
@@ -59,22 +55,6 @@
 ![Histórico De Reservas](/assets/imgs-projeto/Historico-reservas-1.png)
 
 
-**7. Reservas pendentes (Restaurante)**  
-- Ao clicar na aba 'Reservas Pendentes', o restaurante pode cancelar a reserva caso a mesa esteja ocupada (clicando no botão 'Cancelar Reserva'). Ele também pode aprovar a reserva, confirmando com o cliente que está tudo ok (clicando no botão 'Aprovar Reserva'). Além disso, o restaurante pode editar a reserva (clicando no botão cinza com um ícone de lápis). Lembre-se de que o restaurante também pode filtrar as reservas pelo ID e pela data.
- 
-![Reservas pendentes](/assets/imgs-projeto/Reservas-pendentes.png)
-
-
-**8. Reservas em andamento (Restaurante)**  
-- Na aba 'Reservas em andamento', o restaurante pode visualizar todas as reservas que foram aprovadas, podendo 'Cancelar Reserva' (clicando no botão 'Cancelar Reserva') e 'Editar Reserva' (clicando no botão 'Editar Reserva').
- 
-![Reservas em andamento](/assets/imgs-projeto/Reservas-andamento.png)
-
-
-**9. Histórico de reservas (Restaurante)**  
-- Na aba 'Histórico de Reservas' ficam armazenadas todas as reservas aceitas ou negadas, juntamente com as informações respectivas a elas.
-
-![Histórico de reservas](/assets/imgs-projeto/Historico-reservas-2.png)
 
 
 **Link do Figma:** https://www.figma.com/file/hVkB0Zc0hDUNXIzEAOqpwR/Restaurante?type=design&node-id=0%3A1&mode=design&t=5v7xMMMp1OmOOmRq-1
