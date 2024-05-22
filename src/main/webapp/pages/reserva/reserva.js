@@ -45,34 +45,7 @@ document.addEventListener("DOMContentLoaded", function() {
     limitarAno(dataInput);
 });
 
-function criarSelectHorarios(horariosEspecificos) {
-    const horarioAtual = new Date();
-    const horaAtual = horarioAtual.getHours();
-    const horaAmanha = horaAtual + 24;
 
-    const selectHorarios = document.createElement('select');
-    selectHorarios.name = 'horario';
-    selectHorarios.id = 'hours';
-
-    const horariosFiltrados = horariosEspecificos.filter(horario => {
-        const horaHorario = parseInt(horario.split(':')[0]);
-        return horaHorario >= horaAtual && horaHorario < horaAmanha;
-    });
-
-    for (const horario of horariosFiltrados) {
-        const option = document.createElement('option');
-        option.text = horario;
-        selectHorarios.add(option);
-    }
-
-    const bgInputDiv = document.querySelector('.input_block:nth-child(2) .bg_input');
-    bgInputDiv.innerHTML = '';
-    bgInputDiv.appendChild(selectHorarios);
-}
-
-const horariosEspecificos = ['15:30', '17:00', '17:45', '18:25', '18:50', '19:45', '20:00', '20:15', '20:30','20:55', '21:30', '22:45', '23:45'];
-
-criarSelectHorarios(horariosEspecificos);
 
 const notificacao = document.getElementById('notificacao');
 const modalManager = {

@@ -52,14 +52,13 @@
                             <div class="input_block">
                                 <label for="data">DATAS <span>*</span></label>
                                 <div class="bg_input">
-                                    <!-- COLOCAR INPUT CORRETO DE ACORDO COM O FIGMA -->
+
                                     <input type="date" name="" id="data" onload="limitarAno(this)">
                                 </div>
                             </div>
                             <div class="input_block">
                                 <span>HORÁRIOS <span>*</span></span>
                                 <div class="bg_input">
-                                    <!-- COLOCAR INPUT CORRETO DE ACORDO COM O FIGMA -->
                                     <input type="time" id="horario">
                                 </div>
                             </div>
