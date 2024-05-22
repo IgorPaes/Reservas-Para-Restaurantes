@@ -24,7 +24,7 @@
                 <button type="button">Histórico De Reservas</button>
             </div>
             <div class="user">
-                <h1>São Jorge</h1>
+                <h1>${reservas[0].idCliente}</h1>
                 <img src="/assets/saojorge.jpeg" alt="">
             </div>
         </nav>
