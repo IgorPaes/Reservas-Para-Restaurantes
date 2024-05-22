@@ -42,6 +42,7 @@ button {
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 10px;
     width: min-content;
     margin-right: 5rem;
 
@@ -145,15 +146,18 @@ button {
 
 .bloco_pesquisa{
     display: flex;
+    align-items: center;
     justify-content: space-between;
     width: 35.3125rem;
     height: 3.3125rem;
-    border-radius: 0.5rem;
+    border-radius: .5rem;
     border: 4px solid var(--cor-azul-escuro2);
+    padding-right: 8px;
 }
 
 .bloco_pesquisa input{
     width: 100%;
+    height: 100%;
     padding-right: 10px;
     margin-left: 1.56rem;
     align-items: center;
@@ -166,8 +170,6 @@ button {
     justify-content:center;
     width: 1.875rem;
     height: 1.8125rem; 
-    margin-top: 0.5rem;
-    margin-right: 0.75rem;
     background-color: var(--cor-azul-escuro2);
     border: 2px solid transparent;
     border-radius: 3px;

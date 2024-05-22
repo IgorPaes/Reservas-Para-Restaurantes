@@ -29,7 +29,7 @@
                 <button type="button" onclick="scrollParaSecao('secao3')">Clientes</button>
             </div>
             <div class="btn_entrar">
-                <button type="button" id="btnEntrar" onclick="location.href='/pages/login-register/login.html'">Entrar</button>
+                <button type="button" id="btnEntrar" onclick="btnEntrar()">Entrar</button>
                 <button type="button" id="btnSair" onclick="limparLogin()" class="log_out" style="display: none;">Sair</button>
             </div>
         </nav>

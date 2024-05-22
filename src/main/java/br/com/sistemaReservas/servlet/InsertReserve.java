@@ -30,10 +30,7 @@ public class InsertReserve extends HttpServlet {
         byte qtdPessoas;
         String comentario;
 
-        // emailCliente = CookiesUtils.getEmailFromCookie(request);
-        // String restaurantName = CookiesUtils.getRestaurantFromCookie(request);
-
-        idCliente = 1;
+        idCliente = Long.parseLong(CookiesUtils.getIdFromCookie(request));
 
         idRestaurante = Long.parseLong(request.getParameter("idRestaurante"));
 
