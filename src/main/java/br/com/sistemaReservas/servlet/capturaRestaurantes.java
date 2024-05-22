@@ -19,19 +19,26 @@ public class capturaRestaurantes extends HttpServlet {
     
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        String nomeRestaurante = request.getParameter("nomeRestaurante");
 
         DAORestaurante daoRestaurante = new DAORestaurante();
-        List<Restaurante> restaurantes = daoRestaurante.capturaRestaurantes();
+        List<Restaurante> restaurantes;
 
-        if (restaurantes != null) {            
+        if (nomeRestaurante != null && !nomeRestaurante.isEmpty()) {
+            // Se foi fornecido um nome de restaurante, buscar por ele
+            restaurantes = daoRestaurante.buscarRestaurantesPorNome(nomeRestaurante);
+        } else {
+            // Caso contrário, buscar todos os restaurantes
+            restaurantes = daoRestaurante.capturaRestaurantes();
+        }
+
+        if (restaurantes != null) {
             // Adicionar a lista de restaurantes ao request
             request.setAttribute("restaurantes", restaurantes);
             // Encaminhar a requisição para home.jsp
             request.getRequestDispatcher("/pages/home/home.jsp").forward(request, response);
-        }else {
+        } else {
             System.out.println("Nenhum restaurante foi registrado!");
         }
-
     }
-
 }

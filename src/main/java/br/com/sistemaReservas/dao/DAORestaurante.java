@@ -53,42 +53,84 @@ public class DAORestaurante {
         return null;
     }
 
-    // public List<Restaurante> buscaRestaurantes(String nome) {
 
-    //     List<Restaurante> listaRestaurantes = new ArrayList<>();
-        
-    //     try {
-    //         connection = Conexao.abrirConexao();
-    //         comandoSQL = connection.prepareStatement("SELECT name FROM restaurants WHERE LOWER(name) LIKE ?");
-    //         comandoSQL.setString(1, "%" + nome.toLowerCase() + "%");
-    //         resultSet = comandoSQL.executeQuery();
+    public List<Restaurante> buscarRestaurantesPorNome(String nome) {
+        List<Restaurante> listaRestaurantes = new ArrayList<>();
 
-    //         while(resultSet.next()) {
-    //             Restaurante restaurante = new Restaurante(
-    //                 (long) resultSet.getInt("Id"), 
-    //                 resultSet.getString("NomeRestaurante"), 
-    //                 resultSet.getString("Endereco"), 
-    //                 resultSet.getString("Cep"), 
-    //                 resultSet.getString("Telefone"),
-    //                 resultSet.getString("nomeImagem")
-    //             );
-    //             listaRestaurantes.add(restaurante);
-    //         }
+        try {
+            connection = Conexao.abrirConexao();
+            comandoSQL = connection.prepareStatement("SELECT * FROM RESTAURANTES WHERE NOMERESTAURANTE LIKE ?");
+            comandoSQL.setString(1, "%" + nome + "%"); // Usamos LIKE para buscar por parte do nome
+            resultSet = comandoSQL.executeQuery();
 
-    //         return listaRestaurantes;
-    //     } catch (ClassNotFoundException | SQLException ex) {
-    //         System.out.println("ERRO 100");
-    //     } finally {
-    //         try {
-    //             if (resultSet != null) resultSet.close();
-    //             if (comandoSQL != null) comandoSQL.close();
-    //             if (connection != null) connection.close();
-    //         } catch (SQLException e) {
-    //             System.out.println("ERRO 200");
-    //         }
-    //     }
+            while(resultSet.next()) {
+                Restaurante restaurante = new Restaurante(
+                        (long) resultSet.getInt("Id"),
+                        resultSet.getString("NomeRestaurante"),
+                        resultSet.getString("Endereco"),
+                        resultSet.getString("Cep"),
+                        resultSet.getString("Telefone"),
+                        resultSet.getString("nomeImagem")
+                );
+                listaRestaurantes.add(restaurante);
+            }
 
-    //     return null;
-    // }
+            return listaRestaurantes;
+        } catch (ClassNotFoundException | SQLException ex) {
+            System.out.println("ERRO 10");
+        } finally {
+            try {
+                if (resultSet != null) resultSet.close();
+                if (comandoSQL != null) comandoSQL.close();
+                if (connection != null) connection.close();
+            } catch (SQLException e) {
+                System.out.println("ERRO 20");
+            }
+        }
 
+        return null;
+    }
 }
+
+
+
+
+
+
+// public List<Restaurante> buscaRestaurantes(String nome) {
+
+//     List<Restaurante> listaRestaurantes = new ArrayList<>();
+
+//     try {
+//         connection = Conexao.abrirConexao();
+//         comandoSQL = connection.prepareStatement("SELECT name FROM restaurants WHERE LOWER(name) LIKE ?");
+//         comandoSQL.setString(1, "%" + nome.toLowerCase() + "%");
+//         resultSet = comandoSQL.executeQuery();
+
+//         while(resultSet.next()) {
+//             Restaurante restaurante = new Restaurante(
+//                 (long) resultSet.getInt("Id"),
+//                 resultSet.getString("NomeRestaurante"),
+//                 resultSet.getString("Endereco"),
+//                 resultSet.getString("Cep"),
+//                 resultSet.getString("Telefone"),
+//                 resultSet.getString("nomeImagem")
+//             );
+//             listaRestaurantes.add(restaurante);
+//         }
+
+//         return listaRestaurantes;
+//     } catch (ClassNotFoundException | SQLException ex) {
+//         System.out.println("ERRO 100");
+//     } finally {
+//         try {
+//             if (resultSet != null) resultSet.close();
+//             if (comandoSQL != null) comandoSQL.close();
+//             if (connection != null) connection.close();
+//         } catch (SQLException e) {
+//             System.out.println("ERRO 200");
+//         }
+//     }
+
+//     return null;
+// }
