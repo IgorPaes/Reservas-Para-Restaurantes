@@ -29,9 +29,9 @@ CREATE TABLE IF NOT EXISTS Reservas (
     IdCliente INT, FOREIGN KEY (IdCliente) REFERENCES Clientes(Id),
     Data DATE,
     Horario TIME,
-    QtdPessoas INT,
+    QtdPessoas TINYINT,
     Comentario VARCHAR(500),
-    Status varchar(10s)
+    Status VARCHAR(1)
 
 );
 

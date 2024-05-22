@@ -20,7 +20,7 @@
                 <img src="/assets/logo.png" alt="">
             </figure>
             <div class="botoes_nav">
-                <button type="button" class="selected_page" onclick="location.href='/pages/gerenciamento/cliente/minhas-reservas/minhas-reservas.jsp'">Minhas Reservas</button>
+                <button type="button" class="selected_page" onclick="location.href='/minhas-reservas'">Minhas Reservas</button>
                 <button type="button">Histórico De Reservas</button>
             </div>
             <div class="user">

@@ -77,7 +77,7 @@ const modalManager = {
             body: params.toString()
         }).then(response => {
             if (!response.ok) throw new Error('Erro ao inserir reserva');
-            location.href = '/pages/gerenciamento/cliente/minhas-reservas/minhas-reservas.jsp';
+            location.href = '/minhas-reservas';
         }).catch(error => {
             console.error('Erro:', error);
         });

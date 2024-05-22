@@ -26,7 +26,7 @@
                 <h2>CONFIRMAÇÃO DA RESERVA</h2>
                 <div></div>
             </div>
-            <p>Eu <span>Joãozinho</span> confirmo a reserva no restaurante <span>${restaurante.nome}</span> as <span id="hr">...</span> no dia <span id="dt">...</span> para <span id="qp">...</span> pessoa(s).</p>
+            <p>Eu <span></span> confirmo a reserva no restaurante <span>${restaurante.nome}</span> as <span id="hr">...</span> no dia <span id="dt">...</span> para <span id="qp">...</span> pessoa(s).</p>
             <div class="notify_btns">
                 <button type="button" onclick="modalManager.fechar()">EDITAR</button>
                 <button type="button" onclick="modalManager.confirmar()">CONFIRMAR</button>
@@ -89,7 +89,6 @@
                             </div>
                         </div>
                     </form>
-
                 </div>
                 <div class="buttons_box">
                     <button type="button" class="btn_cancelar" onclick="location.href='/'">CANCELAR</button>

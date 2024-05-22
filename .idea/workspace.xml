@@ -5,8 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b28e0256-4d91-4be9-b173-bf0c4be51c1d" name="Changes" comment="">
+<<<<<<< Updated upstream
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/br/com/sistemaReservas/dao/DAORestaurante.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/sistemaReservas/dao/DAORestaurante.java" afterDir="false" />
+=======
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/sistemaReservas/servlet/CatchReservas.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/ScriptSQL.sql" beforeDir="false" afterPath="$PROJECT_DIR$/assets/ScriptSQL.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/sistemaReservas/dao/DAOReserva.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/sistemaReservas/dao/DAOReserva.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/gerenciamento/cliente/minhas-reservas/minhas-reservas.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/gerenciamento/cliente/minhas-reservas/minhas-reservas.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/home/home.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/home/home.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/reserva/reserva.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/reserva/reserva.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/reserva/reserva.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/reserva/reserva.jsp" afterDir="false" />
+>>>>>>> Stashed changes
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,28 +27,40 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+<<<<<<< Updated upstream
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+=======
+>>>>>>> Stashed changes
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
   &quot;associatedIndex&quot;: 1
 }</component>
   <component name="ProjectId" id="2gpZoyz4V2QcdQ1GYYb2hhTKJN5" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+<<<<<<< Updated upstream
     "Maven.reservas-para-restaurantes [org.apache.tomcat.maven:tomcat7-maven-plugin:2.1:run].executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
+=======
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "Maven.reservas-para-restaurantes [org.apache.tomcat.maven:tomcat7-maven-plugin:2.1:run].executor": "Run",
+>>>>>>> Stashed changes
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true"
   }
 }]]></component>
+<<<<<<< Updated upstream
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -45,6 +68,8 @@
       </set>
     </attachedChunks>
   </component>
+=======
+>>>>>>> Stashed changes
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -55,5 +80,8 @@
       <updated>1716396658834</updated>
     </task>
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
 </project>

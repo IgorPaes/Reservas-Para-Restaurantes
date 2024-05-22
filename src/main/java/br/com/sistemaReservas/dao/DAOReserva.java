@@ -3,6 +3,8 @@ package br.com.sistemaReservas.dao;
 import lombok.extern.slf4j.Slf4j;
 
 import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
 
 import br.com.sistemaReservas.model.Reserva;
 
@@ -42,6 +44,45 @@ public class DAOReserva {
             if (connection != null) connection.close();
         }
 
+    }
+
+    public List<Reserva> capturaReservas() {
+
+        List<Reserva> listaReservas = new ArrayList<>();
+        
+        try {
+            connection = Conexao.abrirConexao();
+            comandoSQL = connection.prepareStatement("SELECT * FROM Reservas");
+            resultSet = comandoSQL.executeQuery();
+
+            while(resultSet.next()) {
+                Reserva reserva = new Reserva(
+                    resultSet.getLong("Id"),
+                    resultSet.getLong("IdRestaurante"),
+                    resultSet.getLong("IdCliente"),
+                    resultSet.getDate("Data"),
+                    resultSet.getTime("Horario"),
+                    resultSet.getByte("QtdPessoas"),
+                    resultSet.getString("Comentario"),
+                    resultSet.getString("Status").charAt(0)
+                );
+                listaReservas.add(reserva);
+            }
+
+            return listaReservas;
+        } catch (ClassNotFoundException | SQLException ex) {
+            System.out.println("ERRO 10");
+        } finally {
+            try {
+                if (resultSet != null) resultSet.close();
+                if (comandoSQL != null) comandoSQL.close();
+                if (connection != null) connection.close();
+            } catch (SQLException e) {
+                System.out.println("ERRO 20");
+            }
+        }
+
+        return null;
     }
 
 }
