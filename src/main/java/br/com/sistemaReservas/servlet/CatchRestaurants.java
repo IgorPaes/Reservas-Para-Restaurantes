@@ -1,8 +1,6 @@
 package br.com.sistemaReservas.servlet;
 
-import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
 import java.util.List;
 
 import javax.servlet.ServletException;
@@ -15,7 +13,7 @@ import br.com.sistemaReservas.dao.DAORestaurante;
 import br.com.sistemaReservas.model.Restaurante;
 
 @WebServlet("")
-public class capturaRestaurantes extends HttpServlet {
+public class CatchRestaurants extends HttpServlet {
     
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

@@ -25,6 +25,7 @@ public class DAORestaurante {
             comandoSQL = connection.prepareStatement("SELECT * FROM Restaurantes");
             resultSet = comandoSQL.executeQuery();
 
+
             while(resultSet.next()) {
                 Restaurante restaurante = new Restaurante(
                     (long) resultSet.getInt("Id"), 
@@ -53,13 +54,12 @@ public class DAORestaurante {
         return null;
     }
 
-
     public List<Restaurante> buscarRestaurantesPorNome(String nome) {
         List<Restaurante> listaRestaurantes = new ArrayList<>();
 
         try {
             connection = Conexao.abrirConexao();
-            comandoSQL = connection.prepareStatement("SELECT * FROM RESTAURANTES WHERE NOMERESTAURANTE LIKE ?");
+            comandoSQL = connection.prepareStatement("SELECT * FROM Restaurantes WHERE NomeRestaurante LIKE ?");
             comandoSQL.setString(1, "%" + nome + "%"); // Usamos LIKE para buscar por parte do nome
             resultSet = comandoSQL.executeQuery();
 
@@ -91,10 +91,6 @@ public class DAORestaurante {
         return null;
     }
 }
-
-
-
-
 
 
 // public List<Restaurante> buscaRestaurantes(String nome) {

@@ -1,6 +1,5 @@
 package br.com.sistemaReservas.servlet;
-
-import br.com.sistemaReservas.dao.SaveUser;
+import br.com.sistemaReservas.dao.DAOCliente;
 import br.com.sistemaReservas.model.User;
 
 import javax.servlet.ServletException;
@@ -22,12 +21,12 @@ public class CreateUser extends HttpServlet {
         String userTelefone = request.getParameter("telefone");
         String userSenha = request.getParameter("senha");
 
-        SaveUser saveUser = new SaveUser();
+        DAOCliente userDAO = new DAOCliente();
 
         try {
-            saveUser.save(new User(userName, userEmail, userCpf, userTelefone, userSenha));
+            userDAO.saveUser(new User(userName, userEmail, userCpf, userTelefone, userSenha));
             request.getRequestDispatcher("/pages/login-register/login.html").forward(request, resp);
-        } catch (SaveUser.EmailAlreadyInUseException e) {
+        } catch (DAOCliente.EmailAlreadyInUseException e) {
             // usado para mandar um alerta e voltar para tela de registro novamente
             resp.getWriter().println("<script>alert('Email já está em uso. Por favor, tente outro email.');</script>");
             // request.getRequestDispatcher("/pages/login-register/register.html").forward(request, resp);
