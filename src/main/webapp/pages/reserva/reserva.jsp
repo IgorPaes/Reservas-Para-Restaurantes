@@ -53,7 +53,7 @@
                                 <label for="data">DATAS <span>*</span></label>
                                 <div class="bg_input">
                                     <!-- COLOCAR INPUT CORRETO DE ACORDO COM O FIGMA -->
-                                    <input type="date" name="" id="data">
+                                    <input type="date" name="" id="data" onload="limitarAno(this)">
                                 </div>
                             </div>
                             <div class="input_block">

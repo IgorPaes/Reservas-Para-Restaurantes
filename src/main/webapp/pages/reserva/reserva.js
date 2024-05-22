@@ -51,6 +51,39 @@ document.addEventListener("DOMContentLoaded", function() {
     const dataInput = document.getElementById('data');
     limitarAno(dataInput);
 });
+// Função para criar um select de horários a partir de uma lista de horários específicos
+function criarSelectHorarios(horariosEspecificos) {
+    const horarioAtual = new Date(); // Obtém o horário atual
+    const horaAtual = horarioAtual.getHours(); // Obtém a hora atual
+    const horaAmanha = horaAtual + 24; // Obtém a hora 24 horas depois
+
+    const selectHorarios = document.createElement('select');
+    selectHorarios.name = 'horario';
+    selectHorarios.id = 'hours';
+
+    // Filtra os horários específicos para incluir apenas os horários entre o horário atual e 24 horas depois
+    const horariosFiltrados = horariosEspecificos.filter(horario => {
+        const horaHorario = parseInt(horario.split(':')[0]);
+        return horaHorario >= horaAtual && horaHorario < horaAmanha;
+    });
+
+    for (const horario of horariosFiltrados) {
+        const option = document.createElement('option');
+        option.text = horario;
+        selectHorarios.add(option);
+    }
+
+    // Selecionar a div correta usando o seletor de classe
+    const bgInputDiv = document.querySelector('.input_block:nth-child(2) .bg_input');
+    bgInputDiv.innerHTML = ''; // Limpar qualquer conteúdo existente
+    bgInputDiv.appendChild(selectHorarios);
+}
+
+// Horários específicos que você deseja passar para a função
+const horariosEspecificos = ['15:30', '17:00', '17:45', '18:25', '18:50', '19:45', '20:30', '21:30', '22:45', '23:45'];
+
+// Chamada da função para criar o select de horários com os horários específicos a partir do horário atual até 24 horas depois
+criarSelectHorarios(horariosEspecificos);
 
 /* DESCOMENTE PARA TER O SELECT DE HORÁRIOS
 // Função para pegar o horário atual em formato "HH:MM"
