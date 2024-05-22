@@ -19,10 +19,6 @@ public class Restaurante {
         this.img = img;
     }
 
-    // public String getTelefoneFormatado() {
-    //     return formatarTelefone(this.telefone);
-    // }
-
     public static String formatarTelefone(String telefone) {
         if (telefone.length() == 11) {
             return telefone.replaceAll("(\\d{2})(\\d{1})(\\d{4})(\\d{4})", "($1) $2 $3-$4");

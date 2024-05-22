@@ -17,6 +17,8 @@ public class Reserva {
     private Time horario;
     private byte qtdPessoas;
     private String comentario;
+    private char status = '1';
+    // 1 - Em andamento; 2 - Confirmada; 3 - Cancelada.
 
     public Reserva(long id, long idRestaurante, long idCliente, Date data, Time horario, byte qtdPessoas) {
         this.id = id;
@@ -35,6 +37,10 @@ public class Reserva {
         this.qtdPessoas = qtdPessoas;
         this.comentario = comentario;
     }
-    
+
+    public void setStatus(char status) {
+        this.status = status;
+    }
+
 }
 

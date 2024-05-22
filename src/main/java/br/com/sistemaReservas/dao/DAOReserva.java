@@ -18,7 +18,7 @@ public class DAOReserva {
         connection = Conexao.abrirConexao();
 
         try {
-            comandoSQL = connection.prepareStatement("INSERT INTO Reservas (IdRestaurante, IdCliente, Data, Horario, QtdPessoas, comentario) VALUES (?, ?, ?, ?, ?, ?)");
+            comandoSQL = connection.prepareStatement("INSERT INTO Reservas (IdRestaurante, IdCliente, Data, Horario, QtdPessoas, Comentario, Status) VALUES (?, ?, ?, ?, ?, ?, ?)");
             
             comandoSQL.setLong(1, reserva.getIdRestaurante());
             comandoSQL.setLong(2, reserva.getIdCliente());
@@ -26,6 +26,7 @@ public class DAOReserva {
             comandoSQL.setTime(4, reserva.getHorario());
             comandoSQL.setInt(5, reserva.getQtdPessoas());
             comandoSQL.setString(6, reserva.getComentario());
+            comandoSQL.setString(7, String.valueOf(reserva.getStatus()));
 
             int rowsInserted = comandoSQL.executeUpdate();
             if (rowsInserted > 0) {

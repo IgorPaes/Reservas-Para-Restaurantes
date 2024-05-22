@@ -1,12 +1,14 @@
 -- CREATE DATABASE IF NOT EXISTS sistema_reserva;
 
 CREATE TABLE IF NOT EXISTS Clientes (
+    
     Id int auto_increment primary key,
     Nome varchar(30),
     Cpf varchar(20) unique,
     Email varchar(50) unique,
     Telefone varchar(20),
     Senha varchar(50)
+
 );
 
 CREATE TABLE IF NOT EXISTS Restaurantes (
@@ -21,18 +23,16 @@ CREATE TABLE IF NOT EXISTS Restaurantes (
 );
 
 CREATE TABLE IF NOT EXISTS Reservas (
-    Id INT AUTO_INCREMENT PRIMARY KEY,
     
-    IdRestaurante INT,
-    FOREIGN KEY (IdRestaurante) REFERENCES Restaurantes(Id),
-    IdCliente INT,
-    FOREIGN KEY (IdCliente) REFERENCES Clientes(Id),
-
+    Id INT AUTO_INCREMENT PRIMARY KEY,
+    IdRestaurante INT, FOREIGN KEY (IdRestaurante) REFERENCES Restaurantes(Id),
+    IdCliente INT, FOREIGN KEY (IdCliente) REFERENCES Clientes(Id),
     Data DATE,
     Horario TIME,
     QtdPessoas INT,
     Comentario VARCHAR(500),
-    -- Status CHAR(1)
+    Status varchar(10s)
+
 );
 
 INSERT INTO Restaurantes (NomeRestaurante, Endereco, Cep, Telefone, nomeImagem) VALUES
