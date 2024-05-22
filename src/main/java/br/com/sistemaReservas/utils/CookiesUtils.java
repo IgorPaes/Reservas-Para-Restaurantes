@@ -8,28 +8,13 @@ import javax.servlet.http.HttpServletRequest;
 @UtilityClass
 public class CookiesUtils {
 
-    private static final String EMAIL = "email";
-    private static final String RESTAURANTE = "restaurant_Name";
+    private static final String ID = "id";
 
-    public static String getEmailFromCookie(HttpServletRequest request) {
-        // Implemente a lógica para extrair o email do cookie
+    public static String getIdFromCookie(HttpServletRequest request) {
         Cookie[] cookies = request.getCookies();
         if (cookies != null) {
             for (Cookie cookie : cookies) {
-                if (cookie.getName().equals(EMAIL)) {
-                    return cookie.getValue();
-                }
-            }
-        }
-        return null;
-    }
-
-    public static String getRestaurantFromCookie(HttpServletRequest request) {
-
-        Cookie[] cookies = request.getCookies();
-        if (cookies != null) {
-            for (Cookie cookie : cookies) {
-                if (cookie.getName().equals(RESTAURANTE)) {
+                if (cookie.getName().equals(ID)) {
                     return cookie.getValue();
                 }
             }

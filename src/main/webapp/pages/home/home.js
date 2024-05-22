@@ -1,7 +1,14 @@
-
-if(getCookieValue("cpf")) {
-    document.getElementById('btnEntrar').style.display = 'none';
+const ID = "id";
+if(getCookieValue(ID)) {
     document.getElementById('btnSair').style.display = 'block';
+}
+
+function btnEntrar() {
+    if(getCookieValue(ID)) {
+        location.href = '/pages/gerenciamento/cliente/em-andamento/em-andamento.jsp';
+    }else {
+        location.href='/pages/login-register/login.html';
+    }
 }
 
 // function userOnline() {
@@ -33,10 +40,6 @@ function getCookieValue(name) {
 }
 
 function limparLogin() {
-    const listaInfosCookies = ['cpf', 'email', 'nome', 'telefone'];
-    listaInfosCookies.forEach((name) => {
-        document.cookie = name + '=; Max-Age=-99999999; path=/';
-    });
-    document.getElementById('btnEntrar').style.display = 'block';
+    document.cookie = ID + '=; Max-Age=-99999999; path=/';
     document.getElementById('btnSair').style.display = 'none';
 }

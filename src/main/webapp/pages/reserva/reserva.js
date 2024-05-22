@@ -111,19 +111,23 @@ const modalManager = {
     confirmar: () => {
         const path = window.location.pathname;
         let idRestaurante = path.split('/').pop();
+        
+        const params = new URLSearchParams();
+        params.append('idRestaurante', idRestaurante);
+        params.append('data', document.getElementById("data").value);
+        params.append('horario', document.getElementById("horario").value);
+        params.append('qtdPessoas', document.getElementById("qtdPessoas").textContent);
+        params.append('comentario', document.getElementById("comentario").value);
+        
         fetch('/insert-reserve', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/x-www-form-urlencoded'
             },
-            body: 'idRestaurante=' + encodeURIComponent(idRestaurante) +
-                'data=' + encodeURIComponent(document.getElementById("data").value) +
-                '&horario=' + encodeURIComponent(document.getElementById("horario").value) +
-                '&qtdPessoas=' + encodeURIComponent(document.getElementById("qtdPessoas").textContent) +
-                '&comentario=' + encodeURIComponent(document.getElementById("comentario").value)
+            body: params.toString()
         }).then(response => {
             if (!response.ok) throw new Error('Erro ao inserir reserva');
-            window.location.href = '/pages/gerenciamento/cliente/em-andamento/em-andamento.jsp';
+            location.href = '/pages/gerenciamento/cliente/em-andamento/em-andamento.jsp';
         }).catch(error => {
             console.error('Erro:', error);
         });
@@ -135,7 +139,7 @@ function confirmarReserva() {
     const horario = document.getElementById("horario").value;
     const qtdPessoas = document.getElementById("qtdPessoas").textContent;
 
-    if(data.trim().length == "" && horario.trim().length == "" && qtdPessoas.trim().length == "") { 
+    if(data.trim().length != "" && horario.trim().length != "" && qtdPessoas.trim().length != "") {
         modalManager.abrir(data, horario, qtdPessoas);
     }else {
         alert("Complete os campos para continuar.")
