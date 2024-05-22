@@ -8,26 +8,16 @@ import java.sql.DriverManager;
 
 @Slf4j
 public class Conexao {
+
     public static String STATUS = "Não conectado";
-    public static String DRIVER = "com.mysql.cj.jdbc.Driver";
-    public static String SERVER = "localhost";
-    public static String DATABASE = "sistema_reserva";
-    public static String LOGIN = "root";
-   //public static String SENHA = "P@$$w0rd";
-    //senha andre
-   //public static String SENHA = "210215";
-    public static String SENHA = "sa";
-    public static String URL = "jdbc:mysql://" + SERVER + ":3306/" + DATABASE;
     public static Connection CONEXAO;
-    public Conexao() {}
+
     public static Connection abrirConexao() throws ClassNotFoundException,SQLException {
 
         if(CONEXAO==null) {
-            try {
 
-                Class.forName(DRIVER);
+            try {
                 CONEXAO = DriverManager.getConnection("jdbc:h2:~/test", "sa", "sa");
-                //CONEXAO = DriverManager.getConnection(URL, LOGIN, SENHA);
 
                 if (CONEXAO != null) {
                     STATUS = "Conexão realizada com sucesso!";
@@ -37,22 +27,13 @@ public class Conexao {
                     log.error("falha na conexão ");
                 }
 
-            } catch (ClassNotFoundException e) {
-
-                throw new ClassNotFoundException("O driver especificado nao foi encontrado.");
-
             } catch (SQLException e) {
-
-                //Outra falha de conexão
-                throw new SQLException("Erro ao estabelecer a conexão (Ex: login ou senha errados).");
+                throw new SQLException("Erro ao estabelecer a conexão.");
             }
 
-        }
-        else
-        {
+        } else {
             try {
                 if(CONEXAO.isClosed())
-                    //CONEXAO = DriverManager.getConnection(URL, LOGIN, SENHA);
                     CONEXAO = DriverManager.getConnection("jdbc:h2:~/test", "sa", "sa");
             } catch (SQLException ex) {
                 throw new SQLException("Falha ao fechar a conexão.");
@@ -84,4 +65,5 @@ public class Conexao {
 
         return retorno;
     }
+    
 }

@@ -1,10 +1,3 @@
-// function limitarAno(input) {
-//     const inputValue = input.value;
-//     if(inputValue.length > 10) {
-//         input.value = inputValue.slice(0, 10);
-//     }
-// }
-
 document.addEventListener('DOMContentLoaded', function() {
     const container = document.querySelector('.container_xl');
     const bgUrl = container.getAttribute('data-bg-url');
