@@ -1,0 +1,186 @@
+.container_lr {
+
+    width: 100%;
+    height: 100%;
+    position: relative;
+    padding: 20px;
+
+}
+.container_lr .logo {
+
+    position: absolute;
+    top: 20px;
+    left: 20px;
+
+}
+
+.container_lr .main_lr {
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    padding: 45px 50px 20px 50px;
+    background-color: var(--cor-branca);
+    border-radius: 15px;
+
+}
+
+.container_lr .main_lr .form_titulo {
+
+    width: 100%;
+    margin-bottom: 50px;
+
+}
+
+.main_lr .form_titulo h1 {
+
+    font-size: 45px;
+    font-weight: 600;
+    letter-spacing: 2.25px;
+    color: var(--cor-azul-escuro1);
+    margin-bottom: 12px;
+
+}
+
+.main_lr .form_titulo p {
+
+    font-size: 20px;
+    color: var(--cor-azul-escuro1);
+    letter-spacing: 1.4px;
+
+}
+
+/* .container_lr .main_lr .form_lr {} */
+
+.main_lr .form_lr .form_inputs {
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 35px;
+    row-gap: 25px;
+
+}
+
+.main_lr .form_lr .grupo_input {
+
+    display: flex;
+    flex-direction: column;
+
+}
+
+.form_lr .grupo_input label {
+
+    font-size: 20px;
+    font-weight: 800;
+    letter-spacing: 1.4px;
+    color: var(--cor-azul-escuro1);
+    margin-bottom: 15px;
+    
+}
+
+.form_lr .grupo_input input {
+
+    height: 72px;
+    border: 2px solid var(--cor-azul-escuro1);
+    background-color: transparent;
+    padding: 0 10px 0 25px;
+    border-radius: 8px;
+    font-size: 23px;
+    color: rgba(15, 13, 23, .85);
+
+}
+
+.form_lr .grupo_input input::placeholder {
+
+    font-size: 20px;
+    font-weight: 400;
+    color: rgba(15, 13, 23, .4);
+    letter-spacing: .9px;
+
+}
+
+.main_lr .caixa_adicionais {
+
+    width: 100%;
+    text-align: center;
+    margin-top: 25px;
+
+}
+
+.main_lr .caixa_adicionais button {
+
+    font-size: 18px;
+    color: var(--cor-azul-escuro1);
+    letter-spacing: .9px;
+    text-decoration-line: underline;
+
+}
+
+.main_lr .caixa_confirmar {
+
+    width: 100%;
+    margin-top: 69px;
+
+}
+
+.main_lr .caixa_confirmar button {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    background: var(--cor-azul-escuro2);
+    max-width: 635px;
+    height: 72px;
+    width: 100%;
+    font-size: 21px;
+    font-weight: 700;
+    letter-spacing: 1.47px;
+    color: var(--cor-branca);
+    margin: 0 auto;
+    transition: all var(--tempo-transicao-45);
+
+}
+
+.main_lr .caixa_confirmar button:hover {
+
+    letter-spacing: 6px; 
+
+}
+
+/* -------- REGISTER -------- */
+
+.main_register {
+
+   max-width: 1235px;
+
+}
+
+/* -------- LOGIN -------- */
+
+.main_login {
+
+    max-width: 650px;
+
+}
+
+.main_login .form_inputs {
+
+    display: flex !important;
+    flex-direction: column;
+    max-width: 550px;
+}
+
+.main_login .caixa_confirmar {
+
+    margin-top: 100px;
+
+}
+
+.main_login .form_titulo {
+
+    margin-bottom: 70px;
+
+}

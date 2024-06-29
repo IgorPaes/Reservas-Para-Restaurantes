@@ -1,0 +1,401 @@
+.container_xl {
+
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    /* background: url(/assets/back_reserva.png);
+    background-size: 100%;
+    background-repeat: no-repeat; */
+    padding: 15px;
+
+}
+
+.container_xl::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: var(--bg-url);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: grayscale(80%) blur(5px) opacity(.25);
+    z-index: -1;
+}
+
+.container_xl .logo {
+
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    cursor: pointer;    
+
+}
+
+.form_container {
+
+    width: 62.5rem;
+    /* transform: scale(1.1); */
+
+}
+
+.form_container .title_box {
+
+    width: 100%;
+    height: 6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px 15px 0 0;
+    background: var(--cor-azul-escuro2);
+    
+}
+
+.form_container .title_box h1 {
+
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: .5px;
+
+}
+
+.main_cont {
+
+    width: 100%;
+    background-color: var(--cor-branca);
+    border-radius: 0 0 15px 15px;
+    padding: 2rem 1.25rem 1.25rem 1.25rem;
+
+}
+
+.booking_information {
+
+    max-width: 629px;
+    margin: 0 auto;
+
+}
+
+.infos_title {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1.75rem;
+
+}
+
+.infos_title h2 {
+
+    color: var(--cor-azul-escuro1);
+    font-size: 1.25rem;
+    font-weight: 800;
+    letter-spacing: .5px;
+    margin-bottom: 5px;
+
+}
+
+.infos_title > div {
+
+    min-width: 14.3125rem;
+    height: 2px;
+    background-color: var(--cor-azul-escuro2);
+
+}
+
+.fields_box {
+
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1.4fr 1.07fr 1fr;
+    grid-auto-rows: min-content;
+    column-gap: 30px;
+    row-gap: 20px;
+
+}
+
+.fields_box .input_block {
+
+    height: 100%;
+
+}
+
+.input_block .bg_input {
+
+    border-radius: 8px;
+    background: rgba(216, 216, 216, .25);
+    padding: .94rem;
+    margin-top: 8px;
+
+}
+
+.input_block .bg_input.qtdPessoas {
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.input_block .bg_input.qtdPessoas span {
+
+    width: 70%;
+    max-width: 70%;
+    height: 100%;
+    margin-bottom: 0;
+    text-align: center;
+    user-select: none;
+
+}
+
+.input_block .bg_input.qtdPessoas .extend_btn {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 20px;
+    cursor: pointer;
+
+}
+
+.input_block .bg_input textarea {
+
+    max-height: 10rem;
+    max-width: 100%;
+    word-wrap: break-word;
+
+}
+
+.input_block .bg_input textarea::placeholder {
+
+    user-select: none;
+
+}
+
+.input_block .bg_input input {
+
+    font-weight: 500;
+
+}
+
+.input_block .bg_input input, .input_block .bg_input textarea {
+
+    width: 100%;
+    color: var(--cor-azul-escuro1);
+
+}
+
+.input_block label, .input_block span {
+
+    color: var(--cor-azul-escuro2);
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: .36px;
+    margin-bottom: 8px;
+    user-select: none !important;
+
+}
+
+.input_block label span, .input_block span span {
+
+    color: rgba(255, 0, 0, .85);
+
+}
+
+.fields_box .input_block:last-child {
+
+    grid-column: span 3;
+
+}
+
+.main_cont input {
+
+    user-select: none !important;
+
+}
+
+.main_cont .buttons_box {
+
+    display: flex;
+    gap: 1.25rem;
+    width: 100%;
+    height: 3.5rem;
+    margin: 3rem auto 0 auto;
+
+}
+
+.main_cont .buttons_box .btn_cancelar, .main_cont .buttons_box .btn_confirmar {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    color: var(--cor-branca);
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: .08rem;
+    border-radius: 8px;
+    transition: all ease .45s;
+
+}
+
+.main_cont .buttons_box button:hover {
+
+    transform: scale(.97);
+
+}
+
+.main_cont .buttons_box .btn_cancelar {
+
+    flex: 1;
+    background-color: rgb(160, 160, 160);
+        
+}
+
+.main_cont .buttons_box .btn_confirmar {
+
+    width: 66%;
+    background-color: var(--cor-azul-escuro2);
+
+}
+
+/* -------- MODAL -------- */
+
+.modal_cont {
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;  
+    z-index: 100;
+
+}
+
+.notification_modal {
+
+    width: 37.5rem;
+    background-color: var(--cor-branca);
+    border-radius: 15px;
+    padding: 1.25rem .94rem .94rem .94rem;
+    animation: scale-up-center .45s both;
+
+}
+
+@keyframes scale-up-center {
+    0% {
+        transform: scale(.65);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.notification_modal .notify_title {
+
+    width: 100%;
+    margin-bottom: 2.5rem;
+
+}
+
+.notification_modal .notify_title h2 {
+
+    color: var(--cor-azul-escuro2);
+    font-size: 1.125rem;
+    font-weight: 600;
+    letter-spacing: .0225rem;
+    text-align: center;
+    margin-bottom: 4px;
+
+}
+
+.notification_modal .notify_title > div {
+
+    width: 100%;
+    max-width: 152px;
+    height: 2px;
+    background-color: var(--cor-azul-escuro2);
+    margin: 0 auto;
+
+}
+
+.notification_modal p {
+
+    color: var(--cor-azul-escuro2);
+    font-size: 1.25rem;
+    font-weight: 500;
+    letter-spacing: .00625rem;
+    text-align: center;
+    max-width: 31.875rem;
+    margin: 2.5rem auto 2.5rem auto;
+
+}
+
+.notification_modal p span {
+
+    font-weight: 700;
+
+}
+
+.notification_modal .notify_btns {
+
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+}
+
+.notification_modal .notify_btns button {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    font-weight: 600;
+    letter-spacing: .0225rem;
+    width: 13.75rem;
+    height: 2.5rem;
+    border-radius: .5rem;
+    transition: all ease .45s;
+
+}
+
+.notification_modal .notify_btns button:hover {
+
+    transform: scale(.97);
+
+}
+
+.notification_modal .notify_btns button:nth-child(1) {
+
+    background: rgba(17, 15, 25, .5);
+
+}
+
+.notification_modal .notify_btns button:nth-child(2) {
+
+    background: var(--cor-azul-escuro1);
+
+}
+
+.modal_cont .notification_bg {
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .5);
+    z-index: -1;
+
+}

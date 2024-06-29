@@ -1,0 +1,483 @@
+.cabecalho {
+    width: 100%;
+    height: 7.875rem;
+}
+
+.navegacao {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(10, 9, 13, .4) 0%, rgba(0, 0, 0, .2) 100%);
+}
+
+.logo {
+    margin-left: 5.37rem;
+}
+
+button {
+    all: unset;
+    cursor: pointer;
+}
+
+.botoes_nav {
+    display: flex;
+    gap: 2.12rem;
+}
+
+.botoes_nav > button { 
+    color: rgba(255, 255, 255, .65);
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.botoes_nav > button:hover {
+    color: var(--cor-branca);
+}
+
+.btn_entrar {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: min-content;
+    margin-right: 5rem;
+
+}
+
+.btn_entrar > button {
+
+    text-align: center;
+    color: var(--cor-azul-escuro2);
+    font-size: .94rem;
+    font-weight: 500;
+    width: 6.375rem;
+    height: 2.625rem;
+    border-radius: 3.25rem;
+    border: 2px solid transparent;
+    background: var(--cor-branca);
+    transition: all ease .45s;
+
+}
+
+.btn_entrar > button:hover {
+
+    color: var(--cor-branca);
+    background-color: transparent;
+    border: 2px solid var(--cor-branca);
+
+}
+
+.btn_entrar .log_out {
+
+    color: var(--cor-branca);
+    background-color: transparent;
+    border: 2px solid var(--cor-branca);  
+
+}
+
+.btn_entrar .log_out:hover {
+
+    color: var(--cor-azul-escuro2);
+    background: var(--cor-branca);
+
+}
+
+.caixa_primaria {
+
+    display: flex;
+    padding-bottom: 2rem;
+
+}
+
+.informacao_principal{
+    /* height: min-content; */
+    margin: 7rem 2rem 0 7.7rem;
+}
+
+.titulo_principal_reserva {
+    max-width: 54.75rem;
+    color: var(--cor-branca);
+    font-size: 3.75rem;
+    font-weight: 850;
+}
+
+.paragrafo_principal {
+    line-height: 2.125rem;
+    max-width: 51.8rem;
+    font-size: 1.25rem;
+    color: var(--cor-branca);
+    margin-top: .88rem;
+}
+
+
+.img_celular{
+    max-width: 100%;   
+}
+
+
+
+.img_celular > img{
+    width: 100%;
+    position: relative;
+    bottom: -3.5rem;
+}
+
+.opcoes_restaurante{
+    background: var(--cor-branca);
+}
+
+.tela_resturantes{
+    padding-top: 7.88rem;
+    background-color: var(--cor-branca);
+    width: 100%;
+    padding: 6.2rem 5rem 4rem 5rem;
+}
+
+.bloco_navegacao{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;    
+}
+
+.bloco_pesquisa{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 35.3125rem;
+    height: 3.3125rem;
+    border-radius: .5rem;
+    border: 4px solid var(--cor-azul-escuro2);
+    padding-right: 8px;
+}
+
+.bloco_pesquisa input{
+    width: 100%;
+    height: 100%;
+    padding-right: 10px;
+    margin-left: 1.56rem;
+    align-items: center;
+    color: var(--cor-azul-escuro2);
+
+}
+
+.bloco_pesquisa button{
+    display: flex;
+    justify-content:center;
+    width: 1.875rem;
+    height: 1.8125rem; 
+    background-color: var(--cor-azul-escuro2);
+    border: 2px solid transparent;
+    border-radius: 3px;
+    cursor: pointer;
+    align-items: center;
+    transition: all ease .45s;
+}
+
+.bloco_pesquisa button:hover {
+    
+    background-color: transparent;
+    border: 2px solid var(--cor-azul-escuro1);
+
+}
+
+.bloco_pesquisa button:hover svg path {
+
+    transition-duration: .65s;
+    stroke: var(--cor-azul-escuro1);
+
+}
+
+.lista_restaurantes {
+
+    max-height: 1100px;
+    overflow-y: auto;
+    margin-top: 2rem;
+    list-style-type: none;
+    padding: 0 5px 0 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(24rem,1fr));
+    grid-auto-rows: minmax(26rem, min-content);
+    grid-gap: 1.44rem;
+    position: relative;
+
+}
+
+/* ----------------------------------------------- */
+
+.lista_restaurantes::-webkit-scrollbar {
+    width: 4px;
+}
+  
+.lista_restaurantes::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background: rgba(100, 100, 100, 0.25);
+}
+
+.lista_restaurantes::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: var(--cor-azul-escuro1);
+}
+
+/* ----------------------------------------------- */
+
+.bloco_item {
+
+    position: relative;
+    width: 100%;
+    height: 100%;
+    /* background-image: url('/assets/ImagensRestaurantes/bgRestaurantes/'); */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 15px;
+
+}
+
+.bloco_item .conteudo_item {
+
+    position: absolute;
+    bottom: 0;
+    border-radius: 15px;
+    background-color: rgba(18, 16, 24, .55);
+    backdrop-filter: blur(25px);
+    padding: 1.85rem 1.65rem 1.4rem 1.65rem;
+    width: 100%;
+
+}
+
+.bloco_item .conteudo_item .item_top {
+
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.conteudo_item .item_top h3 {
+
+    font-size: 1.8rem;
+    font-weight: 900;
+    letter-spacing: .05rem;
+
+}
+
+/* .conteudo_item .item_top svg {
+
+    cursor: pointer;
+
+}
+
+.conteudo_item .item_top svg path {
+
+    transition: all ease .25s;
+
+}
+
+.conteudo_item .item_top svg:hover path {
+
+    fill-opacity: 1;
+
+} */
+
+.bloco_infos_item {
+
+    margin: .85rem 0 1.1rem 0;
+    display: grid;
+    gap: 6px;
+    
+}
+
+.conteudo_item .info_item {
+
+    display: flex;
+    align-items: center;
+    gap: 7px;
+
+}
+
+.conteudo_item .item_baixo {
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.conteudo_item .item_baixo button {
+
+    font-size: .8rem;
+    font-weight: 700;
+    color: var(--cor-azul-escuro1);
+    background-color: var(--cor-branca);
+    border: 2px solid transparent;
+    padding: 9px 15px;
+    border-radius: 10px;
+    transition: all ease .3s;
+
+}
+
+.item_baixo button:hover {
+
+    color: var(--cor-branca);
+    background-color: transparent;
+    border: 2px solid var(--cor-branca);
+
+}
+
+.item_status .verde {
+
+    color: rgb(73, 255, 70);
+
+}
+
+.item_status .vermelho {
+
+    color: rgb(255, 70, 70);
+
+}
+
+.conteudo_item .info_item span {
+
+    font-size: .85rem;
+
+}
+
+
+/* ------------------ */
+
+.clientes{
+    
+    width: 100%;
+    background-color: var(--cor-azul-escuro2);
+
+}
+
+.titulo_restaurantes h1{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    color: var(--cor-branca);
+    font-size: 40px;
+    font-weight: 900;
+    letter-spacing: 3.2px;
+    margin-top: 50px;
+    text-align: center;
+
+}
+
+.clientes_restaurantes {
+    
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   flex-wrap: wrap;
+   gap: 2rem;
+   max-width: 75%;
+   margin: 0 auto;
+   padding: 5rem 0 4rem 0;
+    
+}
+
+.clientes_restaurantes img:last-child {
+
+    height: 120px;   
+    filter: invert(100%);
+
+}
+
+.conteudo_cadastre {
+
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    min-height: 610px;
+    background-color: var(--cor-branca);
+
+}
+
+.bloco_texto {
+
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.bloco_texto h1{
+
+    width: 1054px;
+    height: 292px;
+    color: var(--cor-azul-escuro2);
+    font-size: 60px;
+    font-weight: 900;
+
+}
+
+.bloco_text{
+
+    margin-left: 6.69rem;
+    margin-top: 5rem;
+
+}
+
+.bloco_text h1{
+
+    max-width: 54.75rem;
+    color: var(--cor-azul-escuro2);
+    font-size: 50px;
+    font-weight: 850;
+
+}
+
+.bloco_text p{
+
+    line-height: 2.125rem;
+    max-width: 51.8rem;
+    font-size: 20px;
+    margin-top: 43px;
+    color: var(--cor-azul-escuro2);
+
+}
+
+.caixa{
+    max-width: 100%;
+}
+
+.caixa img {
+    
+    width: 100%;
+    position: relative;
+    bottom: -2.5rem;
+    margin-left: 30%;
+    margin-top: 20px;
+    
+}
+
+.rodape {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 150px;
+    background-color: var(--cor-azul-escuro2);
+}
+
+.conteudo_rodape {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.conteudo_rodape img{
+
+    width: 100%;
+
+}

@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    
+    --cor-gradient-azul-escura: linear-gradient(180deg, #191622 0%, #0E0B15 100%);
+    --cor-branca: #FFFFFF;
+    --cor-azul-escuro1: #0F0D17;
+    --cor-azul-escuro2: #121018;
+    --tempo-transicao-45: .45s;
+
+} 
+
+* {
+
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    line-height: normal;
+    box-sizing: border-box;
+    font-weight: 400;
+
+}
+
+.title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: center;
+    color: var(--cor-azul-escuro1);
+}
+
+body {
+
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    background: var(--cor-gradient-azul-escura) !important; 
+    color: var(--cor-branca);
+
+}
+
+button, input, textarea {
+
+    all: unset;
+    box-sizing: border-box;
+
+}
+
+ul {
+
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+}
+  
+li {
+
+    margin: 0; 
+    padding: 0;
+
+}
+
+button {
+
+    cursor: pointer;
+    transition: all .45s;
+
+}
+
+h1, h2, h3, h4, h5, p, ul, figure {
+
+    margin: 0;
+
+}
+
+@media screen and (max-width: 1600px) {
+    .main_lr, .form_container {
+        transform: scale(.86);
+    }
+}
